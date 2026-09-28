@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Admin — Panel de Sucursales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#F4F5F1; --surface:#FFFFFF; --surface-2:#EEF0EA;
+  --ink:#1C2321; --muted:#65706A; --line:#DBDFD8;
+  --brand:#2E4636; --brand-ink:#FFFFFF; --brand-soft:#DCE7DE; --accent:#4C7A5B;
+  --danger:#A23E2A; --danger-soft:#F3E1DB; --warn:#B8823A; --warn-soft:#F4E7D3;
+  --ok:#3C7A54; --ok-soft:#DDEBE1; --info:#4A5B72; --info-soft:#E2E7ED;
+  --shadow:0 1px 2px rgba(28,35,33,.06), 0 1px 1px rgba(28,35,33,.04); --radius:10px;
+}
+:root:not([data-theme="light"]){ @media (prefers-color-scheme: dark){
+  --bg:#181C19; --surface:#20251F; --surface-2:#262B24; --ink:#EDEFEA; --muted:#9AA39B; --line:#343B34;
+  --brand:#4C7A5B; --brand-ink:#0E1410; --brand-soft:#243429; --accent:#6FA080;
+  --danger:#D6785F; --danger-soft:#3A2621; --warn:#D9A85B; --warn-soft:#3A3120;
+  --ok:#6FA080; --ok-soft:#233A2C; --info:#8FA3BC; --info-soft:#232B34;
+}}
+html{scroll-padding-top:env(safe-area-inset-top,0px);}
+*{box-sizing:border-box;}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:'Inter',system-ui,-apple-system,sans-serif; font-size:15px; line-height:1.5; min-height:100vh;}
+h1,h2,h3{font-family:'Space Grotesk',system-ui,sans-serif;}
+.mono{font-family:'IBM Plex Mono',monospace; font-size:0.88em;}
+button{font-family:inherit; cursor:pointer;} input,select,textarea{font-family:inherit; font-size:14px;}
+
+#shell{display:flex; min-height:100vh;}
+#rail{width:220px; flex:0 0 220px; background:var(--brand); color:var(--brand-ink); padding:20px 14px; display:flex; flex-direction:column; gap:4px; position:sticky; top:0; height:100vh; overflow-y:auto;}
+#rail .logo{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:18px; padding:6px 10px 18px; line-height:1.2;}
+#rail .logo small{display:block; font-weight:500; font-size:12px; opacity:.72; font-family:'Inter',sans-serif; margin-top:2px;}
+.navbtn{display:flex; align-items:center; gap:10px; padding:10px 12px; border:none; background:transparent; color:var(--brand-ink); border-radius:8px; text-align:left; font-size:14.5px; font-weight:500; opacity:.82; width:100%;}
+.navbtn .ic{font-size:17px; width:20px; text-align:center;}
+.navbtn.active{background:rgba(255,255,255,.14); opacity:1;}
+#railfoot{margin-top:auto; font-size:11px; opacity:.6; padding:10px;}
+#main{flex:1; min-width:0; display:flex; flex-direction:column;}
+#topbar{padding:16px 28px; padding-top:calc(16px + env(safe-area-inset-top,0px)); border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; gap:16px; background:var(--surface); position:sticky; top:0; z-index:5; flex-wrap:wrap;}
+#topbar h1{font-size:20px; margin:0; font-weight:600;}
+#topbar .sub{color:var(--muted); font-size:13px; margin-top:2px;}
+#content{padding:24px 28px 60px; max-width:1180px; width:100%;}
+.hidden{display:none !important;}
+
+.card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow);}
+.btn{border:1px solid var(--line); background:var(--surface); color:var(--ink); padding:8px 14px; border-radius:8px; font-size:14px; font-weight:500; display:inline-flex; align-items:center; gap:6px;}
+.btn:hover{border-color:var(--muted);}
+.btn.primary{background:var(--brand); color:var(--brand-ink); border-color:var(--brand);}
+.btn.danger{color:var(--danger); border-color:var(--danger-soft);}
+.btn.small{padding:5px 10px; font-size:12.5px;}
+.pill{display:inline-flex; align-items:center; gap:5px; padding:3px 10px; border-radius:100px; font-size:12px; font-weight:600;}
+.pill.ok{background:var(--ok-soft); color:var(--ok);} .pill.warn{background:var(--warn-soft); color:var(--warn);}
+.pill.danger{background:var(--danger-soft); color:var(--danger);} .pill.info{background:var(--info-soft); color:var(--info);}
+.field{display:flex; flex-direction:column; gap:5px; margin-bottom:12px;}
+.field label{font-size:12.5px; font-weight:600; color:var(--muted);}
+.field input, .field select, .field textarea{padding:8px 10px; border:1px solid var(--line); border-radius:7px; background:var(--surface); color:var(--ink);}
+.field textarea{resize:vertical; min-height:60px;}
+.row{display:flex; gap:12px; flex-wrap:wrap;}
+.row > .field{flex:1; min-width:160px;}
+.emptystate{padding:40px 20px; text-align:center; color:var(--muted);}
+.subtabs{display:flex; gap:6px; margin-bottom:18px; flex-wrap:wrap;}
+.subtab{padding:7px 14px; border-radius:100px; border:1px solid var(--line); background:var(--surface); font-size:13.5px; font-weight:500; color:var(--muted);}
+.subtab.active{background:var(--brand-soft); color:var(--brand); border-color:var(--brand-soft); font-weight:600;}
+table{width:100%; border-collapse:collapse; font-size:13.5px;}
+table th{text-align:left; font-size:11.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.03em; font-weight:700; padding:8px 12px; border-bottom:1px solid var(--line);}
+table td{padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top;}
+table tr:last-child td{border-bottom:none;}
+.admin-toolbar{display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; gap:10px; flex-wrap:wrap;}
+.filters{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px;}
+.filters select{padding:7px 10px; border:1px solid var(--line); border-radius:7px; background:var(--surface); color:var(--ink); font-size:13.5px;}
+.group-title{font-size:13px; font-weight:700; margin:22px 0 10px; display:flex; align-items:center; gap:8px;}
+.group-title .cnt{color:var(--muted); font-weight:500; font-family:'IBM Plex Mono',monospace; font-size:12px;}
+.task-row{display:flex; align-items:center; gap:14px; padding:13px 16px; border:1px solid var(--line); border-radius:9px; background:var(--surface); margin-bottom:8px; flex-wrap:wrap;}
+.task-row .tinfo{flex:1; min-width:0;}
+.task-row .tname{font-weight:600; font-size:14px;}
+.task-row .tsub{font-size:12.5px; color:var(--muted); margin-top:2px;}
+.task-row .tdate{font-size:12.5px; color:var(--muted); font-family:'IBM Plex Mono',monospace; flex:0 0 auto; text-align:right; min-width:110px;}
+
+#modal-backdrop{position:fixed; inset:0; background:rgba(20,24,20,.44); display:flex; align-items:flex-start; justify-content:center; padding:40px 16px; overflow-y:auto; z-index:50;}
+#modal-backdrop.hidden{display:none;}
+.modal{background:var(--surface); border-radius:14px; width:100%; max-width:480px; box-shadow:0 20px 60px rgba(0,0,0,.25);}
+.modal-head{padding:18px 22px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center;}
+.modal-head h3{margin:0; font-size:17px;}
+.modal-close{background:none; border:none; font-size:20px; color:var(--muted); line-height:1; padding:2px 6px;}
+.modal-body{padding:20px 22px;}
+.modal-foot{padding:14px 22px 20px; display:flex; justify-content:flex-end; gap:8px;}
+.hist-item{display:flex; gap:10px; padding:8px 0; border-bottom:1px solid var(--line); font-size:13px;}
+.hist-item .hd{color:var(--muted); font-family:'IBM Plex Mono',monospace; flex:0 0 90px;}
+#toast{position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:var(--ink); color:var(--bg); padding:10px 18px; border-radius:8px; font-size:13.5px; z-index:80; opacity:0; transition:opacity .25s; pointer-events:none;}
+#toast.show{opacity:1;}
+#banner{background:var(--warn-soft); color:var(--warn); padding:10px 20px; font-size:13px; text-align:center;}
+.setup-wrap{max-width:480px; margin:60px auto; padding:0 16px;}
+.setup-wrap p{color:var(--muted); font-size:13.5px; line-height:1.6;}
+.help-link{color:var(--brand);}
+
+@media (max-width: 760px){
+  #shell{flex-direction:column;}
+  #rail{position:fixed; bottom:0; left:0; right:0; top:auto; width:100%; height:auto; flex-direction:row; padding:6px 8px calc(6px + env(safe-area-inset-bottom,0px)); z-index:20; box-shadow:0 -2px 10px rgba(0,0,0,.12); gap:2px; justify-content:space-around;}
+  #rail .logo, #railfoot{display:none;}
+  .navbtn{flex-direction:column; font-size:11px; gap:3px; padding:6px 8px; flex:1;}
+  .navbtn .ic{font-size:19px;}
+  #main{padding-bottom:64px;}
+  #content{padding:18px 16px 40px;}
+  #topbar{padding:14px 16px; padding-top:calc(14px + env(safe-area-inset-top,0px));}
+}
+</style>
+</head>
+<body>
+<div id="banner" class="hidden"></div>
+<div id="setup-screen" class="setup-wrap hidden">
+  <h1>Conectar con GitHub</h1>
+  <p>Este panel guarda los cambios directamente en el archivo <code class="mono">data.json</code> de tu repositorio, usando un token que generás vos mismo. El token queda guardado solo en este navegador — nunca se envía a ningún otro lado.</p>
+  <div class="field"><label>Usuario u organización de GitHub</label><input id="cfg-owner" placeholder="tu-usuario"></div>
+  <div class="field"><label>Nombre del repositorio</label><input id="cfg-repo" placeholder="panel-sucursales"></div>
+  <div class="field"><label>Rama</label><input id="cfg-branch" value="main"></div>
+  <div class="field">
+    <label>Token de acceso personal (fine-grained, con permiso "Contents: Read and write" sobre ese repo)</label>
+    <input id="cfg-token" type="password" placeholder="github_pat_...">
+  </div>
+  <p>¿No tenés un token todavía? Generalo en <a class="help-link" href="https://github.com/settings/personal-access-tokens/new" target="_blank">github.com/settings/personal-access-tokens/new</a>, elegí el repositorio y dale permiso de escritura sobre "Contents".</p>
+  <button class="btn primary" id="cfg-save">Conectar</button>
+  <div id="cfg-error" style="color:var(--danger); font-size:13px; margin-top:10px;"></div>
+</div>
+
+<div id="app-screen" class="hidden">
+<div id="shell">
+  <nav id="rail">
+    <div class="logo">Panel de Sucursales<small>Administración</small></div>
+    <button class="navbtn" data-tab="mantenimiento"><span class="ic">🛠️</span><span>Mantenimiento</span></button>
+    <button class="navbtn" data-tab="sucursales"><span class="ic">🏢</span><span>Sucursales</span></button>
+    <button class="navbtn" data-tab="tiposServicio"><span class="ic">📋</span><span>Tipos de servicio</span></button>
+    <button class="navbtn" data-tab="serviciosSucursal"><span class="ic">🔧</span><span>Servicios por sucursal</span></button>
+    <button class="navbtn" data-tab="tareasCatalogo"><span class="ic">🗂️</span><span>Catálogo de tareas</span></button>
+    <div id="railfoot">
+      <span id="repo-label"></span><br>
+      <button class="btn small" id="disconnect-btn" style="margin-top:8px;">Desconectar</button>
+    </div>
+  </nav>
+  <div id="main">
+    <div id="topbar">
+      <div><h1 id="topbar-title">Mantenimiento</h1><div class="sub" id="topbar-sub"></div></div>
+      <div id="topbar-actions"></div>
+    </div>
+    <div id="content"></div>
+  </div>
+</div>
+</div>
+
+<div id="modal-backdrop" class="hidden"><div class="modal" id="modal"></div></div>
+<div id="toast"></div>
+
+<script>
+/* ============================= GITHUB BACKEND ============================= */
+const CFG_KEY = 'panelSucursalesGhConfig';
+function getConfig(){ try{ return JSON.parse(localStorage.getItem(CFG_KEY)||'null'); }catch(e){ return null; } }
+function saveConfig(cfg){ localStorage.setItem(CFG_KEY, JSON.stringify(cfg)); }
+function clearConfig(){ localStorage.removeItem(CFG_KEY); }
+
+function b64EncodeUnicode(str){
+  return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (m,p)=>String.fromCharCode('0x'+p)));
+}
+function b64DecodeUnicode(str){
+  return decodeURIComponent(atob(str).split('').map(c=>'%'+('00'+c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+}
+
+async function ghRequest(path, options={}){
+  const cfg = getConfig();
+  const res = await fetch(`https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${path}`, {
+    ...options,
+    headers: {
+      'Authorization': `Bearer ${cfg.token}`,
+      'Accept': 'application/vnd.github+json',
+      ...(options.headers||{})
+    }
+  });
+  return res;
+}
+
+async function ghGetJson(path){
+  const cfg = getConfig();
+  const res = await ghRequest(`${path}?ref=${encodeURIComponent(cfg.branch||'main')}`);
+  if(res.status === 404) return {content:null, sha:null};
+  if(!res.ok) throw new Error(`GitHub GET ${path} → ${res.status}`);
+  const j = await res.json();
+  return {content: JSON.parse(b64DecodeUnicode(j.content.replace(/\n/g,''))), sha: j.sha};
+}
+
+async function ghPutJson(path, obj, sha, message){
+  const cfg = getConfig();
+  const body = {
+    message: message || `Actualizar ${path} desde el panel admin`,
+    content: b64EncodeUnicode(JSON.stringify(obj, null, 2)),
+    branch: cfg.branch || 'main',
+  };
+  if(sha) body.sha = sha;
+  const res = await ghRequest(path, {method:'PUT', body: JSON.stringify(body)});
+  if(!res.ok){ const t = await res.text(); throw new Error(`GitHub PUT ${path} → ${res.status}: ${t.slice(0,200)}`); }
+  return res.json();
+}
+
+async function ghPutBinaryFile(path, base64Content, message){
+  const cfg = getConfig();
+  const body = { message: message || `Agregar archivo ${path}`, content: base64Content, branch: cfg.branch || 'main' };
+  const res = await ghRequest(path, {method:'PUT', body: JSON.stringify(body)});
+  if(!res.ok){ const t = await res.text(); throw new Error(`GitHub PUT ${path} → ${res.status}: ${t.slice(0,200)}`); }
+  return res.json();
+}
+
+function fileToBase64(file){
+  return new Promise((resolve, reject)=>{
+    const r = new FileReader();
+    r.onload = ()=> resolve(r.result.split(',')[1]);
+    r.onerror = reject;
+    r.readAsDataURL(file);
+  });
+}
+
+/* ============================= STATE ============================= */
+const S = {
+  sucursales:[], tiposServicio:[], serviciosSucursal:[], tareasCatalogo:[], tareasSucursal:[],
+  sha:null, tab:'mantenimiento', selectedSucursal:null, adminSub:'sucursales', mantFiltro:{sucursal:'', tipoServicio:''},
+};
+const PERIOD_DAYS = {Semanal:7, Mensual:30, Trimestral:90, Semestral:182, Anual:365};
+const PERIODOS = Object.keys(PERIOD_DAYS);
+
+function slugify(s){ return (s||'').toString().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-zA-Z0-9]+/g,'-').replace(/^-+|-+$/g,'').toLowerCase(); }
+function todayISO(){ return new Date().toISOString().slice(0,10); }
+function addDays(iso, days){ const d = new Date(iso+'T00:00:00'); d.setDate(d.getDate()+days); return d.toISOString().slice(0,10); }
+function fmtDate(iso){ if(!iso) return '—'; const d = new Date(iso+'T00:00:00'); return d.toLocaleDateString('es-AR', {day:'2-digit', month:'short', year:'numeric'}); }
+function toast(msg){ const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(t._h); t._h = setTimeout(()=>t.classList.remove('show'), 2800); }
+function byId(arr, id){ return arr.find(x=>x.id===id); }
+function el(tag, cls, html){ const e=document.createElement(tag); if(cls) e.className=cls; if(html!=null) e.innerHTML=html; return e; }
+function esc(s){ return (s==null?'':String(s)).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+/* ============================= INIT ============================= */
+async function init(){
+  document.querySelectorAll('.navbtn').forEach(b=>b.addEventListener('click', ()=>{ S.tab=b.dataset.tab; render(); }));
+  document.getElementById('cfg-save').addEventListener('click', onSaveConfig);
+  document.getElementById('disconnect-btn').addEventListener('click', ()=>{
+    if(confirm('¿Desconectar este navegador de GitHub? Vas a tener que volver a pegar el token la próxima vez.')){
+      clearConfig(); location.reload();
+    }
+  });
+  const cfg = getConfig();
+  if(!cfg){ showSetup(); return; }
+  await loadData();
+}
+
+function showSetup(msg){
+  document.getElementById('setup-screen').classList.remove('hidden');
+  document.getElementById('app-screen').classList.add('hidden');
+  if(msg) document.getElementById('cfg-error').textContent = msg;
+}
+
+async function onSaveConfig(){
+  const owner = document.getElementById('cfg-owner').value.trim();
+  const repo = document.getElementById('cfg-repo').value.trim();
+  const branch = document.getElementById('cfg-branch').value.trim() || 'main';
+  const token = document.getElementById('cfg-token').value.trim();
+  if(!owner || !repo || !token){ document.getElementById('cfg-error').textContent = 'Completá usuario, repositorio y token.'; return; }
+  saveConfig({owner, repo, branch, token});
+  document.getElementById('cfg-error').textContent = 'Probando conexión…';
+  try{
+    await loadData();
+  }catch(e){
+    clearConfig();
+    showSetup('No se pudo conectar: ' + e.message);
+  }
+}
+
+async function loadData(){
+  document.getElementById('setup-screen').classList.add('hidden');
+  document.getElementById('app-screen').classList.remove('hidden');
+  const cfg = getConfig();
+  document.getElementById('repo-label').textContent = `${cfg.owner}/${cfg.repo} (${cfg.branch})`;
+  const {content, sha} = await ghGetJson('data.json');
+  if(!content){
+    Object.assign(S, {sucursales:[], tiposServicio:[], serviciosSucursal:[], tareasCatalogo:[], tareasSucursal:[]});
+    S.sha = null;
+    toast('No se encontró data.json en el repo — se creará al guardar el primer cambio.');
+  } else {
+    Object.assign(S, content);
+    S.sha = sha;
+  }
+  render();
+}
+
+async function persist(message){
+  const payload = {
+    sucursales: S.sucursales, tiposServicio: S.tiposServicio, serviciosSucursal: S.serviciosSucursal,
+    tareasCatalogo: S.tareasCatalogo, tareasSucursal: S.tareasSucursal,
+  };
+  const result = await ghPutJson('data.json', payload, S.sha, message);
+  S.sha = result.content.sha;
+}
+
+/* ============================= RENDER ROOT ============================= */
+function render(){
+  document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active', b.dataset.tab===S.tab));
+  const titles = {
+    mantenimiento: ['Mantenimiento', 'Marcar tareas realizadas y ver alertas'],
+    sucursales: ['Sucursales', 'Alta y edición de locales'],
+    tiposServicio: ['Tipos de servicio', 'Catálogo de servicios disponibles'],
+    serviciosSucursal: ['Servicios por sucursal', 'Proveedores y contactos por local'],
+    tareasCatalogo: ['Catálogo de tareas', 'Tareas de mantenimiento estándar'],
+  };
+  document.getElementById('topbar-title').textContent = titles[S.tab][0];
+  document.getElementById('topbar-sub').textContent = titles[S.tab][1];
+  const content = document.getElementById('content'); content.innerHTML = '';
+  if(S.tab==='mantenimiento') renderMantenimiento(content);
+  if(S.tab==='sucursales') renderAdminSucursales(content);
+  if(S.tab==='tiposServicio') renderAdminTipos(content);
+  if(S.tab==='serviciosSucursal') renderAdminServicios(content);
+  if(S.tab==='tareasCatalogo') renderAdminTareas(content);
+}
+
+/* ============================= TAREA HELPERS ============================= */
+function estadoDe(t){
+  if(!t.ultimaFecha || !t.proximoVencimiento) return 'sin-registro';
+  const hoy = todayISO();
+  if(t.proximoVencimiento < hoy) return 'vencido';
+  if(t.proximoVencimiento <= addDays(hoy,7)) return 'proximo';
+  return 'al-dia';
+}
+function estadoInfo(e){
+  return {'vencido':{label:'Vencido',cls:'danger'},'proximo':{label:'Próximo a vencer',cls:'warn'},
+    'al-dia':{label:'Al día',cls:'ok'},'sin-registro':{label:'Sin registro',cls:'info'}}[e];
+}
+function enrichTarea(t){
+  return {...t, cat: byId(S.tareasCatalogo, t.tareaCatalogoId)||{}, suc: byId(S.sucursales, t.sucursalId)||{}, estado: estadoDe(t)};
+}
+
+function renderMantenimiento(content){
+  const filters = el('div','filters');
+  const selSuc = document.createElement('select');
+  selSuc.innerHTML = '<option value="">Todas las sucursales</option>' +
+    S.sucursales.slice().sort((a,b)=>a.nombre.localeCompare(b.nombre)).map(s=>`<option value="${s.id}">${esc(s.nombre)}</option>`).join('');
+  selSuc.value = S.mantFiltro.sucursal;
+  selSuc.addEventListener('change', ()=>{ S.mantFiltro.sucursal = selSuc.value; render(); });
+  const selTipo = document.createElement('select');
+  selTipo.innerHTML = '<option value="">Todos los servicios</option>' +
+    S.tiposServicio.map(t=>`<option value="${t.id}">${esc(t.nombre)}</option>`).join('');
+  selTipo.value = S.mantFiltro.tipoServicio;
+  selTipo.addEventListener('change', ()=>{ S.mantFiltro.tipoServicio = selTipo.value; render(); });
+  filters.appendChild(selSuc); filters.appendChild(selTipo);
+  content.appendChild(filters);
+
+  let tareas = S.tareasSucursal.map(enrichTarea);
+  if(S.mantFiltro.sucursal) tareas = tareas.filter(t=>t.sucursalId===S.mantFiltro.sucursal);
+  if(S.mantFiltro.tipoServicio) tareas = tareas.filter(t=>t.cat.tipoServicioId===S.mantFiltro.tipoServicio);
+
+  const groups = [['vencido','Vencidas'],['proximo','Próximas a vencer (7 días)'],['sin-registro','Sin registro todavía'],['al-dia','Al día']];
+  let any = false;
+  groups.forEach(([key,label])=>{
+    const items = tareas.filter(t=>t.estado===key).sort((a,b)=>(a.proximoVencimiento||'')<(b.proximoVencimiento||'')?-1:1);
+    if(!items.length) return;
+    any = true;
+    content.appendChild(el('div','group-title', `${label} <span class="cnt">${items.length}</span>`));
+    items.forEach(t=>{
+      const info = estadoInfo(t.estado);
+      const row = el('div','task-row', `
+        <div class="tinfo"><div class="tname">${esc(t.cat.nombre||'—')}</div><div class="tsub">${esc(t.suc.nombre||'—')} · ${esc(t.cat.periodicidad||'')}</div></div>
+        <span class="pill ${info.cls}">${info.label}</span>
+        <div class="tdate">${t.proximoVencimiento? 'vence '+fmtDate(t.proximoVencimiento) : 'nunca realizada'}</div>
+        <button class="btn small primary" data-open="1">Marcar realizada</button>`);
+      row.querySelector('[data-open]').addEventListener('click', ()=>openTareaModal(t));
+      content.appendChild(row);
+    });
+  });
+  if(!any) content.appendChild(el('div','emptystate','<div class="big">✅</div>No hay tareas para estos filtros.'));
+}
+
+function openTareaModal(t){
+  const backdrop = document.getElementById('modal-backdrop');
+  const modal = document.getElementById('modal');
+  const info = estadoInfo(t.estado);
+  modal.innerHTML = `
+    <div class="modal-head"><h3>${esc(t.cat.nombre)}</h3><button class="modal-close" id="mclose">✕</button></div>
+    <div class="modal-body">
+      <div style="margin-bottom:14px;"><span class="pill ${info.cls}">${info.label}</span>
+        <span style="color:var(--muted); font-size:13px; margin-left:8px;">${esc(t.suc.nombre)} · ${esc(t.cat.periodicidad)}</span></div>
+      <div class="row">
+        <div class="field"><label>Última vez realizada</label><div class="mono">${fmtDate(t.ultimaFecha)}</div></div>
+        <div class="field"><label>Próximo vencimiento</label><div class="mono">${t.proximoVencimiento? fmtDate(t.proximoVencimiento):'—'}</div></div>
+      </div>
+      <div class="field"><label>Fecha de realización</label><input type="date" id="f-fecha" value="${todayISO()}"></div>
+      <div class="field"><label>Nota (opcional)</label><textarea id="f-nota" placeholder="Detalle del trabajo realizado..."></textarea></div>
+      <div class="field"><label>Evidencia — foto (opcional, se sube al repo)</label>
+        <input type="file" id="f-file" accept="image/*"><div id="f-upload-status" style="font-size:12px; color:var(--muted);"></div></div>
+      ${t.historial && t.historial.length ? `<div class="field"><label>Historial</label>
+        <div>${t.historial.slice().reverse().slice(0,8).map(h=>`<div class="hist-item"><div class="hd">${fmtDate(h.fecha)}</div>
+          <div>${esc(h.nota||'Sin nota')}${h.evidenciaUrl? ` · <a href="${h.evidenciaUrl}" target="_blank">ver evidencia</a>`:''}</div></div>`).join('')}</div></div>` : ''}
+    </div>
+    <div class="modal-foot"><button class="btn" id="mcancel">Cancelar</button><button class="btn primary" id="msave">Guardar</button></div>`;
+  backdrop.classList.remove('hidden');
+  document.getElementById('mclose').onclick = closeModal;
+  document.getElementById('mcancel').onclick = closeModal;
+  document.getElementById('msave').onclick = ()=>saveTareaRealizada(t);
+}
+function closeModal(){ document.getElementById('modal-backdrop').classList.add('hidden'); }
+
+async function saveTareaRealizada(t){
+  const fecha = document.getElementById('f-fecha').value || todayISO();
+  const nota = document.getElementById('f-nota').value.trim();
+  const fileInput = document.getElementById('f-file');
+  const btn = document.getElementById('msave');
+  btn.disabled = true; btn.textContent = 'Guardando…';
+  try{
+    let evidenciaUrl = null;
+    if(fileInput.files[0]){
+      document.getElementById('f-upload-status').textContent = 'Subiendo evidencia…';
+      const cfg = getConfig();
+      const b64 = await fileToBase64(fileInput.files[0]);
+      const ext = (fileInput.files[0].name.split('.').pop() || 'jpg').toLowerCase();
+      const fname = `evidencias/${t.sucursalId}__${t.tareaCatalogoId}__${Date.now()}.${ext}`;
+      const up = await ghPutBinaryFile(fname, b64, `Evidencia: ${t.cat.nombre} - ${t.suc.nombre}`);
+      evidenciaUrl = up.content.download_url;
+    }
+    const idx = S.tareasSucursal.findIndex(x=>x.sucursalId===t.sucursalId && x.tareaCatalogoId===t.tareaCatalogoId);
+    const proximo = addDays(fecha, t.cat.periodicidadDias || 30);
+    const prevHist = (idx>=0 && S.tareasSucursal[idx].historial) || [];
+    const updated = { sucursalId:t.sucursalId, tareaCatalogoId:t.tareaCatalogoId, ultimaFecha:fecha, proximoVencimiento:proximo,
+      historial:[...prevHist, {fecha, nota, evidenciaUrl}] };
+    if(idx>=0) S.tareasSucursal[idx] = updated; else S.tareasSucursal.push(updated);
+    await persist(`Mantenimiento: ${t.cat.nombre} realizado en ${t.suc.nombre}`);
+    closeModal(); toast('Tarea actualizada y guardada en GitHub');
+  }catch(e){ console.error(e); toast('No se pudo guardar: ' + e.message); }
+  finally{ btn.disabled = false; btn.textContent = 'Guardar'; }
+}
+
+/* ============================= ADMIN: SUCURSALES ============================= */
+function renderAdminSucursales(content){
+  const toolbar = el('div','admin-toolbar', `<div><strong>${S.sucursales.length}</strong> sucursales</div>`);
+  const addBtn = el('button','btn primary','+ Agregar sucursal');
+  addBtn.addEventListener('click', ()=>openSucursalModal(null));
+  toolbar.appendChild(addBtn); content.appendChild(toolbar);
+  const table = el('table','','<thead><tr><th>Nombre</th><th>Dirección</th><th>Provincia</th><th></th></tr></thead>');
+  const tbody = el('tbody');
+  S.sucursales.slice().sort((a,b)=>a.nombre.localeCompare(b.nombre)).forEach(s=>{
+    const tr = el('tr','', `<td>${esc(s.nombre)}</td><td>${esc(s.direccion)||'—'}</td><td>${esc(s.provincia)||'—'}</td><td></td>`);
+    const editBtn = el('button','btn small','Editar'); editBtn.addEventListener('click', ()=>openSucursalModal(s));
+    tr.lastElementChild.appendChild(editBtn); tbody.appendChild(tr);
+  });
+  table.appendChild(tbody);
+  const c = el('div','card',''); c.appendChild(table); content.appendChild(c);
+}
+function openSucursalModal(s){
+  const backdrop = document.getElementById('modal-backdrop'); const modal = document.getElementById('modal'); const isNew = !s;
+  modal.innerHTML = `
+    <div class="modal-head"><h3>${isNew?'Nueva sucursal':'Editar sucursal'}</h3><button class="modal-close" id="mclose">✕</button></div>
+    <div class="modal-body">
+      <div class="field"><label>Nombre</label><input id="f-nombre" value="${esc(s?.nombre||'')}"></div>
+      <div class="field"><label>Dirección</label><input id="f-direccion" value="${esc(s?.direccion||'')}"></div>
+      <div class="field"><label>Provincia</label><input id="f-provincia" value="${esc(s?.provincia||'')}"></div>
+    </div>
+    <div class="modal-foot"><button class="btn" id="mcancel">Cancelar</button><button class="btn primary" id="msave">Guardar</button></div>`;
+  backdrop.classList.remove('hidden');
+  document.getElementById('mclose').onclick = closeModal; document.getElementById('mcancel').onclick = closeModal;
+  document.getElementById('msave').onclick = async ()=>{
+    const nombre = document.getElementById('f-nombre').value.trim();
+    if(!nombre){ toast('Poné un nombre'); return; }
+    const id = s ? s.id : (slugify(nombre) + (S.sucursales.some(x=>x.id===slugify(nombre))?'-'+Date.now().toString(36).slice(-4):''));
+    const data = {id, nombre, direccion: document.getElementById('f-direccion').value.trim(), provincia: document.getElementById('f-provincia').value.trim()};
+    const idx = S.sucursales.findIndex(x=>x.id===id);
+    if(idx>=0) S.sucursales[idx] = data; else S.sucursales.push(data);
+    try{ await persist(`Sucursal: ${nombre}`); closeModal(); toast('Sucursal guardada'); }
+    catch(e){ toast('Error al guardar: '+e.message); }
+  };
+}
+
+/* ============================= ADMIN: TIPOS DE SERVICIO ============================= */
+function renderAdminTipos(content){
+  const toolbar = el('div','admin-toolbar', `<div><strong>${S.tiposServicio.length}</strong> tipos de servicio</div>`);
+  const addBtn = el('button','btn primary','+ Agregar tipo'); addBtn.addEventListener('click', ()=>openTipoModal());
+  toolbar.appendChild(addBtn); content.appendChild(toolbar);
+  const table = el('table','','<thead><tr><th></th><th>Nombre</th><th>Sucursales con este servicio</th></tr></thead>');
+  const tbody = el('tbody');
+  S.tiposServicio.forEach(t=>{
+    const count = S.serviciosSucursal.filter(x=>x.tipoServicioId===t.id).length;
+    tbody.appendChild(el('tr','', `<td style="font-size:18px;">${t.icono||'•'}</td><td>${esc(t.nombre)}</td><td>${count}</td>`));
+  });
+  table.appendChild(tbody);
+  const c = el('div','card',''); c.appendChild(table); content.appendChild(c);
+}
+function openTipoModal(){
+  const backdrop = document.getElementById('modal-backdrop'); const modal = document.getElementById('modal');
+  modal.innerHTML = `
+    <div class="modal-head"><h3>Nuevo tipo de servicio</h3><button class="modal-close" id="mclose">✕</button></div>
+    <div class="modal-body">
+      <div class="field"><label>Nombre</label><input id="f-nombre" placeholder="Ej: Fumigación"></div>
+      <div class="field"><label>Ícono (un emoji, opcional)</label><input id="f-icono" placeholder="🧹" maxlength="4"></div>
+    </div>
+    <div class="modal-foot"><button class="btn" id="mcancel">Cancelar</button><button class="btn primary" id="msave">Guardar</button></div>`;
+  backdrop.classList.remove('hidden');
+  document.getElementById('mclose').onclick = closeModal; document.getElementById('mcancel').onclick = closeModal;
+  document.getElementById('msave').onclick = async ()=>{
+    const nombre = document.getElementById('f-nombre').value.trim();
+    if(!nombre){ toast('Poné un nombre'); return; }
+    const id = slugify(nombre);
+    S.tiposServicio.push({id, nombre, icono: document.getElementById('f-icono').value.trim()||'•'});
+    try{ await persist(`Tipo de servicio: ${nombre}`); closeModal(); toast('Tipo de servicio agregado'); }
+    catch(e){ toast('Error al guardar: '+e.message); }
+  };
+}
+
+/* ============================= ADMIN: SERVICIOS POR SUCURSAL ============================= */
+function renderAdminServicios(content){
+  const toolbar = el('div','admin-toolbar', `<div><strong>${S.serviciosSucursal.length}</strong> servicios asignados</div>`);
+  const addBtn = el('button','btn primary','+ Asignar servicio'); addBtn.addEventListener('click', ()=>openServicioModal(null));
+  toolbar.appendChild(addBtn); content.appendChild(toolbar);
+  const table = el('table','','<thead><tr><th>Sucursal</th><th>Servicio</th><th>Proveedor</th><th>Contacto</th><th></th></tr></thead>');
+  const tbody = el('tbody');
+  S.serviciosSucursal.slice().sort((a,b)=>{
+    const sa = byId(S.sucursales,a.sucursalId)?.nombre||''; const sb = byId(S.sucursales,b.sucursalId)?.nombre||'';
+    return sa.localeCompare(sb);
+  }).forEach(s=>{
+    const suc = byId(S.sucursales, s.sucursalId); const tipo = byId(S.tiposServicio, s.tipoServicioId);
+    const contacto = [s.contacto?.responsable, s.contacto?.telefono, s.contacto?.email].filter(Boolean).join(' · ') || '—';
+    const tr = el('tr','', `<td>${esc(suc?.nombre||s.sucursalId)}</td><td>${tipo?.icono||''} ${esc(tipo?.nombre||s.tipoServicioId)}</td><td>${esc(s.proveedor)||'—'}</td><td>${esc(contacto)}</td><td></td>`);
+    const editBtn = el('button','btn small','Editar'); editBtn.addEventListener('click', ()=>openServicioModal(s));
+    tr.lastElementChild.appendChild(editBtn); tbody.appendChild(tr);
+  });
+  table.appendChild(tbody);
+  const c = el('div','card',''); c.appendChild(table); content.appendChild(c);
+}
+function openServicioModal(s){
+  const backdrop = document.getElementById('modal-backdrop'); const modal = document.getElementById('modal'); const isNew = !s;
+  const sucOpts = S.sucursales.slice().sort((a,b)=>a.nombre.localeCompare(b.nombre)).map(x=>`<option value="${x.id}" ${s?.sucursalId===x.id?'selected':''}>${esc(x.nombre)}</option>`).join('');
+  const tipoOpts = S.tiposServicio.map(x=>`<option value="${x.id}" ${s?.tipoServicioId===x.id?'selected':''}>${esc(x.nombre)}</option>`).join('');
+  modal.innerHTML = `
+    <div class="modal-head"><h3>${isNew?'Asignar servicio':'Editar servicio'}</h3><button class="modal-close" id="mclose">✕</button></div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="field"><label>Sucursal</label><select id="f-suc" ${!isNew?'disabled':''}>${sucOpts}</select></div>
+        <div class="field"><label>Tipo de servicio</label><select id="f-tipo" ${!isNew?'disabled':''}>${tipoOpts}</select></div>
+      </div>
+      <div class="field"><label>Proveedor</label><input id="f-proveedor" value="${esc(s?.proveedor||'')}"></div>
+      <div class="row">
+        <div class="field"><label id="f-resp-label">${s?.tipoServicioId === 'alarma' ? 'Contactos declarados' : 'Responsable'}</label><input id="f-resp" value="${esc(s?.contacto?.responsable||'')}"></div>
+        <div class="field"><label>Teléfono</label><input id="f-tel" value="${esc(s?.contacto?.telefono||'')}"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Email</label><input id="f-email" value="${esc(s?.contacto?.email||'')}"></div>
+        <div class="field"><label>Nº de contrato</label><input id="f-contrato" value="${esc(s?.contrato||'')}"></div>
+      </div>
+      <div class="field"><label>Notas</label><textarea id="f-notas">${esc(s?.notas||'')}</textarea></div>
+    </div>
+    <div class="modal-foot">
+      ${!isNew?'<button class="btn danger" id="mdelete" style="margin-right:auto;">Eliminar</button>':''}
+      <button class="btn" id="mcancel">Cancelar</button><button class="btn primary" id="msave">Guardar</button>
+    </div>`;
+  backdrop.classList.remove('hidden');
+  document.getElementById('mclose').onclick = closeModal; document.getElementById('mcancel').onclick = closeModal;
+  if(isNew){
+    document.getElementById('f-tipo').addEventListener('change', (e)=>{
+      document.getElementById('f-resp-label').textContent = e.target.value === 'alarma' ? 'Contactos declarados' : 'Responsable';
+    });
+  }
+  if(!isNew){
+    document.getElementById('mdelete').onclick = async ()=>{
+      if(!confirm('¿Eliminar este servicio de la sucursal?')) return;
+      S.serviciosSucursal = S.serviciosSucursal.filter(x=>x.id!==s.id);
+      try{ await persist(`Eliminar servicio ${s.id}`); closeModal(); toast('Servicio eliminado'); }
+      catch(e){ toast('Error al guardar: '+e.message); }
+    };
+  }
+  document.getElementById('msave').onclick = async ()=>{
+    const sucursalId = isNew ? document.getElementById('f-suc').value : s.sucursalId;
+    const tipoServicioId = isNew ? document.getElementById('f-tipo').value : s.tipoServicioId;
+    const id = sucursalId+'__'+tipoServicioId;
+    const data = { id, sucursalId, tipoServicioId,
+      proveedor: document.getElementById('f-proveedor').value.trim(),
+      contacto: { responsable: document.getElementById('f-resp').value.trim(), telefono: document.getElementById('f-tel').value.trim(), email: document.getElementById('f-email').value.trim() },
+      contrato: document.getElementById('f-contrato').value.trim(), notas: document.getElementById('f-notas').value.trim() };
+    const idx = S.serviciosSucursal.findIndex(x=>x.id===id);
+    if(idx>=0) S.serviciosSucursal[idx] = data; else S.serviciosSucursal.push(data);
+    ensureTareasParaServicio(sucursalId, tipoServicioId);
+    try{ await persist(`Servicio ${tipoServicioId} en ${sucursalId}`); closeModal(); toast('Servicio guardado'); }
+    catch(e){ toast('Error al guardar: '+e.message); }
+  };
+}
+function ensureTareasParaServicio(sucursalId, tipoServicioId){
+  S.tareasCatalogo.filter(t=>t.tipoServicioId===tipoServicioId).forEach(t=>{
+    const id = sucursalId+'__'+t.id;
+    if(!S.tareasSucursal.find(x=> (x.sucursalId+'__'+x.tareaCatalogoId)===id)){
+      S.tareasSucursal.push({sucursalId, tareaCatalogoId:t.id, ultimaFecha:null, proximoVencimiento:null, historial:[]});
+    }
+  });
+}
+
+/* ============================= ADMIN: TAREAS CATÁLOGO ============================= */
+function renderAdminTareas(content){
+  const toolbar = el('div','admin-toolbar', `<div><strong>${S.tareasCatalogo.length}</strong> tareas en el catálogo</div>`);
+  const addBtn = el('button','btn primary','+ Agregar tarea'); addBtn.addEventListener('click', ()=>openTareaCatalogoModal());
+  toolbar.appendChild(addBtn); content.appendChild(toolbar);
+  const table = el('table','','<thead><tr><th>Tarea</th><th>Periodicidad</th><th>Servicio asociado</th><th>Sucursales donde aplica</th></tr></thead>');
+  const tbody = el('tbody');
+  S.tareasCatalogo.forEach(t=>{
+    const tipo = t.tipoServicioId ? byId(S.tiposServicio, t.tipoServicioId) : null;
+    const count = S.tareasSucursal.filter(x=>x.tareaCatalogoId===t.id).length;
+    tbody.appendChild(el('tr','', `<td>${esc(t.nombre)}</td><td>${esc(t.periodicidad)}</td><td>${tipo? (tipo.icono+' '+esc(tipo.nombre)) : 'Todas (general)'}</td><td>${count}</td>`));
+  });
+  table.appendChild(tbody);
+  const c = el('div','card',''); c.appendChild(table); content.appendChild(c);
+}
+function openTareaCatalogoModal(){
+  const backdrop = document.getElementById('modal-backdrop'); const modal = document.getElementById('modal');
+  const tipoOpts = '<option value="">Ninguno — aplica a todas las sucursales</option>' + S.tiposServicio.map(t=>`<option value="${t.id}">${esc(t.nombre)}</option>`).join('');
+  const periodOpts = PERIODOS.map(p=>`<option value="${p}">${p}</option>`).join('');
+  modal.innerHTML = `
+    <div class="modal-head"><h3>Nueva tarea de mantenimiento</h3><button class="modal-close" id="mclose">✕</button></div>
+    <div class="modal-body">
+      <div class="field"><label>Nombre de la tarea</label><input id="f-nombre" placeholder="Ej: Revisión de matafuegos"></div>
+      <div class="row">
+        <div class="field"><label>Periodicidad</label><select id="f-period">${periodOpts}</select></div>
+        <div class="field"><label>Servicio asociado (opcional)</label><select id="f-tipo">${tipoOpts}</select></div>
+      </div>
+      <div style="font-size:12.5px; color:var(--muted);">Si elegís un servicio, la tarea solo se genera para las sucursales que tengan ese servicio asignado.</div>
+    </div>
+    <div class="modal-foot"><button class="btn" id="mcancel">Cancelar</button><button class="btn primary" id="msave">Guardar</button></div>`;
+  backdrop.classList.remove('hidden');
+  document.getElementById('mclose').onclick = closeModal; document.getElementById('mcancel').onclick = closeModal;
+  document.getElementById('msave').onclick = async ()=>{
+    const nombre = document.getElementById('f-nombre').value.trim();
+    if(!nombre){ toast('Poné un nombre'); return; }
+    const periodicidad = document.getElementById('f-period').value;
+    const tipoServicioId = document.getElementById('f-tipo').value || null;
+    const id = slugify(nombre);
+    S.tareasCatalogo.push({id, nombre, periodicidad, periodicidadDias: PERIOD_DAYS[periodicidad], tipoServicioId});
+    const applicable = tipoServicioId ? S.serviciosSucursal.filter(x=>x.tipoServicioId===tipoServicioId).map(x=>x.sucursalId) : S.sucursales.map(x=>x.id);
+    applicable.forEach(sucursalId=>{
+      if(!S.tareasSucursal.find(x=>x.sucursalId===sucursalId && x.tareaCatalogoId===id)){
+        S.tareasSucursal.push({sucursalId, tareaCatalogoId:id, ultimaFecha:null, proximoVencimiento:null, historial:[]});
+      }
+    });
+    try{ await persist(`Tarea de catálogo: ${nombre}`); closeModal(); toast('Tarea agregada al catálogo'); }
+    catch(e){ toast('Error al guardar: '+e.message); }
+  };
+}
+
+init();
+</script>
+</body>
+</html>

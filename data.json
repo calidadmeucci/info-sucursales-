@@ -1,0 +1,1248 @@
+{
+  "sucursales": [
+    {
+      "id": "alliance-ctes"
+    },
+    {
+      "id": "alliance-r"
+    },
+    {
+      "id": "benelli"
+    },
+    {
+      "id": "dallas-ctes"
+    },
+    {
+      "id": "dallas-r"
+    },
+    {
+      "id": "kia"
+    },
+    {
+      "id": "meucci"
+    },
+    {
+      "id": "mg"
+    },
+    {
+      "id": "mm-3-de-abril"
+    },
+    {
+      "id": "mm-barranqueras"
+    },
+    {
+      "id": "mm-italia"
+    },
+    {
+      "id": "mm-juan-b-justo"
+    },
+    {
+      "id": "mm-ruta-11"
+    },
+    {
+      "id": "north"
+    },
+    {
+      "id": "re-ctes"
+    },
+    {
+      "id": "re-r"
+    },
+    {
+      "id": "scuderia-ctes"
+    },
+    {
+      "id": "scuderia-r"
+    }
+  ],
+  "tiposServicio": [
+    {
+      "id": "agua"
+    },
+    {
+      "id": "alarma"
+    },
+    {
+      "id": "aromatizadores"
+    },
+    {
+      "id": "cafeteria"
+    },
+    {
+      "id": "desagote-pozo"
+    },
+    {
+      "id": "electricidad"
+    },
+    {
+      "id": "grupo-elec"
+    },
+    {
+      "id": "herreria"
+    },
+    {
+      "id": "internet"
+    },
+    {
+      "id": "jardineria"
+    },
+    {
+      "id": "luz"
+    },
+    {
+      "id": "plomeria"
+    },
+    {
+      "id": "puertas-vidrios"
+    },
+    {
+      "id": "refrigeracion"
+    },
+    {
+      "id": "seguridad"
+    },
+    {
+      "id": "techista"
+    }
+  ],
+  "serviciosSucursal": [
+    {
+      "id": "alliance-ctes__agua"
+    },
+    {
+      "id": "alliance-ctes__alarma"
+    },
+    {
+      "id": "alliance-ctes__aromatizadores"
+    },
+    {
+      "id": "alliance-ctes__cafeteria"
+    },
+    {
+      "id": "alliance-ctes__electricidad"
+    },
+    {
+      "id": "alliance-ctes__herreria"
+    },
+    {
+      "id": "alliance-ctes__internet"
+    },
+    {
+      "id": "alliance-ctes__jardineria"
+    },
+    {
+      "id": "alliance-ctes__luz"
+    },
+    {
+      "id": "alliance-ctes__plomeria"
+    },
+    {
+      "id": "alliance-ctes__puertas-vidrios"
+    },
+    {
+      "id": "alliance-ctes__refrigeracion"
+    },
+    {
+      "id": "alliance-ctes__seguridad"
+    },
+    {
+      "id": "alliance-ctes__techista"
+    },
+    {
+      "id": "alliance-r__agua"
+    },
+    {
+      "id": "alliance-r__alarma"
+    },
+    {
+      "id": "alliance-r__aromatizadores"
+    },
+    {
+      "id": "alliance-r__cafeteria"
+    },
+    {
+      "id": "alliance-r__electricidad"
+    },
+    {
+      "id": "alliance-r__herreria"
+    },
+    {
+      "id": "alliance-r__internet"
+    },
+    {
+      "id": "alliance-r__jardineria"
+    },
+    {
+      "id": "alliance-r__luz"
+    },
+    {
+      "id": "alliance-r__puertas-vidrios"
+    },
+    {
+      "id": "alliance-r__refrigeracion"
+    },
+    {
+      "id": "alliance-r__techista"
+    },
+    {
+      "id": "benelli__agua"
+    },
+    {
+      "id": "benelli__alarma"
+    },
+    {
+      "id": "benelli__cafeteria"
+    },
+    {
+      "id": "benelli__electricidad"
+    },
+    {
+      "id": "benelli__herreria"
+    },
+    {
+      "id": "benelli__internet"
+    },
+    {
+      "id": "benelli__luz"
+    },
+    {
+      "id": "benelli__plomeria"
+    },
+    {
+      "id": "benelli__puertas-vidrios"
+    },
+    {
+      "id": "benelli__refrigeracion"
+    },
+    {
+      "id": "benelli__techista"
+    },
+    {
+      "id": "dallas-ctes__agua"
+    },
+    {
+      "id": "dallas-ctes__alarma"
+    },
+    {
+      "id": "dallas-ctes__aromatizadores"
+    },
+    {
+      "id": "dallas-ctes__cafeteria"
+    },
+    {
+      "id": "dallas-ctes__electricidad"
+    },
+    {
+      "id": "dallas-ctes__herreria"
+    },
+    {
+      "id": "dallas-ctes__internet"
+    },
+    {
+      "id": "dallas-ctes__luz"
+    },
+    {
+      "id": "dallas-ctes__plomeria"
+    },
+    {
+      "id": "dallas-ctes__puertas-vidrios"
+    },
+    {
+      "id": "dallas-ctes__refrigeracion"
+    },
+    {
+      "id": "dallas-ctes__seguridad"
+    },
+    {
+      "id": "dallas-ctes__techista"
+    },
+    {
+      "id": "dallas-r__agua"
+    },
+    {
+      "id": "dallas-r__aromatizadores"
+    },
+    {
+      "id": "dallas-r__cafeteria"
+    },
+    {
+      "id": "dallas-r__desagote-pozo"
+    },
+    {
+      "id": "dallas-r__electricidad"
+    },
+    {
+      "id": "dallas-r__grupo-elec"
+    },
+    {
+      "id": "dallas-r__herreria"
+    },
+    {
+      "id": "dallas-r__internet"
+    },
+    {
+      "id": "dallas-r__jardineria"
+    },
+    {
+      "id": "dallas-r__luz"
+    },
+    {
+      "id": "dallas-r__puertas-vidrios"
+    },
+    {
+      "id": "dallas-r__refrigeracion"
+    },
+    {
+      "id": "dallas-r__seguridad"
+    },
+    {
+      "id": "dallas-r__techista"
+    },
+    {
+      "id": "kia__agua"
+    },
+    {
+      "id": "kia__alarma"
+    },
+    {
+      "id": "kia__electricidad"
+    },
+    {
+      "id": "kia__herreria"
+    },
+    {
+      "id": "kia__internet"
+    },
+    {
+      "id": "kia__luz"
+    },
+    {
+      "id": "kia__puertas-vidrios"
+    },
+    {
+      "id": "kia__refrigeracion"
+    },
+    {
+      "id": "kia__techista"
+    },
+    {
+      "id": "meucci__agua"
+    },
+    {
+      "id": "meucci__cafeteria"
+    },
+    {
+      "id": "meucci__electricidad"
+    },
+    {
+      "id": "meucci__herreria"
+    },
+    {
+      "id": "meucci__internet"
+    },
+    {
+      "id": "meucci__jardineria"
+    },
+    {
+      "id": "meucci__luz"
+    },
+    {
+      "id": "meucci__puertas-vidrios"
+    },
+    {
+      "id": "meucci__refrigeracion"
+    },
+    {
+      "id": "meucci__seguridad"
+    },
+    {
+      "id": "meucci__techista"
+    },
+    {
+      "id": "mg__aromatizadores"
+    },
+    {
+      "id": "mg__cafeteria"
+    },
+    {
+      "id": "mg__electricidad"
+    },
+    {
+      "id": "mg__herreria"
+    },
+    {
+      "id": "mg__internet"
+    },
+    {
+      "id": "mg__luz"
+    },
+    {
+      "id": "mg__puertas-vidrios"
+    },
+    {
+      "id": "mg__techista"
+    },
+    {
+      "id": "mm-3-de-abril__agua"
+    },
+    {
+      "id": "mm-3-de-abril__alarma"
+    },
+    {
+      "id": "mm-3-de-abril__electricidad"
+    },
+    {
+      "id": "mm-3-de-abril__herreria"
+    },
+    {
+      "id": "mm-3-de-abril__internet"
+    },
+    {
+      "id": "mm-3-de-abril__luz"
+    },
+    {
+      "id": "mm-3-de-abril__plomeria"
+    },
+    {
+      "id": "mm-3-de-abril__puertas-vidrios"
+    },
+    {
+      "id": "mm-3-de-abril__refrigeracion"
+    },
+    {
+      "id": "mm-3-de-abril__techista"
+    },
+    {
+      "id": "mm-barranqueras__agua"
+    },
+    {
+      "id": "mm-barranqueras__alarma"
+    },
+    {
+      "id": "mm-barranqueras__electricidad"
+    },
+    {
+      "id": "mm-barranqueras__herreria"
+    },
+    {
+      "id": "mm-barranqueras__luz"
+    },
+    {
+      "id": "mm-barranqueras__puertas-vidrios"
+    },
+    {
+      "id": "mm-barranqueras__refrigeracion"
+    },
+    {
+      "id": "mm-barranqueras__techista"
+    },
+    {
+      "id": "mm-italia__agua"
+    },
+    {
+      "id": "mm-italia__alarma"
+    },
+    {
+      "id": "mm-italia__electricidad"
+    },
+    {
+      "id": "mm-italia__herreria"
+    },
+    {
+      "id": "mm-italia__internet"
+    },
+    {
+      "id": "mm-italia__luz"
+    },
+    {
+      "id": "mm-italia__puertas-vidrios"
+    },
+    {
+      "id": "mm-italia__refrigeracion"
+    },
+    {
+      "id": "mm-italia__techista"
+    },
+    {
+      "id": "mm-juan-b-justo__agua"
+    },
+    {
+      "id": "mm-juan-b-justo__alarma"
+    },
+    {
+      "id": "mm-juan-b-justo__electricidad"
+    },
+    {
+      "id": "mm-juan-b-justo__herreria"
+    },
+    {
+      "id": "mm-juan-b-justo__internet"
+    },
+    {
+      "id": "mm-juan-b-justo__luz"
+    },
+    {
+      "id": "mm-juan-b-justo__puertas-vidrios"
+    },
+    {
+      "id": "mm-juan-b-justo__refrigeracion"
+    },
+    {
+      "id": "mm-juan-b-justo__techista"
+    },
+    {
+      "id": "mm-ruta-11__desagote-pozo"
+    },
+    {
+      "id": "mm-ruta-11__electricidad"
+    },
+    {
+      "id": "mm-ruta-11__grupo-elec"
+    },
+    {
+      "id": "mm-ruta-11__herreria"
+    },
+    {
+      "id": "mm-ruta-11__internet"
+    },
+    {
+      "id": "mm-ruta-11__puertas-vidrios"
+    },
+    {
+      "id": "mm-ruta-11__refrigeracion"
+    },
+    {
+      "id": "mm-ruta-11__techista"
+    },
+    {
+      "id": "north__agua"
+    },
+    {
+      "id": "north__alarma"
+    },
+    {
+      "id": "north__aromatizadores"
+    },
+    {
+      "id": "north__cafeteria"
+    },
+    {
+      "id": "north__desagote-pozo"
+    },
+    {
+      "id": "north__electricidad"
+    },
+    {
+      "id": "north__herreria"
+    },
+    {
+      "id": "north__internet"
+    },
+    {
+      "id": "north__jardineria"
+    },
+    {
+      "id": "north__luz"
+    },
+    {
+      "id": "north__puertas-vidrios"
+    },
+    {
+      "id": "north__refrigeracion"
+    },
+    {
+      "id": "north__techista"
+    },
+    {
+      "id": "re-ctes__aromatizadores"
+    },
+    {
+      "id": "re-ctes__cafeteria"
+    },
+    {
+      "id": "re-ctes__electricidad"
+    },
+    {
+      "id": "re-ctes__herreria"
+    },
+    {
+      "id": "re-ctes__internet"
+    },
+    {
+      "id": "re-ctes__luz"
+    },
+    {
+      "id": "re-ctes__plomeria"
+    },
+    {
+      "id": "re-ctes__puertas-vidrios"
+    },
+    {
+      "id": "re-ctes__refrigeracion"
+    },
+    {
+      "id": "re-ctes__techista"
+    },
+    {
+      "id": "re-r__agua"
+    },
+    {
+      "id": "re-r__alarma"
+    },
+    {
+      "id": "re-r__aromatizadores"
+    },
+    {
+      "id": "re-r__cafeteria"
+    },
+    {
+      "id": "re-r__electricidad"
+    },
+    {
+      "id": "re-r__herreria"
+    },
+    {
+      "id": "re-r__internet"
+    },
+    {
+      "id": "re-r__jardineria"
+    },
+    {
+      "id": "re-r__luz"
+    },
+    {
+      "id": "re-r__puertas-vidrios"
+    },
+    {
+      "id": "re-r__refrigeracion"
+    },
+    {
+      "id": "re-r__techista"
+    },
+    {
+      "id": "scuderia-ctes__agua"
+    },
+    {
+      "id": "scuderia-ctes__aromatizadores"
+    },
+    {
+      "id": "scuderia-ctes__cafeteria"
+    },
+    {
+      "id": "scuderia-ctes__desagote-pozo"
+    },
+    {
+      "id": "scuderia-ctes__electricidad"
+    },
+    {
+      "id": "scuderia-ctes__grupo-elec"
+    },
+    {
+      "id": "scuderia-ctes__herreria"
+    },
+    {
+      "id": "scuderia-ctes__internet"
+    },
+    {
+      "id": "scuderia-ctes__jardineria"
+    },
+    {
+      "id": "scuderia-ctes__luz"
+    },
+    {
+      "id": "scuderia-ctes__plomeria"
+    },
+    {
+      "id": "scuderia-ctes__puertas-vidrios"
+    },
+    {
+      "id": "scuderia-ctes__refrigeracion"
+    },
+    {
+      "id": "scuderia-ctes__seguridad"
+    },
+    {
+      "id": "scuderia-ctes__techista"
+    },
+    {
+      "id": "scuderia-r__agua"
+    },
+    {
+      "id": "scuderia-r__alarma"
+    },
+    {
+      "id": "scuderia-r__aromatizadores"
+    },
+    {
+      "id": "scuderia-r__cafeteria"
+    },
+    {
+      "id": "scuderia-r__electricidad"
+    },
+    {
+      "id": "scuderia-r__grupo-elec"
+    },
+    {
+      "id": "scuderia-r__herreria"
+    },
+    {
+      "id": "scuderia-r__internet"
+    },
+    {
+      "id": "scuderia-r__jardineria"
+    },
+    {
+      "id": "scuderia-r__luz"
+    },
+    {
+      "id": "scuderia-r__puertas-vidrios"
+    },
+    {
+      "id": "scuderia-r__refrigeracion"
+    },
+    {
+      "id": "scuderia-r__seguridad"
+    },
+    {
+      "id": "scuderia-r__techista"
+    }
+  ],
+  "tareasCatalogo": [
+    {
+      "id": "aires-acondicionados"
+    },
+    {
+      "id": "cartelera-exterior"
+    },
+    {
+      "id": "control-plagas"
+    },
+    {
+      "id": "corte-pasto"
+    },
+    {
+      "id": "limpieza-desagues"
+    },
+    {
+      "id": "limpieza-tanques"
+    },
+    {
+      "id": "mantenimiento-aromatizadores"
+    },
+    {
+      "id": "mantenimiento-jardineria"
+    },
+    {
+      "id": "matafuegos"
+    },
+    {
+      "id": "pintura-exterior"
+    },
+    {
+      "id": "recarga-aromatizadores"
+    },
+    {
+      "id": "servicio-generadores"
+    }
+  ],
+  "tareasSucursal": [
+    {
+      "id": "alliance-ctes__aires-acondicionados"
+    },
+    {
+      "id": "alliance-ctes__cartelera-exterior"
+    },
+    {
+      "id": "alliance-ctes__control-plagas"
+    },
+    {
+      "id": "alliance-ctes__corte-pasto"
+    },
+    {
+      "id": "alliance-ctes__limpieza-desagues"
+    },
+    {
+      "id": "alliance-ctes__limpieza-tanques"
+    },
+    {
+      "id": "alliance-ctes__mantenimiento-aromatizadores"
+    },
+    {
+      "id": "alliance-ctes__mantenimiento-jardineria"
+    },
+    {
+      "id": "alliance-ctes__matafuegos"
+    },
+    {
+      "id": "alliance-ctes__pintura-exterior"
+    },
+    {
+      "id": "alliance-ctes__recarga-aromatizadores"
+    },
+    {
+      "id": "alliance-r__aires-acondicionados"
+    },
+    {
+      "id": "alliance-r__cartelera-exterior"
+    },
+    {
+      "id": "alliance-r__control-plagas"
+    },
+    {
+      "id": "alliance-r__corte-pasto"
+    },
+    {
+      "id": "alliance-r__limpieza-desagues"
+    },
+    {
+      "id": "alliance-r__limpieza-tanques"
+    },
+    {
+      "id": "alliance-r__mantenimiento-aromatizadores"
+    },
+    {
+      "id": "alliance-r__mantenimiento-jardineria"
+    },
+    {
+      "id": "alliance-r__matafuegos"
+    },
+    {
+      "id": "alliance-r__pintura-exterior"
+    },
+    {
+      "id": "alliance-r__recarga-aromatizadores"
+    },
+    {
+      "id": "benelli__aires-acondicionados"
+    },
+    {
+      "id": "benelli__cartelera-exterior"
+    },
+    {
+      "id": "benelli__control-plagas"
+    },
+    {
+      "id": "benelli__limpieza-desagues"
+    },
+    {
+      "id": "benelli__limpieza-tanques"
+    },
+    {
+      "id": "benelli__matafuegos"
+    },
+    {
+      "id": "benelli__pintura-exterior"
+    },
+    {
+      "id": "dallas-ctes__aires-acondicionados"
+    },
+    {
+      "id": "dallas-ctes__cartelera-exterior"
+    },
+    {
+      "id": "dallas-ctes__control-plagas"
+    },
+    {
+      "id": "dallas-ctes__limpieza-desagues"
+    },
+    {
+      "id": "dallas-ctes__limpieza-tanques"
+    },
+    {
+      "id": "dallas-ctes__mantenimiento-aromatizadores"
+    },
+    {
+      "id": "dallas-ctes__matafuegos"
+    },
+    {
+      "id": "dallas-ctes__pintura-exterior"
+    },
+    {
+      "id": "dallas-ctes__recarga-aromatizadores"
+    },
+    {
+      "id": "dallas-r__aires-acondicionados"
+    },
+    {
+      "id": "dallas-r__cartelera-exterior"
+    },
+    {
+      "id": "dallas-r__control-plagas"
+    },
+    {
+      "id": "dallas-r__corte-pasto"
+    },
+    {
+      "id": "dallas-r__limpieza-desagues"
+    },
+    {
+      "id": "dallas-r__limpieza-tanques"
+    },
+    {
+      "id": "dallas-r__mantenimiento-aromatizadores"
+    },
+    {
+      "id": "dallas-r__mantenimiento-jardineria"
+    },
+    {
+      "id": "dallas-r__matafuegos"
+    },
+    {
+      "id": "dallas-r__pintura-exterior"
+    },
+    {
+      "id": "dallas-r__recarga-aromatizadores"
+    },
+    {
+      "id": "dallas-r__servicio-generadores"
+    },
+    {
+      "id": "kia__aires-acondicionados"
+    },
+    {
+      "id": "kia__cartelera-exterior"
+    },
+    {
+      "id": "kia__control-plagas"
+    },
+    {
+      "id": "kia__limpieza-desagues"
+    },
+    {
+      "id": "kia__limpieza-tanques"
+    },
+    {
+      "id": "kia__matafuegos"
+    },
+    {
+      "id": "kia__pintura-exterior"
+    },
+    {
+      "id": "meucci__aires-acondicionados"
+    },
+    {
+      "id": "meucci__cartelera-exterior"
+    },
+    {
+      "id": "meucci__control-plagas"
+    },
+    {
+      "id": "meucci__corte-pasto"
+    },
+    {
+      "id": "meucci__limpieza-desagues"
+    },
+    {
+      "id": "meucci__limpieza-tanques"
+    },
+    {
+      "id": "meucci__mantenimiento-jardineria"
+    },
+    {
+      "id": "meucci__matafuegos"
+    },
+    {
+      "id": "meucci__pintura-exterior"
+    },
+    {
+      "id": "mg__aires-acondicionados"
+    },
+    {
+      "id": "mg__cartelera-exterior"
+    },
+    {
+      "id": "mg__control-plagas"
+    },
+    {
+      "id": "mg__limpieza-desagues"
+    },
+    {
+      "id": "mg__limpieza-tanques"
+    },
+    {
+      "id": "mg__mantenimiento-aromatizadores"
+    },
+    {
+      "id": "mg__matafuegos"
+    },
+    {
+      "id": "mg__pintura-exterior"
+    },
+    {
+      "id": "mg__recarga-aromatizadores"
+    },
+    {
+      "id": "mm-3-de-abril__aires-acondicionados"
+    },
+    {
+      "id": "mm-3-de-abril__cartelera-exterior"
+    },
+    {
+      "id": "mm-3-de-abril__control-plagas"
+    },
+    {
+      "id": "mm-3-de-abril__limpieza-desagues"
+    },
+    {
+      "id": "mm-3-de-abril__limpieza-tanques"
+    },
+    {
+      "id": "mm-3-de-abril__matafuegos"
+    },
+    {
+      "id": "mm-3-de-abril__pintura-exterior"
+    },
+    {
+      "id": "mm-barranqueras__aires-acondicionados"
+    },
+    {
+      "id": "mm-barranqueras__cartelera-exterior"
+    },
+    {
+      "id": "mm-barranqueras__control-plagas"
+    },
+    {
+      "id": "mm-barranqueras__limpieza-desagues"
+    },
+    {
+      "id": "mm-barranqueras__limpieza-tanques"
+    },
+    {
+      "id": "mm-barranqueras__matafuegos"
+    },
+    {
+      "id": "mm-barranqueras__pintura-exterior"
+    },
+    {
+      "id": "mm-italia__aires-acondicionados"
+    },
+    {
+      "id": "mm-italia__cartelera-exterior"
+    },
+    {
+      "id": "mm-italia__control-plagas"
+    },
+    {
+      "id": "mm-italia__limpieza-desagues"
+    },
+    {
+      "id": "mm-italia__limpieza-tanques"
+    },
+    {
+      "id": "mm-italia__matafuegos"
+    },
+    {
+      "id": "mm-italia__pintura-exterior"
+    },
+    {
+      "id": "mm-juan-b-justo__aires-acondicionados"
+    },
+    {
+      "id": "mm-juan-b-justo__cartelera-exterior"
+    },
+    {
+      "id": "mm-juan-b-justo__control-plagas"
+    },
+    {
+      "id": "mm-juan-b-justo__limpieza-desagues"
+    },
+    {
+      "id": "mm-juan-b-justo__limpieza-tanques"
+    },
+    {
+      "id": "mm-juan-b-justo__matafuegos"
+    },
+    {
+      "id": "mm-juan-b-justo__pintura-exterior"
+    },
+    {
+      "id": "mm-ruta-11__aires-acondicionados"
+    },
+    {
+      "id": "mm-ruta-11__cartelera-exterior"
+    },
+    {
+      "id": "mm-ruta-11__control-plagas"
+    },
+    {
+      "id": "mm-ruta-11__limpieza-desagues"
+    },
+    {
+      "id": "mm-ruta-11__limpieza-tanques"
+    },
+    {
+      "id": "mm-ruta-11__matafuegos"
+    },
+    {
+      "id": "mm-ruta-11__pintura-exterior"
+    },
+    {
+      "id": "mm-ruta-11__servicio-generadores"
+    },
+    {
+      "id": "north__aires-acondicionados"
+    },
+    {
+      "id": "north__cartelera-exterior"
+    },
+    {
+      "id": "north__control-plagas"
+    },
+    {
+      "id": "north__corte-pasto"
+    },
+    {
+      "id": "north__limpieza-desagues"
+    },
+    {
+      "id": "north__limpieza-tanques"
+    },
+    {
+      "id": "north__mantenimiento-aromatizadores"
+    },
+    {
+      "id": "north__mantenimiento-jardineria"
+    },
+    {
+      "id": "north__matafuegos"
+    },
+    {
+      "id": "north__pintura-exterior"
+    },
+    {
+      "id": "north__recarga-aromatizadores"
+    },
+    {
+      "id": "re-ctes__aires-acondicionados"
+    },
+    {
+      "id": "re-ctes__cartelera-exterior"
+    },
+    {
+      "id": "re-ctes__control-plagas"
+    },
+    {
+      "id": "re-ctes__limpieza-desagues"
+    },
+    {
+      "id": "re-ctes__limpieza-tanques"
+    },
+    {
+      "id": "re-ctes__mantenimiento-aromatizadores"
+    },
+    {
+      "id": "re-ctes__matafuegos"
+    },
+    {
+      "id": "re-ctes__pintura-exterior"
+    },
+    {
+      "id": "re-ctes__recarga-aromatizadores"
+    },
+    {
+      "id": "re-r__aires-acondicionados"
+    },
+    {
+      "id": "re-r__cartelera-exterior"
+    },
+    {
+      "id": "re-r__control-plagas"
+    },
+    {
+      "id": "re-r__corte-pasto"
+    },
+    {
+      "id": "re-r__limpieza-desagues"
+    },
+    {
+      "id": "re-r__limpieza-tanques"
+    },
+    {
+      "id": "re-r__mantenimiento-aromatizadores"
+    },
+    {
+      "id": "re-r__mantenimiento-jardineria"
+    },
+    {
+      "id": "re-r__matafuegos"
+    },
+    {
+      "id": "re-r__pintura-exterior"
+    },
+    {
+      "id": "re-r__recarga-aromatizadores"
+    },
+    {
+      "id": "scuderia-ctes__aires-acondicionados"
+    },
+    {
+      "id": "scuderia-ctes__cartelera-exterior"
+    },
+    {
+      "id": "scuderia-ctes__control-plagas"
+    },
+    {
+      "id": "scuderia-ctes__corte-pasto"
+    },
+    {
+      "id": "scuderia-ctes__limpieza-desagues"
+    },
+    {
+      "id": "scuderia-ctes__limpieza-tanques"
+    },
+    {
+      "id": "scuderia-ctes__mantenimiento-aromatizadores"
+    },
+    {
+      "id": "scuderia-ctes__mantenimiento-jardineria"
+    },
+    {
+      "id": "scuderia-ctes__matafuegos"
+    },
+    {
+      "id": "scuderia-ctes__pintura-exterior"
+    },
+    {
+      "id": "scuderia-ctes__recarga-aromatizadores"
+    },
+    {
+      "id": "scuderia-ctes__servicio-generadores"
+    },
+    {
+      "id": "scuderia-r__aires-acondicionados"
+    },
+    {
+      "id": "scuderia-r__cartelera-exterior"
+    },
+    {
+      "id": "scuderia-r__control-plagas"
+    },
+    {
+      "id": "scuderia-r__corte-pasto"
+    },
+    {
+      "id": "scuderia-r__limpieza-desagues"
+    },
+    {
+      "id": "scuderia-r__limpieza-tanques"
+    },
+    {
+      "id": "scuderia-r__mantenimiento-aromatizadores"
+    },
+    {
+      "id": "scuderia-r__mantenimiento-jardineria"
+    },
+    {
+      "id": "scuderia-r__matafuegos"
+    },
+    {
+      "id": "scuderia-r__pintura-exterior"
+    },
+    {
+      "id": "scuderia-r__recarga-aromatizadores"
+    },
+    {
+      "id": "scuderia-r__servicio-generadores"
+    }
+  ]
+}

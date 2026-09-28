@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Panel de Sucursales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#F4F5F1; --surface:#FFFFFF; --surface-2:#EEF0EA;
+  --ink:#1C2321; --muted:#65706A; --line:#DBDFD8;
+  --brand:#2E4636; --brand-ink:#FFFFFF; --brand-soft:#DCE7DE; --accent:#4C7A5B;
+  --danger:#A23E2A; --danger-soft:#F3E1DB; --warn:#B8823A; --warn-soft:#F4E7D3;
+  --ok:#3C7A54; --ok-soft:#DDEBE1; --info:#4A5B72; --info-soft:#E2E7ED;
+  --shadow:0 1px 2px rgba(28,35,33,.06), 0 1px 1px rgba(28,35,33,.04); --radius:10px;
+}
+:root:not([data-theme="light"]){ @media (prefers-color-scheme: dark){
+  --bg:#181C19; --surface:#20251F; --surface-2:#262B24; --ink:#EDEFEA; --muted:#9AA39B; --line:#343B34;
+  --brand:#4C7A5B; --brand-ink:#0E1410; --brand-soft:#243429; --accent:#6FA080;
+  --danger:#D6785F; --danger-soft:#3A2621; --warn:#D9A85B; --warn-soft:#3A3120;
+  --ok:#6FA080; --ok-soft:#233A2C; --info:#8FA3BC; --info-soft:#232B34;
+}}
+html{scroll-padding-top:env(safe-area-inset-top,0px);}
+*{box-sizing:border-box;}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:'Inter',system-ui,-apple-system,sans-serif; font-size:15px; line-height:1.5; min-height:100vh; -webkit-font-smoothing:antialiased;}
+h1,h2,h3{font-family:'Space Grotesk',system-ui,sans-serif; letter-spacing:-0.01em;}
+.mono{font-family:'IBM Plex Mono',monospace; font-size:0.88em;}
+
+#shell{display:flex; min-height:100vh;}
+#rail{width:220px; flex:0 0 220px; background:var(--brand); color:var(--brand-ink); padding:20px 14px; display:flex; flex-direction:column; gap:4px; position:sticky; top:0; height:100vh; overflow-y:auto;}
+#rail .logo{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:18px; padding:6px 10px 18px; line-height:1.2;}
+#rail .logo small{display:block; font-weight:500; font-size:12px; opacity:.72; font-family:'Inter',sans-serif; margin-top:2px;}
+.navbtn{display:flex; align-items:center; gap:10px; padding:10px 12px; border:none; background:transparent; color:var(--brand-ink); border-radius:8px; text-align:left; font-size:14.5px; font-weight:500; opacity:.82; width:100%; cursor:pointer;}
+.navbtn .ic{font-size:17px; width:20px; text-align:center;}
+.navbtn.active{background:rgba(255,255,255,.14); opacity:1;}
+.navbtn:hover{opacity:1;}
+#railfoot{margin-top:auto; font-size:11.5px; opacity:.6; padding:10px; line-height:1.5;}
+
+#main{flex:1; min-width:0; display:flex; flex-direction:column;}
+#topbar{padding:16px 28px; padding-top:calc(16px + env(safe-area-inset-top,0px)); border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; gap:16px; background:var(--surface); position:sticky; top:0; z-index:5; flex-wrap:wrap;}
+#topbar h1{font-size:20px; margin:0; font-weight:600;}
+#topbar .sub{color:var(--muted); font-size:13px; margin-top:2px;}
+#content{padding:24px 28px 60px; max-width:1180px; width:100%;}
+.hidden{display:none !important;}
+
+.card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow);}
+.pill{display:inline-flex; align-items:center; gap:5px; padding:3px 10px; border-radius:100px; font-size:12px; font-weight:600;}
+.pill.ok{background:var(--ok-soft); color:var(--ok);} .pill.warn{background:var(--warn-soft); color:var(--warn);}
+.pill.danger{background:var(--danger-soft); color:var(--danger);} .pill.info{background:var(--info-soft); color:var(--info);}
+.emptystate{padding:40px 20px; text-align:center; color:var(--muted);}
+.emptystate .big{font-size:32px; margin-bottom:8px;}
+
+.filters{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px;}
+.filters select{padding:7px 10px; border:1px solid var(--line); border-radius:7px; background:var(--surface); color:var(--ink); font-size:13.5px;}
+.group-title{font-size:13px; font-weight:700; margin:22px 0 10px; display:flex; align-items:center; gap:8px;}
+.group-title .cnt{color:var(--muted); font-weight:500; font-family:'IBM Plex Mono',monospace; font-size:12px;}
+.task-row{display:flex; align-items:center; gap:14px; padding:13px 16px; border:1px solid var(--line); border-radius:9px; background:var(--surface); margin-bottom:8px;}
+.task-row .tinfo{flex:1; min-width:0;}
+.task-row .tname{font-weight:600; font-size:14px;}
+.task-row .tsub{font-size:12.5px; color:var(--muted); margin-top:2px;}
+.task-row .tdate{font-size:12.5px; color:var(--muted); font-family:'IBM Plex Mono',monospace; flex:0 0 auto; text-align:right; min-width:110px;}
+
+.md{display:flex; gap:20px; align-items:flex-start;}
+.md-list{flex:0 0 280px; display:flex; flex-direction:column; gap:14px;}
+.prov-group{display:flex; flex-direction:column; gap:2px;}
+.prov-title{font-size:12px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; padding:6px 10px 4px;}
+.suc-item{padding:9px 10px; border-radius:8px; border:1px solid transparent; text-align:left; background:transparent; display:flex; justify-content:space-between; align-items:center; gap:8px; width:100%; cursor:pointer;}
+.suc-item:hover{background:var(--surface-2);}
+.suc-item.active{background:var(--brand-soft); color:var(--brand); font-weight:600;}
+.suc-item .cnt{font-size:11.5px; color:var(--muted); font-family:'IBM Plex Mono',monospace;}
+.md-detail{flex:1; min-width:0;}
+.detail-head{padding:18px 20px; border-bottom:1px solid var(--line);}
+.detail-head h2{margin:0 0 4px; font-size:19px;}
+.detail-head .addr{color:var(--muted); font-size:13.5px;}
+.svc-list{padding:6px 20px 18px;}
+.svc-row{display:flex; gap:12px; align-items:flex-start; padding:13px 0; border-bottom:1px solid var(--line);}
+.svc-row:last-child{border-bottom:none;}
+.svc-ic{font-size:20px; width:28px; text-align:center; flex:0 0 28px;}
+.svc-body{flex:1; min-width:0;}
+.svc-name{font-weight:600; font-size:14.5px;}
+.svc-detail{color:var(--muted); font-size:13px; margin-top:2px; line-height:1.5;}
+
+#banner{background:var(--warn-soft); color:var(--warn); padding:10px 20px; font-size:13px; text-align:center;}
+
+@media (max-width: 760px){
+  #shell{flex-direction:column;}
+  #rail{position:fixed; bottom:0; left:0; right:0; top:auto; width:100%; height:auto; flex-direction:row; padding:6px 8px calc(6px + env(safe-area-inset-bottom,0px)); z-index:20; box-shadow:0 -2px 10px rgba(0,0,0,.12); gap:2px; justify-content:space-around;}
+  #rail .logo, #railfoot{display:none;}
+  .navbtn{flex-direction:column; font-size:11px; gap:3px; padding:6px 8px; flex:1;}
+  .navbtn .ic{font-size:19px;}
+  #main{padding-bottom:64px;}
+  #content{padding:18px 16px 40px;}
+  .md{flex-direction:column;}
+  .md-list{flex:none; width:100%;}
+  #topbar{padding:14px 16px; padding-top:calc(14px + env(safe-area-inset-top,0px));}
+}
+</style>
+</head>
+<body>
+<div id="banner" class="hidden"></div>
+<div id="shell">
+  <nav id="rail">
+    <div class="logo">Panel de Sucursales<small>Servicios &amp; Mantenimiento</small></div>
+    <button class="navbtn" data-tab="sucursales"><span class="ic">🏢</span><span>Sucursales</span></button>
+    <button class="navbtn" data-tab="mantenimiento"><span class="ic">🛠️</span><span>Mantenimiento</span></button>
+    <div id="railfoot">Vista de consulta. Los cambios se cargan desde el panel de administración.</div>
+  </nav>
+  <div id="main">
+    <div id="topbar">
+      <div><h1 id="topbar-title">Sucursales</h1><div class="sub" id="topbar-sub">Provincia → sucursal → servicios y contactos</div></div>
+    </div>
+    <div id="content"></div>
+  </div>
+</div>
+
+<script>
+const S = { sucursales:[], tiposServicio:[], serviciosSucursal:[], tareasCatalogo:[], tareasSucursal:[],
+  tab:'sucursales', selectedSucursal:null, mantFiltro:{sucursal:'', tipoServicio:''} };
+
+function esc(s){ return (s==null?'':String(s)).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function el(tag, cls, html){ const e=document.createElement(tag); if(cls) e.className=cls; if(html!=null) e.innerHTML=html; return e; }
+function byId(arr, id){ return arr.find(x=>x.id===id); }
+function todayISO(){ return new Date().toISOString().slice(0,10); }
+function addDays(iso, days){ const d = new Date(iso+'T00:00:00'); d.setDate(d.getDate()+days); return d.toISOString().slice(0,10); }
+function fmtDate(iso){ if(!iso) return '—'; const d = new Date(iso+'T00:00:00'); return d.toLocaleDateString('es-AR', {day:'2-digit', month:'short', year:'numeric'}); }
+
+async function init(){
+  document.querySelectorAll('.navbtn').forEach(b=>b.addEventListener('click', ()=>{ S.tab=b.dataset.tab; render(); }));
+  try{
+    const res = await fetch('./data.json', {cache:'no-store'});
+    if(!res.ok) throw new Error(res.status);
+    const data = await res.json();
+    Object.assign(S, data);
+  }catch(e){
+    document.getElementById('banner').textContent = 'No se pudo cargar data.json — revisá que el archivo exista en este repositorio.';
+    document.getElementById('banner').classList.remove('hidden');
+  }
+  render();
+}
+
+function render(){
+  document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active', b.dataset.tab===S.tab));
+  const titles = {
+    sucursales: ['Sucursales', 'Provincia → sucursal → servicios y contactos'],
+    mantenimiento: ['Mantenimiento', 'Estado de las tareas programadas por sucursal'],
+  };
+  document.getElementById('topbar-title').textContent = titles[S.tab][0];
+  document.getElementById('topbar-sub').textContent = titles[S.tab][1];
+  const content = document.getElementById('content');
+  content.innerHTML = '';
+  if(S.tab==='sucursales') renderSucursales(content);
+  if(S.tab==='mantenimiento') renderMantenimiento(content);
+}
+
+function renderSucursales(content){
+  const wrap = document.createElement('div'); wrap.className='md';
+  const list = document.createElement('div'); list.className='md-list';
+  const byProv = {};
+  S.sucursales.slice().sort((a,b)=>a.nombre.localeCompare(b.nombre)).forEach(s=>{
+    const p = s.provincia || 'Sin provincia';
+    (byProv[p] = byProv[p]||[]).push(s);
+  });
+  const provNames = Object.keys(byProv).sort();
+  if(!S.selectedSucursal && S.sucursales.length) S.selectedSucursal = S.sucursales[0].id;
+  provNames.forEach(p=>{
+    const g = document.createElement('div'); g.className='prov-group';
+    g.appendChild(el('div','prov-title', esc(p)));
+    byProv[p].forEach(s=>{
+      const svcCount = S.serviciosSucursal.filter(x=>x.sucursalId===s.id).length;
+      const btn = document.createElement('button');
+      btn.className = 'suc-item' + (s.id===S.selectedSucursal?' active':'');
+      btn.innerHTML = `<span>${esc(s.nombre)}</span><span class="cnt">${svcCount} serv.</span>`;
+      btn.addEventListener('click', ()=>{ S.selectedSucursal = s.id; render(); });
+      g.appendChild(btn);
+    });
+    list.appendChild(g);
+  });
+  wrap.appendChild(list);
+
+  const detail = document.createElement('div'); detail.className='md-detail card';
+  const suc = byId(S.sucursales, S.selectedSucursal);
+  if(!suc){
+    detail.innerHTML = '<div class="emptystate"><div class="big">🏢</div>Elegí una sucursal para ver sus servicios.</div>';
+  } else {
+    const head = document.createElement('div'); head.className='detail-head';
+    head.innerHTML = `<h2>${esc(suc.nombre)}</h2><div class="addr">${esc(suc.direccion)||'Sin dirección registrada'}${suc.provincia? ' · '+esc(suc.provincia):''}</div>`;
+    detail.appendChild(head);
+    const svcs = S.serviciosSucursal.filter(x=>x.sucursalId===suc.id);
+    const svcList = document.createElement('div'); svcList.className='svc-list';
+    if(!svcs.length){
+      svcList.innerHTML = '<div class="emptystate">Todavía no hay servicios cargados para esta sucursal.</div>';
+    } else {
+      svcs.sort((a,b)=>{
+        const ta = byId(S.tiposServicio,a.tipoServicioId), tb = byId(S.tiposServicio,b.tipoServicioId);
+        return (ta?.nombre||'').localeCompare(tb?.nombre||'');
+      }).forEach(s=>{
+        const tipo = byId(S.tiposServicio, s.tipoServicioId) || {nombre:s.tipoServicioId, icono:'•'};
+        const row = document.createElement('div'); row.className='svc-row';
+        const bits = [];
+        if(s.proveedor) bits.push(`<span>${esc(s.proveedor)}</span>`);
+        if(s.contacto && s.contacto.responsable){
+          const label = s.tipoServicioId === 'alarma' ? 'Contactos declarados' : null;
+          bits.push(label ? `${label}: ${esc(s.contacto.responsable)}` : esc(s.contacto.responsable));
+        }
+        if(s.contacto && s.contacto.telefono) bits.push('☎ '+esc(s.contacto.telefono));
+        if(s.contacto && s.contacto.email) bits.push('✉ '+esc(s.contacto.email));
+        if(s.contrato) bits.push('Contrato: '+esc(s.contrato));
+        row.innerHTML = `<div class="svc-ic">${tipo.icono||'•'}</div><div class="svc-body">
+          <div class="svc-name">${esc(tipo.nombre)}</div>
+          <div class="svc-detail">${bits.join(' · ') || 'Sin datos de contacto'}${s.notas? '<br>'+esc(s.notas):''}</div></div>`;
+        svcList.appendChild(row);
+      });
+    }
+    detail.appendChild(svcList);
+  }
+  wrap.appendChild(detail);
+  content.appendChild(wrap);
+}
+
+function estadoDe(t){
+  if(!t.ultimaFecha || !t.proximoVencimiento) return 'sin-registro';
+  const hoy = todayISO();
+  if(t.proximoVencimiento < hoy) return 'vencido';
+  if(t.proximoVencimiento <= addDays(hoy,7)) return 'proximo';
+  return 'al-dia';
+}
+function estadoInfo(e){
+  return {'vencido':{label:'Vencido',cls:'danger'},'proximo':{label:'Próximo a vencer',cls:'warn'},
+    'al-dia':{label:'Al día',cls:'ok'},'sin-registro':{label:'Sin registro',cls:'info'}}[e];
+}
+function enrichTarea(t){
+  return {...t, cat: byId(S.tareasCatalogo, t.tareaCatalogoId)||{}, suc: byId(S.sucursales, t.sucursalId)||{}, estado: estadoDe(t)};
+}
+
+function renderMantenimiento(content){
+  const filters = document.createElement('div'); filters.className='filters';
+  const selSuc = document.createElement('select');
+  selSuc.innerHTML = '<option value="">Todas las sucursales</option>' +
+    S.sucursales.slice().sort((a,b)=>a.nombre.localeCompare(b.nombre)).map(s=>`<option value="${s.id}">${esc(s.nombre)}</option>`).join('');
+  selSuc.value = S.mantFiltro.sucursal;
+  selSuc.addEventListener('change', ()=>{ S.mantFiltro.sucursal = selSuc.value; render(); });
+  const selTipo = document.createElement('select');
+  selTipo.innerHTML = '<option value="">Todos los servicios</option>' +
+    S.tiposServicio.map(t=>`<option value="${t.id}">${esc(t.nombre)}</option>`).join('');
+  selTipo.value = S.mantFiltro.tipoServicio;
+  selTipo.addEventListener('change', ()=>{ S.mantFiltro.tipoServicio = selTipo.value; render(); });
+  filters.appendChild(selSuc); filters.appendChild(selTipo);
+  content.appendChild(filters);
+
+  let tareas = S.tareasSucursal.map(enrichTarea);
+  if(S.mantFiltro.sucursal) tareas = tareas.filter(t=>t.sucursalId===S.mantFiltro.sucursal);
+  if(S.mantFiltro.tipoServicio) tareas = tareas.filter(t=>t.cat.tipoServicioId===S.mantFiltro.tipoServicio);
+
+  const groups = [['vencido','Vencidas'],['proximo','Próximas a vencer (7 días)'],['sin-registro','Sin registro todavía'],['al-dia','Al día']];
+  let any = false;
+  groups.forEach(([key,label])=>{
+    const items = tareas.filter(t=>t.estado===key).sort((a,b)=>(a.proximoVencimiento||'')<(b.proximoVencimiento||'')?-1:1);
+    if(!items.length) return;
+    any = true;
+    content.appendChild(el('div','group-title', `${label} <span class="cnt">${items.length}</span>`));
+    items.forEach(t=>{
+      const info = estadoInfo(t.estado);
+      const row = el('div','task-row', `
+        <div class="tinfo"><div class="tname">${esc(t.cat.nombre||'—')}</div><div class="tsub">${esc(t.suc.nombre||'—')} · ${esc(t.cat.periodicidad||'')}</div></div>
+        <span class="pill ${info.cls}">${info.label}</span>
+        <div class="tdate">${t.proximoVencimiento? 'vence '+fmtDate(t.proximoVencimiento) : 'nunca realizada'}</div>`);
+      content.appendChild(row);
+    });
+  });
+  if(!any) content.appendChild(el('div','emptystate','<div class="big">✅</div>No hay tareas para estos filtros.'));
+}
+
+init();
+</script>
+</body>
+</html>
