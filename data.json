@@ -1,1247 +1,4377 @@
 {
   "sucursales": [
     {
+      "direccion": "Independencia 5402",
+      "nombre": "Alliance Ctes",
+      "provincia": "Corrientes",
       "id": "alliance-ctes"
     },
     {
+      "direccion": "AV. 25 de mayo 1113",
+      "nombre": "Alliance R.",
+      "provincia": "Chaco",
       "id": "alliance-r"
     },
     {
+      "direccion": "av independencia 3581",
+      "nombre": "Benelli",
+      "provincia": "Corrientes",
       "id": "benelli"
     },
     {
+      "direccion": "Av ferre 1899",
+      "nombre": "Dallas Ctes",
+      "provincia": "Corrientes",
       "id": "dallas-ctes"
     },
     {
+      "direccion": "",
+      "nombre": "Dallas R.",
+      "provincia": "Chaco",
       "id": "dallas-r"
     },
     {
+      "direccion": "",
+      "nombre": "KIA",
+      "provincia": "Chaco",
       "id": "kia"
     },
     {
+      "direccion": "",
+      "nombre": "Meucci",
+      "provincia": "Chaco",
       "id": "meucci"
     },
     {
+      "direccion": "",
+      "nombre": "MG",
+      "provincia": "Chaco",
       "id": "mg"
     },
     {
+      "direccion": "AV FERRE 1690",
+      "nombre": "MM 3 de abril",
+      "provincia": "Corrientes",
       "id": "mm-3-de-abril"
     },
     {
+      "direccion": "Diagonal Eva Peron 495 Bqueras",
+      "nombre": "MM Barranqueras",
+      "provincia": "Chaco",
       "id": "mm-barranqueras"
     },
     {
+      "direccion": "AV. ITALIA 123",
+      "nombre": "MM italia",
+      "provincia": "Chaco",
       "id": "mm-italia"
     },
     {
+      "direccion": "juan b justo 282",
+      "nombre": "MM juan B justo",
+      "provincia": "Chaco",
       "id": "mm-juan-b-justo"
     },
     {
+      "direccion": "",
+      "nombre": "MM ruta 11",
+      "provincia": "Chaco",
       "id": "mm-ruta-11"
     },
     {
+      "direccion": "Av. 25 de Mayo 2338",
+      "nombre": "North",
+      "provincia": "Chaco",
       "id": "north"
     },
     {
+      "direccion": "",
+      "nombre": "RE ctes",
+      "provincia": "Corrientes",
       "id": "re-ctes"
     },
     {
+      "direccion": "Av. Sarmiento 1901",
+      "nombre": "RE R.",
+      "provincia": "Chaco",
       "id": "re-r"
     },
     {
+      "direccion": "",
+      "nombre": "Scuderia Ctes",
+      "provincia": "Corrientes",
       "id": "scuderia-ctes"
     },
     {
+      "direccion": "Av Sarmiento 1935",
+      "nombre": "Scuderia R.",
+      "provincia": "Chaco",
       "id": "scuderia-r"
     }
   ],
   "tiposServicio": [
     {
+      "icono": "💧",
+      "nombre": "Agua",
       "id": "agua"
     },
     {
+      "icono": "🚨",
+      "nombre": "Alarma",
       "id": "alarma"
     },
     {
+      "icono": "🌸",
+      "nombre": "Aromatizadores",
       "id": "aromatizadores"
     },
     {
+      "icono": "☕",
+      "nombre": "Cafetería",
       "id": "cafeteria"
     },
     {
+      "icono": "🕳️",
+      "nombre": "Desagote de Pozo",
       "id": "desagote-pozo"
     },
     {
+      "icono": "🔌",
+      "nombre": "Electricidad",
       "id": "electricidad"
     },
     {
+      "icono": "⚡",
+      "nombre": "Grupo Electrógeno",
       "id": "grupo-elec"
     },
     {
+      "icono": "⚒️",
+      "nombre": "Herrería",
       "id": "herreria"
     },
     {
+      "icono": "🌐",
+      "nombre": "Internet",
       "id": "internet"
     },
     {
+      "icono": "🌿",
+      "nombre": "Jardinería",
       "id": "jardineria"
     },
     {
+      "icono": "💡",
+      "nombre": "Luz",
       "id": "luz"
     },
     {
+      "icono": "🔧",
+      "nombre": "Plomería",
       "id": "plomeria"
     },
     {
+      "icono": "🚪",
+      "nombre": "Puertas y Vidrios",
       "id": "puertas-vidrios"
     },
     {
+      "icono": "❄️",
+      "nombre": "Refrigeración",
       "id": "refrigeracion"
     },
     {
+      "icono": "🛡️",
+      "nombre": "Seguridad",
       "id": "seguridad"
     },
     {
+      "icono": "🏗️",
+      "nombre": "Techista",
       "id": "techista"
     }
   ],
   "serviciosSucursal": [
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "10054495",
+      "notas": "Domicilio de la cuenta: Av. Independencia 5420",
+      "proveedor": "AGUAS DE CORRIENTES",
+      "sucursalId": "alliance-ctes",
+      "tipoServicioId": "agua",
       "id": "alliance-ctes__agua"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "MARCELO ROJAS (3794828987); FACUNDO CARDOZO (3624535032); SIRLEYNE AGTERBERG (3624955607)",
+        "telefono": ""
+      },
+      "contrato": "C12512",
+      "notas": "Palabra clave: DALLAS",
+      "proveedor": "",
+      "sucursalId": "alliance-ctes",
+      "tipoServicioId": "alarma",
       "id": "alliance-ctes__alarma"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Fragancia: amaderada con notas de cuero · Contacto proveedor: +54 9 11 6294-8007",
+      "proveedor": "OHMYDEER",
+      "sucursalId": "alliance-ctes",
+      "tipoServicioId": "aromatizadores",
       "id": "alliance-ctes__aromatizadores"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Con heladera",
+      "proveedor": "NESPRESO",
+      "sucursalId": "alliance-ctes",
+      "tipoServicioId": "cafeteria",
       "id": "alliance-ctes__cafeteria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "DANI: +54 9 3794 55-1283",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "alliance-ctes",
+      "tipoServicioId": "electricidad",
       "id": "alliance-ctes__electricidad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "alliance-ctes",
+      "tipoServicioId": "herreria",
       "id": "alliance-ctes__herreria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "GIGARED",
+      "sucursalId": "alliance-ctes",
+      "tipoServicioId": "internet",
       "id": "alliance-ctes__internet"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto: +54 9 3794 56-5713",
+      "proveedor": "MAKA",
+      "sucursalId": "alliance-ctes",
+      "tipoServicioId": "jardineria",
       "id": "alliance-ctes__jardineria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "30202281",
+      "notas": "Domicilio de la cuenta: Av. Independencia 5420",
+      "proveedor": "DEPEC",
+      "sucursalId": "alliance-ctes",
+      "tipoServicioId": "luz",
       "id": "alliance-ctes__luz"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "WILLY: +54 9 3794 78-9561",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "alliance-ctes",
+      "tipoServicioId": "plomeria",
       "id": "alliance-ctes__plomeria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "EL GALLO: +54 9 3794 81-8700 / CLAUDIO",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "alliance-ctes",
+      "tipoServicioId": "puertas-vidrios",
       "id": "alliance-ctes__puertas-vidrios"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 3, Chicos: 5, Central: 0",
+      "proveedor": "",
+      "sucursalId": "alliance-ctes",
+      "tipoServicioId": "refrigeracion",
       "id": "alliance-ctes__refrigeracion"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Recepción: +54 9 3795 00-1857",
+      "proveedor": "",
+      "sucursalId": "alliance-ctes",
+      "tipoServicioId": "seguridad",
       "id": "alliance-ctes__seguridad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "alliance-ctes",
+      "tipoServicioId": "techista",
       "id": "alliance-ctes__techista"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "150218",
+      "notas": "Domicilio de la cuenta: Av. 25 de Mayo 1101",
+      "proveedor": "SAMEEP",
+      "sucursalId": "alliance-r",
+      "tipoServicioId": "agua",
       "id": "alliance-r__agua"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "MARIANA ZALAZAR (3794873768); FACUNDO CARDOZO (3624535032); SIRLEYNE AGTERBERG (3624955607)",
+        "telefono": ""
+      },
+      "contrato": "C6644",
+      "notas": "Palabra clave: DALLAS",
+      "proveedor": "",
+      "sucursalId": "alliance-r",
+      "tipoServicioId": "alarma",
       "id": "alliance-r__alarma"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Fragancia: amaderada con notas de cuero · Contacto proveedor: +54 9 11 6294-8007",
+      "proveedor": "OHMYDEER",
+      "sucursalId": "alliance-r",
+      "tipoServicioId": "aromatizadores",
       "id": "alliance-r__aromatizadores"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Con heladera · Contacto NESPRESO PROF: OFIDIRECT Claudia 11-4876-5555 (cmedina@ofidirect.com)",
+      "proveedor": "NESPRESO PROF",
+      "sucursalId": "alliance-r",
+      "tipoServicioId": "cafeteria",
       "id": "alliance-r__cafeteria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "MACIEL: +54 9 362 455-3982",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "alliance-r",
+      "tipoServicioId": "electricidad",
       "id": "alliance-r__electricidad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "alliance-r",
+      "tipoServicioId": "herreria",
       "id": "alliance-r__herreria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "CLARO",
+      "sucursalId": "alliance-r",
+      "tipoServicioId": "internet",
       "id": "alliance-r__internet"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto: +54 9 362 436-9223",
+      "proveedor": "FRANGIOLI",
+      "sucursalId": "alliance-r",
+      "tipoServicioId": "jardineria",
       "id": "alliance-r__jardineria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "225384",
+      "notas": "Domicilio de la cuenta: Padre Cerqueira 20",
+      "proveedor": "SECHEEP",
+      "sucursalId": "alliance-r",
+      "tipoServicioId": "luz",
       "id": "alliance-r__luz"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "alliance-r",
+      "tipoServicioId": "puertas-vidrios",
       "id": "alliance-r__puertas-vidrios"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 3, Chicos: 8, Central: 0",
+      "proveedor": "",
+      "sucursalId": "alliance-r",
+      "tipoServicioId": "refrigeracion",
       "id": "alliance-r__refrigeracion"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "alliance-r",
+      "tipoServicioId": "techista",
       "id": "alliance-r__techista"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "10018772",
+      "notas": "Domicilio de la cuenta: Av. Independencia 3581",
+      "proveedor": "AGUAS DE CORRIENTES",
+      "sucursalId": "benelli",
+      "tipoServicioId": "agua",
       "id": "benelli__agua"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "SANTIAGO MEDAIL (379 5567728); JAYNIS CORONELL (362 5164872); LUCIANA BRUZZO (3794627095)",
+        "telefono": ""
+      },
+      "contrato": "C17235",
+      "notas": "Palabra clave: MORBIDELLI",
+      "proveedor": "",
+      "sucursalId": "benelli",
+      "tipoServicioId": "alarma",
       "id": "benelli__alarma"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Con heladera · Contacto NESPRESO PROF: OFIDIRECT Claudia 11-4876-5555 (cmedina@ofidirect.com)",
+      "proveedor": "NESPRESO PROF",
+      "sucursalId": "benelli",
+      "tipoServicioId": "cafeteria",
       "id": "benelli__cafeteria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "DANI: +54 9 3794 55-1283",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "benelli",
+      "tipoServicioId": "electricidad",
       "id": "benelli__electricidad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "benelli",
+      "tipoServicioId": "herreria",
       "id": "benelli__herreria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "GIGARED",
+      "sucursalId": "benelli",
+      "tipoServicioId": "internet",
       "id": "benelli__internet"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "30309519",
+      "notas": "Domicilio de la cuenta: Av. Independencia 3581",
+      "proveedor": "DEPEC",
+      "sucursalId": "benelli",
+      "tipoServicioId": "luz",
       "id": "benelli__luz"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "WILLY: +54 9 3794 78-9561",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "benelli",
+      "tipoServicioId": "plomeria",
       "id": "benelli__plomeria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "EL GALLO: +54 9 3794 81-8700 / CLAUDIO",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "benelli",
+      "tipoServicioId": "puertas-vidrios",
       "id": "benelli__puertas-vidrios"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 2, Chicos: 2, Central: 0",
+      "proveedor": "",
+      "sucursalId": "benelli",
+      "tipoServicioId": "refrigeracion",
       "id": "benelli__refrigeracion"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "benelli",
+      "tipoServicioId": "techista",
       "id": "benelli__techista"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "10008072 y 10073608 (2 medidores)",
+      "notas": "Domicilio de la cuenta: Paraguay 1590 / Av. Pedro Ferré 1899",
+      "proveedor": "AGUAS DE CORRIENTES",
+      "sucursalId": "dallas-ctes",
+      "tipoServicioId": "agua",
       "id": "dallas-ctes__agua"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "TIAGO GARCIO (3794528945); FRANCO SOSA (3795153331); SIRLEYNE AGTERBERG (3624955607)",
+        "telefono": ""
+      },
+      "contrato": "C12950",
+      "notas": "Palabra clave: MONTECARLO",
+      "proveedor": "",
+      "sucursalId": "dallas-ctes",
+      "tipoServicioId": "alarma",
       "id": "dallas-ctes__alarma"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Fragancia: amaderada con notas de cuero · Contacto proveedor: +54 9 11 6294-8007",
+      "proveedor": "OHMYDEER",
+      "sucursalId": "dallas-ctes",
+      "tipoServicioId": "aromatizadores",
       "id": "dallas-ctes__aromatizadores"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Con heladera",
+      "proveedor": "NESPRESO",
+      "sucursalId": "dallas-ctes",
+      "tipoServicioId": "cafeteria",
       "id": "dallas-ctes__cafeteria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "DANI: +54 9 3794 55-1283",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "dallas-ctes",
+      "tipoServicioId": "electricidad",
       "id": "dallas-ctes__electricidad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "dallas-ctes",
+      "tipoServicioId": "herreria",
       "id": "dallas-ctes__herreria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "GIGARED",
+      "sucursalId": "dallas-ctes",
+      "tipoServicioId": "internet",
       "id": "dallas-ctes__internet"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "30169535",
+      "notas": "Domicilio de la cuenta: Av. Pedro Ferré 1899",
+      "proveedor": "DEPEC",
+      "sucursalId": "dallas-ctes",
+      "tipoServicioId": "luz",
       "id": "dallas-ctes__luz"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "WILLY: +54 9 3794 78-9561",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "dallas-ctes",
+      "tipoServicioId": "plomeria",
       "id": "dallas-ctes__plomeria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "EL GALLO: +54 9 3794 81-8700 / CLAUDIO",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "dallas-ctes",
+      "tipoServicioId": "puertas-vidrios",
       "id": "dallas-ctes__puertas-vidrios"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 2, Chicos: 0, Central: 0",
+      "proveedor": "",
+      "sucursalId": "dallas-ctes",
+      "tipoServicioId": "refrigeracion",
       "id": "dallas-ctes__refrigeracion"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Recepción: +54 9 3794 28-4581",
+      "proveedor": "",
+      "sucursalId": "dallas-ctes",
+      "tipoServicioId": "seguridad",
       "id": "dallas-ctes__seguridad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "dallas-ctes",
+      "tipoServicioId": "techista",
       "id": "dallas-ctes__techista"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "281301",
+      "notas": "Domicilio de la cuenta: CH 177 PC - Monteagudo 537",
+      "proveedor": "SAMEEP",
+      "sucursalId": "dallas-r",
+      "tipoServicioId": "agua",
       "id": "dallas-r__agua"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Fragancia: amaderada con notas de cuero · Contacto proveedor: +54 9 11 6294-8007",
+      "proveedor": "OHMYDEER",
+      "sucursalId": "dallas-r",
+      "tipoServicioId": "aromatizadores",
       "id": "dallas-r__aromatizadores"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Con heladera · Contacto CACTA: Federico +54 9 362 470-8664",
+      "proveedor": "CACTA",
+      "sucursalId": "dallas-r",
+      "tipoServicioId": "cafeteria",
       "id": "dallas-r__cafeteria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "Servicio ATM El Gordo: +54 9 362 465-9814",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "",
+      "sucursalId": "dallas-r",
+      "tipoServicioId": "desagote-pozo",
       "id": "dallas-r__desagote-pozo"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "MACIEL: +54 9 362 455-3982",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "dallas-r",
+      "tipoServicioId": "electricidad",
       "id": "dallas-r__electricidad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "",
+      "sucursalId": "dallas-r",
+      "tipoServicioId": "grupo-elec",
       "id": "dallas-r__grupo-elec"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "dallas-r",
+      "tipoServicioId": "herreria",
       "id": "dallas-r__herreria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "GIGARED",
+      "sucursalId": "dallas-r",
+      "tipoServicioId": "internet",
       "id": "dallas-r__internet"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto: +54 9 362 436-9223",
+      "proveedor": "FRANGIOLI",
+      "sucursalId": "dallas-r",
+      "tipoServicioId": "jardineria",
       "id": "dallas-r__jardineria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "532917",
+      "notas": "Domicilio de la cuenta: Ruta 16 km 9",
+      "proveedor": "SECHEEP",
+      "sucursalId": "dallas-r",
+      "tipoServicioId": "luz",
       "id": "dallas-r__luz"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "dallas-r",
+      "tipoServicioId": "puertas-vidrios",
       "id": "dallas-r__puertas-vidrios"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 0, Chicos: 6, Central: 1",
+      "proveedor": "",
+      "sucursalId": "dallas-r",
+      "tipoServicioId": "refrigeracion",
       "id": "dallas-r__refrigeracion"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "Guardia Juan Ramón: +54 9 3795 01-6271",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Recepción: +54 9 362 530-8416",
+      "proveedor": "JOSEGUR",
+      "sucursalId": "dallas-r",
+      "tipoServicioId": "seguridad",
       "id": "dallas-r__seguridad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "dallas-r",
+      "tipoServicioId": "techista",
       "id": "dallas-r__techista"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "68882",
+      "notas": "Domicilio de la cuenta: Av 25 de mayo 1934",
+      "proveedor": "SAMEEP",
+      "sucursalId": "kia",
+      "tipoServicioId": "agua",
       "id": "kia__agua"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "EDUARDO BAZAN (+54 9 362 400-0514 ); SOLEDAD LOPEZ ( +54 9 362 539-4926); SIRLEYNE AGTERBERG (3624955607)",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Palabra clave: MONTECARLO",
+      "proveedor": "",
+      "sucursalId": "kia",
+      "tipoServicioId": "alarma",
       "id": "kia__alarma"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "MACIEL: +54 9 362 455-3982",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "kia",
+      "tipoServicioId": "electricidad",
       "id": "kia__electricidad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "kia",
+      "tipoServicioId": "herreria",
       "id": "kia__herreria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "CLARO",
+      "sucursalId": "kia",
+      "tipoServicioId": "internet",
       "id": "kia__internet"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "245854",
+      "notas": "Domicilio de la cuenta: Av 25 de Mayo 1934",
+      "proveedor": "SECHEEP",
+      "sucursalId": "kia",
+      "tipoServicioId": "luz",
       "id": "kia__luz"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "kia",
+      "tipoServicioId": "puertas-vidrios",
       "id": "kia__puertas-vidrios"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 2, Chicos: 1, Central: 0",
+      "proveedor": "",
+      "sucursalId": "kia",
+      "tipoServicioId": "refrigeracion",
       "id": "kia__refrigeracion"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "kia",
+      "tipoServicioId": "techista",
       "id": "kia__techista"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "244696 y 97271 (2 medidores)",
+      "notas": "Domicilio de la cuenta: Paso de la Patria 2456 / Av. Las Malvinas 2401",
+      "proveedor": "SAMEEP",
+      "sucursalId": "meucci",
+      "tipoServicioId": "agua",
       "id": "meucci__agua"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Con heladera · Contacto NESPRESO PROF: OFIDIRECT Claudia 11-4876-5555 (cmedina@ofidirect.com)",
+      "proveedor": "NESPRESO PROF",
+      "sucursalId": "meucci",
+      "tipoServicioId": "cafeteria",
       "id": "meucci__cafeteria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "MACIEL: +54 9 362 455-3982",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "meucci",
+      "tipoServicioId": "electricidad",
       "id": "meucci__electricidad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "meucci",
+      "tipoServicioId": "herreria",
       "id": "meucci__herreria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "GIGARED",
+      "sucursalId": "meucci",
+      "tipoServicioId": "internet",
       "id": "meucci__internet"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto: +54 9 362 436-9223",
+      "proveedor": "FRANGIOLI",
+      "sucursalId": "meucci",
+      "tipoServicioId": "jardineria",
       "id": "meucci__jardineria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "532915",
+      "notas": "Domicilio de la cuenta: Ruta 11 km 1002,3 y Malvinas",
+      "proveedor": "SECHEEP",
+      "sucursalId": "meucci",
+      "tipoServicioId": "luz",
       "id": "meucci__luz"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "meucci",
+      "tipoServicioId": "puertas-vidrios",
       "id": "meucci__puertas-vidrios"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 2, Chicos: 8, Central: 0",
+      "proveedor": "",
+      "sucursalId": "meucci",
+      "tipoServicioId": "refrigeracion",
       "id": "meucci__refrigeracion"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "Guardias: +54 9 362 498-7374",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "EMPLEADOS",
+      "sucursalId": "meucci",
+      "tipoServicioId": "seguridad",
       "id": "meucci__seguridad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "meucci",
+      "tipoServicioId": "techista",
       "id": "meucci__techista"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Fragancia: amaderada con notas de cuero · Contacto proveedor: +54 9 11 6294-8007",
+      "proveedor": "OHMYDEER",
+      "sucursalId": "mg",
+      "tipoServicioId": "aromatizadores",
       "id": "mg__aromatizadores"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Con heladera",
+      "proveedor": "",
+      "sucursalId": "mg",
+      "tipoServicioId": "cafeteria",
       "id": "mg__cafeteria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "MACIEL: +54 9 362 455-3982",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mg",
+      "tipoServicioId": "electricidad",
       "id": "mg__electricidad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mg",
+      "tipoServicioId": "herreria",
       "id": "mg__herreria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "GIGARED",
+      "sucursalId": "mg",
+      "tipoServicioId": "internet",
       "id": "mg__internet"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "557819",
+      "notas": "Domicilio de la cuenta: Av. Rivadavia N°709 Local 2 (MF)",
+      "proveedor": "SECHEEP",
+      "sucursalId": "mg",
+      "tipoServicioId": "luz",
       "id": "mg__luz"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mg",
+      "tipoServicioId": "puertas-vidrios",
       "id": "mg__puertas-vidrios"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mg",
+      "tipoServicioId": "techista",
       "id": "mg__techista"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "10085193",
+      "notas": "Domicilio de la cuenta: Av. Sarmiento 1610 - 3 de Abril 1698",
+      "proveedor": "AGUAS DE CORRIENTES",
+      "sucursalId": "mm-3-de-abril",
+      "tipoServicioId": "agua",
       "id": "mm-3-de-abril__agua"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ROCIO GONZALES (3795 077670); JAYNIS CORONELL (362 5164872); LUCIANA AVALOS (3794565187)",
+        "telefono": ""
+      },
+      "contrato": "C17044",
+      "notas": "Palabra clave: MORBIDELLI",
+      "proveedor": "",
+      "sucursalId": "mm-3-de-abril",
+      "tipoServicioId": "alarma",
       "id": "mm-3-de-abril__alarma"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "DANI: +54 9 3794 55-1283",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "mm-3-de-abril",
+      "tipoServicioId": "electricidad",
       "id": "mm-3-de-abril__electricidad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "mm-3-de-abril",
+      "tipoServicioId": "herreria",
       "id": "mm-3-de-abril__herreria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "GIGARED",
+      "sucursalId": "mm-3-de-abril",
+      "tipoServicioId": "internet",
       "id": "mm-3-de-abril__internet"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "30065635",
+      "notas": "Domicilio de la cuenta: Av. 3 de Abril 1698",
+      "proveedor": "DEPEC",
+      "sucursalId": "mm-3-de-abril",
+      "tipoServicioId": "luz",
       "id": "mm-3-de-abril__luz"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "WILLY: +54 9 3794 78-9561",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "mm-3-de-abril",
+      "tipoServicioId": "plomeria",
       "id": "mm-3-de-abril__plomeria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "EL GALLO: +54 9 3794 81-8700 / CLAUDIO",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "mm-3-de-abril",
+      "tipoServicioId": "puertas-vidrios",
       "id": "mm-3-de-abril__puertas-vidrios"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 1, Chicos: 1, Central: 0",
+      "proveedor": "",
+      "sucursalId": "mm-3-de-abril",
+      "tipoServicioId": "refrigeracion",
       "id": "mm-3-de-abril__refrigeracion"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "mm-3-de-abril",
+      "tipoServicioId": "techista",
       "id": "mm-3-de-abril__techista"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Domicilio de la cuenta: Diagonal Eva Perón 501, Barranqueras",
+      "proveedor": "SAMEEP",
+      "sucursalId": "mm-barranqueras",
+      "tipoServicioId": "agua",
       "id": "mm-barranqueras__agua"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "SANTIAGO MEDAIL (379 5567728); JAYNIS CORONELL (362 5164872)",
+        "telefono": ""
+      },
+      "contrato": "C16624",
+      "notas": "Palabra clave: MORBIDELLI",
+      "proveedor": "",
+      "sucursalId": "mm-barranqueras",
+      "tipoServicioId": "alarma",
       "id": "mm-barranqueras__alarma"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "MACIEL: +54 9 362 455-3982",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mm-barranqueras",
+      "tipoServicioId": "electricidad",
       "id": "mm-barranqueras__electricidad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mm-barranqueras",
+      "tipoServicioId": "herreria",
       "id": "mm-barranqueras__herreria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "322944",
+      "notas": "Domicilio de la cuenta: Diagonal Eva Perón 501, Barranqueras",
+      "proveedor": "SECHEEP",
+      "sucursalId": "mm-barranqueras",
+      "tipoServicioId": "luz",
       "id": "mm-barranqueras__luz"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mm-barranqueras",
+      "tipoServicioId": "puertas-vidrios",
       "id": "mm-barranqueras__puertas-vidrios"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 2, Chicos: 0, Central: 0",
+      "proveedor": "",
+      "sucursalId": "mm-barranqueras",
+      "tipoServicioId": "refrigeracion",
       "id": "mm-barranqueras__refrigeracion"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mm-barranqueras",
+      "tipoServicioId": "techista",
       "id": "mm-barranqueras__techista"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "60756",
+      "notas": "Domicilio de la cuenta: Av. Italia N°135",
+      "proveedor": "SAMEEP",
+      "sucursalId": "mm-italia",
+      "tipoServicioId": "agua",
       "id": "mm-italia__agua"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "OSCAR GALLO (362 4261413); SANTIAGO MEDAIL (379 5567728); JAYNIS CORONELL (362 5164872)",
+        "telefono": ""
+      },
+      "contrato": "C17062",
+      "notas": "Palabra clave: MORBIDELLI",
+      "proveedor": "",
+      "sucursalId": "mm-italia",
+      "tipoServicioId": "alarma",
       "id": "mm-italia__alarma"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "MACIEL: +54 9 362 455-3982",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mm-italia",
+      "tipoServicioId": "electricidad",
       "id": "mm-italia__electricidad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mm-italia",
+      "tipoServicioId": "herreria",
       "id": "mm-italia__herreria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "CLARO",
+      "sucursalId": "mm-italia",
+      "tipoServicioId": "internet",
       "id": "mm-italia__internet"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "515114",
+      "notas": "Domicilio de la cuenta: Av. Italia N°135",
+      "proveedor": "SECHEEP",
+      "sucursalId": "mm-italia",
+      "tipoServicioId": "luz",
       "id": "mm-italia__luz"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mm-italia",
+      "tipoServicioId": "puertas-vidrios",
       "id": "mm-italia__puertas-vidrios"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 2, Chicos: 1, Central: 0",
+      "proveedor": "",
+      "sucursalId": "mm-italia",
+      "tipoServicioId": "refrigeracion",
       "id": "mm-italia__refrigeracion"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mm-italia",
+      "tipoServicioId": "techista",
       "id": "mm-italia__techista"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "67761",
+      "notas": "Domicilio de la cuenta: Juan B Justo N°280",
+      "proveedor": "SAMEEP",
+      "sucursalId": "mm-juan-b-justo",
+      "tipoServicioId": "agua",
       "id": "mm-juan-b-justo__agua"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ROMINA GIRIALDI (362 5177204); SANTIAGO MEDAIL (379 5567728); JAYNIS CORONELL (362 5164872)",
+        "telefono": ""
+      },
+      "contrato": "C17091",
+      "notas": "Palabra clave: MORBIDELLI",
+      "proveedor": "",
+      "sucursalId": "mm-juan-b-justo",
+      "tipoServicioId": "alarma",
       "id": "mm-juan-b-justo__alarma"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "MACIEL: +54 9 362 455-3982",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mm-juan-b-justo",
+      "tipoServicioId": "electricidad",
       "id": "mm-juan-b-justo__electricidad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mm-juan-b-justo",
+      "tipoServicioId": "herreria",
       "id": "mm-juan-b-justo__herreria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "CLARO",
+      "sucursalId": "mm-juan-b-justo",
+      "tipoServicioId": "internet",
       "id": "mm-juan-b-justo__internet"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "307251",
+      "notas": "Domicilio de la cuenta: Juan B Justo N°282",
+      "proveedor": "SECHEEP",
+      "sucursalId": "mm-juan-b-justo",
+      "tipoServicioId": "luz",
       "id": "mm-juan-b-justo__luz"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mm-juan-b-justo",
+      "tipoServicioId": "puertas-vidrios",
       "id": "mm-juan-b-justo__puertas-vidrios"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 2, Chicos: 0, Central: 0",
+      "proveedor": "",
+      "sucursalId": "mm-juan-b-justo",
+      "tipoServicioId": "refrigeracion",
       "id": "mm-juan-b-justo__refrigeracion"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mm-juan-b-justo",
+      "tipoServicioId": "techista",
       "id": "mm-juan-b-justo__techista"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "Servicio ATM El Gordo: +54 9 362 465-9814",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "",
+      "sucursalId": "mm-ruta-11",
+      "tipoServicioId": "desagote-pozo",
       "id": "mm-ruta-11__desagote-pozo"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "MACIEL: +54 9 362 455-3982",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mm-ruta-11",
+      "tipoServicioId": "electricidad",
       "id": "mm-ruta-11__electricidad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "",
+      "sucursalId": "mm-ruta-11",
+      "tipoServicioId": "grupo-elec",
       "id": "mm-ruta-11__grupo-elec"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mm-ruta-11",
+      "tipoServicioId": "herreria",
       "id": "mm-ruta-11__herreria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "GIGARED",
+      "sucursalId": "mm-ruta-11",
+      "tipoServicioId": "internet",
       "id": "mm-ruta-11__internet"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mm-ruta-11",
+      "tipoServicioId": "puertas-vidrios",
       "id": "mm-ruta-11__puertas-vidrios"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 1, Chicos: 1, Central: 0",
+      "proveedor": "",
+      "sucursalId": "mm-ruta-11",
+      "tipoServicioId": "refrigeracion",
       "id": "mm-ruta-11__refrigeracion"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "mm-ruta-11",
+      "tipoServicioId": "techista",
       "id": "mm-ruta-11__techista"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "159737 y 132774 (2 medidores)",
+      "notas": "Domicilio de la cuenta: Av 25 de Mayo 2338",
+      "proveedor": "SAMEEP",
+      "sucursalId": "north",
+      "tipoServicioId": "agua",
       "id": "north__agua"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "NADIA GODOY RIOS (3794 877874); PABLO FERRER (3795073588); WOJTUN HECTOR GABRIEL (3624119855)",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Palabra clave: MEUCCI",
+      "proveedor": "",
+      "sucursalId": "north",
+      "tipoServicioId": "alarma",
       "id": "north__alarma"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Fragancia: amaderada con notas de cuero · Contacto proveedor: +54 9 11 6294-8007",
+      "proveedor": "OHMYDEER",
+      "sucursalId": "north",
+      "tipoServicioId": "aromatizadores",
       "id": "north__aromatizadores"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Con heladera · Contacto CACTA: Federico +54 9 362 470-8664",
+      "proveedor": "CACTA",
+      "sucursalId": "north",
+      "tipoServicioId": "cafeteria",
       "id": "north__cafeteria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "Servicio ATM El Gordo: +54 9 362 465-9814",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "",
+      "sucursalId": "north",
+      "tipoServicioId": "desagote-pozo",
       "id": "north__desagote-pozo"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "MACIEL: +54 9 362 455-3982",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "north",
+      "tipoServicioId": "electricidad",
       "id": "north__electricidad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "north",
+      "tipoServicioId": "herreria",
       "id": "north__herreria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "GIGARED",
+      "sucursalId": "north",
+      "tipoServicioId": "internet",
       "id": "north__internet"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto: +54 9 362 436-9223",
+      "proveedor": "FRANGIOLI",
+      "sucursalId": "north",
+      "tipoServicioId": "jardineria",
       "id": "north__jardineria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "344009",
+      "notas": "Domicilio de la cuenta: Av 25 de Mayo 2338",
+      "proveedor": "SECHEEP",
+      "sucursalId": "north",
+      "tipoServicioId": "luz",
       "id": "north__luz"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "north",
+      "tipoServicioId": "puertas-vidrios",
       "id": "north__puertas-vidrios"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 0, Chicos: 5, Central: 1",
+      "proveedor": "",
+      "sucursalId": "north",
+      "tipoServicioId": "refrigeracion",
       "id": "north__refrigeracion"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "north",
+      "tipoServicioId": "techista",
       "id": "north__techista"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Fragancia: amaderada con notas de cuero · Contacto proveedor: +54 9 11 6294-8007",
+      "proveedor": "OHMYDEER",
+      "sucursalId": "re-ctes",
+      "tipoServicioId": "aromatizadores",
       "id": "re-ctes__aromatizadores"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Con heladera",
+      "proveedor": "",
+      "sucursalId": "re-ctes",
+      "tipoServicioId": "cafeteria",
       "id": "re-ctes__cafeteria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "DANI: +54 9 3794 55-1283",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "re-ctes",
+      "tipoServicioId": "electricidad",
       "id": "re-ctes__electricidad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "re-ctes",
+      "tipoServicioId": "herreria",
       "id": "re-ctes__herreria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "GIGARED",
+      "sucursalId": "re-ctes",
+      "tipoServicioId": "internet",
       "id": "re-ctes__internet"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "30330585",
+      "notas": "Domicilio de la cuenta: Av. Costanera 3400",
+      "proveedor": "DEPEC",
+      "sucursalId": "re-ctes",
+      "tipoServicioId": "luz",
       "id": "re-ctes__luz"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "WILLY: +54 9 3794 78-9561",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "re-ctes",
+      "tipoServicioId": "plomeria",
       "id": "re-ctes__plomeria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "EL GALLO: +54 9 3794 81-8700 / CLAUDIO",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "re-ctes",
+      "tipoServicioId": "puertas-vidrios",
       "id": "re-ctes__puertas-vidrios"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 0, Chicos: 0, Central: 1",
+      "proveedor": "",
+      "sucursalId": "re-ctes",
+      "tipoServicioId": "refrigeracion",
       "id": "re-ctes__refrigeracion"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "re-ctes",
+      "tipoServicioId": "techista",
       "id": "re-ctes__techista"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "89975",
+      "notas": "Domicilio de la cuenta: Av Sarmiento 1901",
+      "proveedor": "SAMEEP",
+      "sucursalId": "re-r",
+      "tipoServicioId": "agua",
       "id": "re-r__agua"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "SANTIAGO MEDAIL (379 5567728); SANTIAGO MEDAIL (379 5567728); JAYNIS CORONELL (362 5164872)",
+        "telefono": ""
+      },
+      "contrato": "C16152",
+      "notas": "Palabra clave: MONTECARLO",
+      "proveedor": "",
+      "sucursalId": "re-r",
+      "tipoServicioId": "alarma",
       "id": "re-r__alarma"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Fragancia: amaderada con notas de cuero · Contacto proveedor: +54 9 11 6294-8007",
+      "proveedor": "OHMYDEER",
+      "sucursalId": "re-r",
+      "tipoServicioId": "aromatizadores",
       "id": "re-r__aromatizadores"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Con heladera · Contacto CACTA: Federico +54 9 362 470-8664",
+      "proveedor": "CACTA",
+      "sucursalId": "re-r",
+      "tipoServicioId": "cafeteria",
       "id": "re-r__cafeteria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "MACIEL: +54 9 362 455-3982",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "re-r",
+      "tipoServicioId": "electricidad",
       "id": "re-r__electricidad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "re-r",
+      "tipoServicioId": "herreria",
       "id": "re-r__herreria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "CLARO",
+      "sucursalId": "re-r",
+      "tipoServicioId": "internet",
       "id": "re-r__internet"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto: +54 9 362 436-9223",
+      "proveedor": "FRANGIOLI",
+      "sucursalId": "re-r",
+      "tipoServicioId": "jardineria",
       "id": "re-r__jardineria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "197804",
+      "notas": "Domicilio de la cuenta: Av Sarmiento 1901",
+      "proveedor": "SECHEEP",
+      "sucursalId": "re-r",
+      "tipoServicioId": "luz",
       "id": "re-r__luz"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "re-r",
+      "tipoServicioId": "puertas-vidrios",
       "id": "re-r__puertas-vidrios"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 0, Chicos: 1, Central: 1",
+      "proveedor": "",
+      "sucursalId": "re-r",
+      "tipoServicioId": "refrigeracion",
       "id": "re-r__refrigeracion"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "re-r",
+      "tipoServicioId": "techista",
       "id": "re-r__techista"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "10136915",
+      "notas": "Domicilio de la cuenta: Av. Armando Carmelo Romero 5755",
+      "proveedor": "AGUAS DE CORRIENTES",
+      "sucursalId": "scuderia-ctes",
+      "tipoServicioId": "agua",
       "id": "scuderia-ctes__agua"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Fragancia: amaderada con notas de cuero · Contacto proveedor: +54 9 11 6294-8007",
+      "proveedor": "OHMYDEER",
+      "sucursalId": "scuderia-ctes",
+      "tipoServicioId": "aromatizadores",
       "id": "scuderia-ctes__aromatizadores"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Con heladera · Contacto CACTA: Federico +54 9 362 470-8664",
+      "proveedor": "CACTA",
+      "sucursalId": "scuderia-ctes",
+      "tipoServicioId": "cafeteria",
       "id": "scuderia-ctes__cafeteria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "SANCHEZ: +54 9 3794 21-4139",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "",
+      "sucursalId": "scuderia-ctes",
+      "tipoServicioId": "desagote-pozo",
       "id": "scuderia-ctes__desagote-pozo"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "DANI: +54 9 3794 55-1283",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "scuderia-ctes",
+      "tipoServicioId": "electricidad",
       "id": "scuderia-ctes__electricidad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "",
+      "sucursalId": "scuderia-ctes",
+      "tipoServicioId": "grupo-elec",
       "id": "scuderia-ctes__grupo-elec"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "scuderia-ctes",
+      "tipoServicioId": "herreria",
       "id": "scuderia-ctes__herreria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "GIGARED",
+      "sucursalId": "scuderia-ctes",
+      "tipoServicioId": "internet",
       "id": "scuderia-ctes__internet"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto: +54 9 3794 56-5713",
+      "proveedor": "MAKA",
+      "sucursalId": "scuderia-ctes",
+      "tipoServicioId": "jardineria",
       "id": "scuderia-ctes__jardineria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "30206728",
+      "notas": "Domicilio de la cuenta: Ruta N°5",
+      "proveedor": "DEPEC",
+      "sucursalId": "scuderia-ctes",
+      "tipoServicioId": "luz",
       "id": "scuderia-ctes__luz"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "WILLY: +54 9 3794 78-9561",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "scuderia-ctes",
+      "tipoServicioId": "plomeria",
       "id": "scuderia-ctes__plomeria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "EL GALLO: +54 9 3794 81-8700 / CLAUDIO",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "scuderia-ctes",
+      "tipoServicioId": "puertas-vidrios",
       "id": "scuderia-ctes__puertas-vidrios"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 4, Chicos: 8, Central: 0",
+      "proveedor": "",
+      "sucursalId": "scuderia-ctes",
+      "tipoServicioId": "refrigeracion",
       "id": "scuderia-ctes__refrigeracion"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "Guardia Diego: +54 9 3794 94-3780",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Recepción: +54 9 3794 80-6310",
+      "proveedor": "JOSEGUR",
+      "sucursalId": "scuderia-ctes",
+      "tipoServicioId": "seguridad",
       "id": "scuderia-ctes__seguridad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Corrientes)",
+      "proveedor": "",
+      "sucursalId": "scuderia-ctes",
+      "tipoServicioId": "techista",
       "id": "scuderia-ctes__techista"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "89978",
+      "notas": "Domicilio de la cuenta: Av Sarmiento 1931",
+      "proveedor": "SAMEEP",
+      "sucursalId": "scuderia-r",
+      "tipoServicioId": "agua",
       "id": "scuderia-r__agua"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "CARLA SAMUDIO (3624261438); MIRTA YBARRA (3624172130); SIRLEYNE AGTERBERG (3624955607)",
+        "telefono": ""
+      },
+      "contrato": "C11612",
+      "notas": "Palabra clave: MONTECARLO",
+      "proveedor": "",
+      "sucursalId": "scuderia-r",
+      "tipoServicioId": "alarma",
       "id": "scuderia-r__alarma"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Fragancia: amaderada con notas de cuero · Contacto proveedor: +54 9 11 6294-8007",
+      "proveedor": "OHMYDEER",
+      "sucursalId": "scuderia-r",
+      "tipoServicioId": "aromatizadores",
       "id": "scuderia-r__aromatizadores"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Con heladera · Contacto CACTA: Federico +54 9 362 470-8664",
+      "proveedor": "CACTA",
+      "sucursalId": "scuderia-r",
+      "tipoServicioId": "cafeteria",
       "id": "scuderia-r__cafeteria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "MACIEL: +54 9 362 455-3982",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "scuderia-r",
+      "tipoServicioId": "electricidad",
       "id": "scuderia-r__electricidad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Tiene portón eléctrico",
+      "proveedor": "",
+      "sucursalId": "scuderia-r",
+      "tipoServicioId": "grupo-elec",
       "id": "scuderia-r__grupo-elec"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "scuderia-r",
+      "tipoServicioId": "herreria",
       "id": "scuderia-r__herreria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "",
+      "proveedor": "CLARO / GIGARED",
+      "sucursalId": "scuderia-r",
+      "tipoServicioId": "internet",
       "id": "scuderia-r__internet"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto: +54 9 3794 56-5713",
+      "proveedor": "MAKA",
+      "sucursalId": "scuderia-r",
+      "tipoServicioId": "jardineria",
       "id": "scuderia-r__jardineria"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "234781",
+      "notas": "Domicilio de la cuenta: Av Sarmiento 1935",
+      "proveedor": "SECHEEP",
+      "sucursalId": "scuderia-r",
+      "tipoServicioId": "luz",
       "id": "scuderia-r__luz"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "ANTONIO MOLINA: +54 9 362 477-7856",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "scuderia-r",
+      "tipoServicioId": "puertas-vidrios",
       "id": "scuderia-r__puertas-vidrios"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 4, Chicos: 4, Central: 0",
+      "proveedor": "",
+      "sucursalId": "scuderia-r",
+      "tipoServicioId": "refrigeracion",
       "id": "scuderia-r__refrigeracion"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Recepción: +54 9 3794 15-9045",
+      "proveedor": "",
+      "sucursalId": "scuderia-r",
+      "tipoServicioId": "seguridad",
       "id": "scuderia-r__seguridad"
     },
     {
+      "contacto": {
+        "email": "",
+        "responsable": "HUGO: +54 9 3794 57-3029",
+        "telefono": ""
+      },
+      "contrato": "",
+      "notas": "Contacto regional (Chaco/Resistencia)",
+      "proveedor": "",
+      "sucursalId": "scuderia-r",
+      "tipoServicioId": "techista",
       "id": "scuderia-r__techista"
     }
   ],
   "tareasCatalogo": [
     {
+      "nombre": "Mantenimiento Aires Acondicionados",
+      "periodicidad": "Anual",
+      "periodicidadDias": 365,
+      "tipoServicioId": null,
       "id": "aires-acondicionados"
     },
     {
+      "nombre": "Control y mantenimiento cartelería exterior",
+      "periodicidad": "Anual",
+      "periodicidadDias": 365,
+      "tipoServicioId": null,
       "id": "cartelera-exterior"
     },
     {
+      "nombre": "Control de plagas",
+      "periodicidad": "Trimestral",
+      "periodicidadDias": 90,
+      "tipoServicioId": null,
       "id": "control-plagas"
     },
     {
+      "nombre": "Corte de Pasto",
+      "periodicidad": "Semanal",
+      "periodicidadDias": 7,
+      "tipoServicioId": "jardineria",
       "id": "corte-pasto"
     },
     {
+      "nombre": "Limpieza desagües y cañerías",
+      "periodicidad": "Anual",
+      "periodicidadDias": 365,
+      "tipoServicioId": null,
       "id": "limpieza-desagues"
     },
     {
+      "nombre": "Limpieza de tanques",
+      "periodicidad": "Semestral",
+      "periodicidadDias": 182,
+      "tipoServicioId": null,
       "id": "limpieza-tanques"
     },
     {
+      "nombre": "Mantenimiento Aromatizadores",
+      "periodicidad": "Trimestral",
+      "periodicidadDias": 90,
+      "tipoServicioId": "aromatizadores",
       "id": "mantenimiento-aromatizadores"
     },
     {
+      "nombre": "Mantenimiento jardinería",
+      "periodicidad": "Mensual",
+      "periodicidadDias": 30,
+      "tipoServicioId": "jardineria",
       "id": "mantenimiento-jardineria"
     },
     {
+      "nombre": "Control y recarga de matafuegos",
+      "periodicidad": "Semestral",
+      "periodicidadDias": 182,
+      "tipoServicioId": null,
       "id": "matafuegos"
     },
     {
+      "nombre": "Mantenimiento pintura exterior",
+      "periodicidad": "Anual",
+      "periodicidadDias": 365,
+      "tipoServicioId": null,
       "id": "pintura-exterior"
     },
     {
+      "nombre": "Recarga de aromatizadores",
+      "periodicidad": "Mensual",
+      "periodicidadDias": 30,
+      "tipoServicioId": "aromatizadores",
       "id": "recarga-aromatizadores"
     },
     {
+      "nombre": "Servicio de Generadores",
+      "periodicidad": "Anual",
+      "periodicidadDias": 365,
+      "tipoServicioId": "grupo-elec",
       "id": "servicio-generadores"
     }
   ],
   "tareasSucursal": [
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-ctes",
+      "tareaCatalogoId": "aires-acondicionados",
+      "ultimaFecha": null,
       "id": "alliance-ctes__aires-acondicionados"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-ctes",
+      "tareaCatalogoId": "cartelera-exterior",
+      "ultimaFecha": null,
       "id": "alliance-ctes__cartelera-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-ctes",
+      "tareaCatalogoId": "control-plagas",
+      "ultimaFecha": null,
       "id": "alliance-ctes__control-plagas"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-ctes",
+      "tareaCatalogoId": "corte-pasto",
+      "ultimaFecha": null,
       "id": "alliance-ctes__corte-pasto"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-ctes",
+      "tareaCatalogoId": "limpieza-desagues",
+      "ultimaFecha": null,
       "id": "alliance-ctes__limpieza-desagues"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-ctes",
+      "tareaCatalogoId": "limpieza-tanques",
+      "ultimaFecha": null,
       "id": "alliance-ctes__limpieza-tanques"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-ctes",
+      "tareaCatalogoId": "mantenimiento-aromatizadores",
+      "ultimaFecha": null,
       "id": "alliance-ctes__mantenimiento-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-ctes",
+      "tareaCatalogoId": "mantenimiento-jardineria",
+      "ultimaFecha": null,
       "id": "alliance-ctes__mantenimiento-jardineria"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-ctes",
+      "tareaCatalogoId": "matafuegos",
+      "ultimaFecha": null,
       "id": "alliance-ctes__matafuegos"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-ctes",
+      "tareaCatalogoId": "pintura-exterior",
+      "ultimaFecha": null,
       "id": "alliance-ctes__pintura-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-ctes",
+      "tareaCatalogoId": "recarga-aromatizadores",
+      "ultimaFecha": null,
       "id": "alliance-ctes__recarga-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-r",
+      "tareaCatalogoId": "aires-acondicionados",
+      "ultimaFecha": null,
       "id": "alliance-r__aires-acondicionados"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-r",
+      "tareaCatalogoId": "cartelera-exterior",
+      "ultimaFecha": null,
       "id": "alliance-r__cartelera-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-r",
+      "tareaCatalogoId": "control-plagas",
+      "ultimaFecha": null,
       "id": "alliance-r__control-plagas"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-r",
+      "tareaCatalogoId": "corte-pasto",
+      "ultimaFecha": null,
       "id": "alliance-r__corte-pasto"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-r",
+      "tareaCatalogoId": "limpieza-desagues",
+      "ultimaFecha": null,
       "id": "alliance-r__limpieza-desagues"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-r",
+      "tareaCatalogoId": "limpieza-tanques",
+      "ultimaFecha": null,
       "id": "alliance-r__limpieza-tanques"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-r",
+      "tareaCatalogoId": "mantenimiento-aromatizadores",
+      "ultimaFecha": null,
       "id": "alliance-r__mantenimiento-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-r",
+      "tareaCatalogoId": "mantenimiento-jardineria",
+      "ultimaFecha": null,
       "id": "alliance-r__mantenimiento-jardineria"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-r",
+      "tareaCatalogoId": "matafuegos",
+      "ultimaFecha": null,
       "id": "alliance-r__matafuegos"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-r",
+      "tareaCatalogoId": "pintura-exterior",
+      "ultimaFecha": null,
       "id": "alliance-r__pintura-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "alliance-r",
+      "tareaCatalogoId": "recarga-aromatizadores",
+      "ultimaFecha": null,
       "id": "alliance-r__recarga-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "benelli",
+      "tareaCatalogoId": "aires-acondicionados",
+      "ultimaFecha": null,
       "id": "benelli__aires-acondicionados"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "benelli",
+      "tareaCatalogoId": "cartelera-exterior",
+      "ultimaFecha": null,
       "id": "benelli__cartelera-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "benelli",
+      "tareaCatalogoId": "control-plagas",
+      "ultimaFecha": null,
       "id": "benelli__control-plagas"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "benelli",
+      "tareaCatalogoId": "limpieza-desagues",
+      "ultimaFecha": null,
       "id": "benelli__limpieza-desagues"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "benelli",
+      "tareaCatalogoId": "limpieza-tanques",
+      "ultimaFecha": null,
       "id": "benelli__limpieza-tanques"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "benelli",
+      "tareaCatalogoId": "matafuegos",
+      "ultimaFecha": null,
       "id": "benelli__matafuegos"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "benelli",
+      "tareaCatalogoId": "pintura-exterior",
+      "ultimaFecha": null,
       "id": "benelli__pintura-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-ctes",
+      "tareaCatalogoId": "aires-acondicionados",
+      "ultimaFecha": null,
       "id": "dallas-ctes__aires-acondicionados"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-ctes",
+      "tareaCatalogoId": "cartelera-exterior",
+      "ultimaFecha": null,
       "id": "dallas-ctes__cartelera-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-ctes",
+      "tareaCatalogoId": "control-plagas",
+      "ultimaFecha": null,
       "id": "dallas-ctes__control-plagas"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-ctes",
+      "tareaCatalogoId": "limpieza-desagues",
+      "ultimaFecha": null,
       "id": "dallas-ctes__limpieza-desagues"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-ctes",
+      "tareaCatalogoId": "limpieza-tanques",
+      "ultimaFecha": null,
       "id": "dallas-ctes__limpieza-tanques"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-ctes",
+      "tareaCatalogoId": "mantenimiento-aromatizadores",
+      "ultimaFecha": null,
       "id": "dallas-ctes__mantenimiento-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-ctes",
+      "tareaCatalogoId": "matafuegos",
+      "ultimaFecha": null,
       "id": "dallas-ctes__matafuegos"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-ctes",
+      "tareaCatalogoId": "pintura-exterior",
+      "ultimaFecha": null,
       "id": "dallas-ctes__pintura-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-ctes",
+      "tareaCatalogoId": "recarga-aromatizadores",
+      "ultimaFecha": null,
       "id": "dallas-ctes__recarga-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-r",
+      "tareaCatalogoId": "aires-acondicionados",
+      "ultimaFecha": null,
       "id": "dallas-r__aires-acondicionados"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-r",
+      "tareaCatalogoId": "cartelera-exterior",
+      "ultimaFecha": null,
       "id": "dallas-r__cartelera-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-r",
+      "tareaCatalogoId": "control-plagas",
+      "ultimaFecha": null,
       "id": "dallas-r__control-plagas"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-r",
+      "tareaCatalogoId": "corte-pasto",
+      "ultimaFecha": null,
       "id": "dallas-r__corte-pasto"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-r",
+      "tareaCatalogoId": "limpieza-desagues",
+      "ultimaFecha": null,
       "id": "dallas-r__limpieza-desagues"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-r",
+      "tareaCatalogoId": "limpieza-tanques",
+      "ultimaFecha": null,
       "id": "dallas-r__limpieza-tanques"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-r",
+      "tareaCatalogoId": "mantenimiento-aromatizadores",
+      "ultimaFecha": null,
       "id": "dallas-r__mantenimiento-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-r",
+      "tareaCatalogoId": "mantenimiento-jardineria",
+      "ultimaFecha": null,
       "id": "dallas-r__mantenimiento-jardineria"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-r",
+      "tareaCatalogoId": "matafuegos",
+      "ultimaFecha": null,
       "id": "dallas-r__matafuegos"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-r",
+      "tareaCatalogoId": "pintura-exterior",
+      "ultimaFecha": null,
       "id": "dallas-r__pintura-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-r",
+      "tareaCatalogoId": "recarga-aromatizadores",
+      "ultimaFecha": null,
       "id": "dallas-r__recarga-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "dallas-r",
+      "tareaCatalogoId": "servicio-generadores",
+      "ultimaFecha": null,
       "id": "dallas-r__servicio-generadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "kia",
+      "tareaCatalogoId": "aires-acondicionados",
+      "ultimaFecha": null,
       "id": "kia__aires-acondicionados"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "kia",
+      "tareaCatalogoId": "cartelera-exterior",
+      "ultimaFecha": null,
       "id": "kia__cartelera-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "kia",
+      "tareaCatalogoId": "control-plagas",
+      "ultimaFecha": null,
       "id": "kia__control-plagas"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "kia",
+      "tareaCatalogoId": "limpieza-desagues",
+      "ultimaFecha": null,
       "id": "kia__limpieza-desagues"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "kia",
+      "tareaCatalogoId": "limpieza-tanques",
+      "ultimaFecha": null,
       "id": "kia__limpieza-tanques"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "kia",
+      "tareaCatalogoId": "matafuegos",
+      "ultimaFecha": null,
       "id": "kia__matafuegos"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "kia",
+      "tareaCatalogoId": "pintura-exterior",
+      "ultimaFecha": null,
       "id": "kia__pintura-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "meucci",
+      "tareaCatalogoId": "aires-acondicionados",
+      "ultimaFecha": null,
       "id": "meucci__aires-acondicionados"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "meucci",
+      "tareaCatalogoId": "cartelera-exterior",
+      "ultimaFecha": null,
       "id": "meucci__cartelera-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "meucci",
+      "tareaCatalogoId": "control-plagas",
+      "ultimaFecha": null,
       "id": "meucci__control-plagas"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "meucci",
+      "tareaCatalogoId": "corte-pasto",
+      "ultimaFecha": null,
       "id": "meucci__corte-pasto"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "meucci",
+      "tareaCatalogoId": "limpieza-desagues",
+      "ultimaFecha": null,
       "id": "meucci__limpieza-desagues"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "meucci",
+      "tareaCatalogoId": "limpieza-tanques",
+      "ultimaFecha": null,
       "id": "meucci__limpieza-tanques"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "meucci",
+      "tareaCatalogoId": "mantenimiento-jardineria",
+      "ultimaFecha": null,
       "id": "meucci__mantenimiento-jardineria"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "meucci",
+      "tareaCatalogoId": "matafuegos",
+      "ultimaFecha": null,
       "id": "meucci__matafuegos"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "meucci",
+      "tareaCatalogoId": "pintura-exterior",
+      "ultimaFecha": null,
       "id": "meucci__pintura-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mg",
+      "tareaCatalogoId": "aires-acondicionados",
+      "ultimaFecha": null,
       "id": "mg__aires-acondicionados"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mg",
+      "tareaCatalogoId": "cartelera-exterior",
+      "ultimaFecha": null,
       "id": "mg__cartelera-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mg",
+      "tareaCatalogoId": "control-plagas",
+      "ultimaFecha": null,
       "id": "mg__control-plagas"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mg",
+      "tareaCatalogoId": "limpieza-desagues",
+      "ultimaFecha": null,
       "id": "mg__limpieza-desagues"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mg",
+      "tareaCatalogoId": "limpieza-tanques",
+      "ultimaFecha": null,
       "id": "mg__limpieza-tanques"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mg",
+      "tareaCatalogoId": "mantenimiento-aromatizadores",
+      "ultimaFecha": null,
       "id": "mg__mantenimiento-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mg",
+      "tareaCatalogoId": "matafuegos",
+      "ultimaFecha": null,
       "id": "mg__matafuegos"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mg",
+      "tareaCatalogoId": "pintura-exterior",
+      "ultimaFecha": null,
       "id": "mg__pintura-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mg",
+      "tareaCatalogoId": "recarga-aromatizadores",
+      "ultimaFecha": null,
       "id": "mg__recarga-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-3-de-abril",
+      "tareaCatalogoId": "aires-acondicionados",
+      "ultimaFecha": null,
       "id": "mm-3-de-abril__aires-acondicionados"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-3-de-abril",
+      "tareaCatalogoId": "cartelera-exterior",
+      "ultimaFecha": null,
       "id": "mm-3-de-abril__cartelera-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-3-de-abril",
+      "tareaCatalogoId": "control-plagas",
+      "ultimaFecha": null,
       "id": "mm-3-de-abril__control-plagas"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-3-de-abril",
+      "tareaCatalogoId": "limpieza-desagues",
+      "ultimaFecha": null,
       "id": "mm-3-de-abril__limpieza-desagues"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-3-de-abril",
+      "tareaCatalogoId": "limpieza-tanques",
+      "ultimaFecha": null,
       "id": "mm-3-de-abril__limpieza-tanques"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-3-de-abril",
+      "tareaCatalogoId": "matafuegos",
+      "ultimaFecha": null,
       "id": "mm-3-de-abril__matafuegos"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-3-de-abril",
+      "tareaCatalogoId": "pintura-exterior",
+      "ultimaFecha": null,
       "id": "mm-3-de-abril__pintura-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-barranqueras",
+      "tareaCatalogoId": "aires-acondicionados",
+      "ultimaFecha": null,
       "id": "mm-barranqueras__aires-acondicionados"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-barranqueras",
+      "tareaCatalogoId": "cartelera-exterior",
+      "ultimaFecha": null,
       "id": "mm-barranqueras__cartelera-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-barranqueras",
+      "tareaCatalogoId": "control-plagas",
+      "ultimaFecha": null,
       "id": "mm-barranqueras__control-plagas"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-barranqueras",
+      "tareaCatalogoId": "limpieza-desagues",
+      "ultimaFecha": null,
       "id": "mm-barranqueras__limpieza-desagues"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-barranqueras",
+      "tareaCatalogoId": "limpieza-tanques",
+      "ultimaFecha": null,
       "id": "mm-barranqueras__limpieza-tanques"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-barranqueras",
+      "tareaCatalogoId": "matafuegos",
+      "ultimaFecha": null,
       "id": "mm-barranqueras__matafuegos"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-barranqueras",
+      "tareaCatalogoId": "pintura-exterior",
+      "ultimaFecha": null,
       "id": "mm-barranqueras__pintura-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-italia",
+      "tareaCatalogoId": "aires-acondicionados",
+      "ultimaFecha": null,
       "id": "mm-italia__aires-acondicionados"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-italia",
+      "tareaCatalogoId": "cartelera-exterior",
+      "ultimaFecha": null,
       "id": "mm-italia__cartelera-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-italia",
+      "tareaCatalogoId": "control-plagas",
+      "ultimaFecha": null,
       "id": "mm-italia__control-plagas"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-italia",
+      "tareaCatalogoId": "limpieza-desagues",
+      "ultimaFecha": null,
       "id": "mm-italia__limpieza-desagues"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-italia",
+      "tareaCatalogoId": "limpieza-tanques",
+      "ultimaFecha": null,
       "id": "mm-italia__limpieza-tanques"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-italia",
+      "tareaCatalogoId": "matafuegos",
+      "ultimaFecha": null,
       "id": "mm-italia__matafuegos"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-italia",
+      "tareaCatalogoId": "pintura-exterior",
+      "ultimaFecha": null,
       "id": "mm-italia__pintura-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-juan-b-justo",
+      "tareaCatalogoId": "aires-acondicionados",
+      "ultimaFecha": null,
       "id": "mm-juan-b-justo__aires-acondicionados"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-juan-b-justo",
+      "tareaCatalogoId": "cartelera-exterior",
+      "ultimaFecha": null,
       "id": "mm-juan-b-justo__cartelera-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-juan-b-justo",
+      "tareaCatalogoId": "control-plagas",
+      "ultimaFecha": null,
       "id": "mm-juan-b-justo__control-plagas"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-juan-b-justo",
+      "tareaCatalogoId": "limpieza-desagues",
+      "ultimaFecha": null,
       "id": "mm-juan-b-justo__limpieza-desagues"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-juan-b-justo",
+      "tareaCatalogoId": "limpieza-tanques",
+      "ultimaFecha": null,
       "id": "mm-juan-b-justo__limpieza-tanques"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-juan-b-justo",
+      "tareaCatalogoId": "matafuegos",
+      "ultimaFecha": null,
       "id": "mm-juan-b-justo__matafuegos"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-juan-b-justo",
+      "tareaCatalogoId": "pintura-exterior",
+      "ultimaFecha": null,
       "id": "mm-juan-b-justo__pintura-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-ruta-11",
+      "tareaCatalogoId": "aires-acondicionados",
+      "ultimaFecha": null,
       "id": "mm-ruta-11__aires-acondicionados"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-ruta-11",
+      "tareaCatalogoId": "cartelera-exterior",
+      "ultimaFecha": null,
       "id": "mm-ruta-11__cartelera-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-ruta-11",
+      "tareaCatalogoId": "control-plagas",
+      "ultimaFecha": null,
       "id": "mm-ruta-11__control-plagas"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-ruta-11",
+      "tareaCatalogoId": "limpieza-desagues",
+      "ultimaFecha": null,
       "id": "mm-ruta-11__limpieza-desagues"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-ruta-11",
+      "tareaCatalogoId": "limpieza-tanques",
+      "ultimaFecha": null,
       "id": "mm-ruta-11__limpieza-tanques"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-ruta-11",
+      "tareaCatalogoId": "matafuegos",
+      "ultimaFecha": null,
       "id": "mm-ruta-11__matafuegos"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-ruta-11",
+      "tareaCatalogoId": "pintura-exterior",
+      "ultimaFecha": null,
       "id": "mm-ruta-11__pintura-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "mm-ruta-11",
+      "tareaCatalogoId": "servicio-generadores",
+      "ultimaFecha": null,
       "id": "mm-ruta-11__servicio-generadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "north",
+      "tareaCatalogoId": "aires-acondicionados",
+      "ultimaFecha": null,
       "id": "north__aires-acondicionados"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "north",
+      "tareaCatalogoId": "cartelera-exterior",
+      "ultimaFecha": null,
       "id": "north__cartelera-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "north",
+      "tareaCatalogoId": "control-plagas",
+      "ultimaFecha": null,
       "id": "north__control-plagas"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "north",
+      "tareaCatalogoId": "corte-pasto",
+      "ultimaFecha": null,
       "id": "north__corte-pasto"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "north",
+      "tareaCatalogoId": "limpieza-desagues",
+      "ultimaFecha": null,
       "id": "north__limpieza-desagues"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "north",
+      "tareaCatalogoId": "limpieza-tanques",
+      "ultimaFecha": null,
       "id": "north__limpieza-tanques"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "north",
+      "tareaCatalogoId": "mantenimiento-aromatizadores",
+      "ultimaFecha": null,
       "id": "north__mantenimiento-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "north",
+      "tareaCatalogoId": "mantenimiento-jardineria",
+      "ultimaFecha": null,
       "id": "north__mantenimiento-jardineria"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "north",
+      "tareaCatalogoId": "matafuegos",
+      "ultimaFecha": null,
       "id": "north__matafuegos"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "north",
+      "tareaCatalogoId": "pintura-exterior",
+      "ultimaFecha": null,
       "id": "north__pintura-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "north",
+      "tareaCatalogoId": "recarga-aromatizadores",
+      "ultimaFecha": null,
       "id": "north__recarga-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-ctes",
+      "tareaCatalogoId": "aires-acondicionados",
+      "ultimaFecha": null,
       "id": "re-ctes__aires-acondicionados"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-ctes",
+      "tareaCatalogoId": "cartelera-exterior",
+      "ultimaFecha": null,
       "id": "re-ctes__cartelera-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-ctes",
+      "tareaCatalogoId": "control-plagas",
+      "ultimaFecha": null,
       "id": "re-ctes__control-plagas"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-ctes",
+      "tareaCatalogoId": "limpieza-desagues",
+      "ultimaFecha": null,
       "id": "re-ctes__limpieza-desagues"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-ctes",
+      "tareaCatalogoId": "limpieza-tanques",
+      "ultimaFecha": null,
       "id": "re-ctes__limpieza-tanques"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-ctes",
+      "tareaCatalogoId": "mantenimiento-aromatizadores",
+      "ultimaFecha": null,
       "id": "re-ctes__mantenimiento-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-ctes",
+      "tareaCatalogoId": "matafuegos",
+      "ultimaFecha": null,
       "id": "re-ctes__matafuegos"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-ctes",
+      "tareaCatalogoId": "pintura-exterior",
+      "ultimaFecha": null,
       "id": "re-ctes__pintura-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-ctes",
+      "tareaCatalogoId": "recarga-aromatizadores",
+      "ultimaFecha": null,
       "id": "re-ctes__recarga-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-r",
+      "tareaCatalogoId": "aires-acondicionados",
+      "ultimaFecha": null,
       "id": "re-r__aires-acondicionados"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-r",
+      "tareaCatalogoId": "cartelera-exterior",
+      "ultimaFecha": null,
       "id": "re-r__cartelera-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-r",
+      "tareaCatalogoId": "control-plagas",
+      "ultimaFecha": null,
       "id": "re-r__control-plagas"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-r",
+      "tareaCatalogoId": "corte-pasto",
+      "ultimaFecha": null,
       "id": "re-r__corte-pasto"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-r",
+      "tareaCatalogoId": "limpieza-desagues",
+      "ultimaFecha": null,
       "id": "re-r__limpieza-desagues"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-r",
+      "tareaCatalogoId": "limpieza-tanques",
+      "ultimaFecha": null,
       "id": "re-r__limpieza-tanques"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-r",
+      "tareaCatalogoId": "mantenimiento-aromatizadores",
+      "ultimaFecha": null,
       "id": "re-r__mantenimiento-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-r",
+      "tareaCatalogoId": "mantenimiento-jardineria",
+      "ultimaFecha": null,
       "id": "re-r__mantenimiento-jardineria"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-r",
+      "tareaCatalogoId": "matafuegos",
+      "ultimaFecha": null,
       "id": "re-r__matafuegos"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-r",
+      "tareaCatalogoId": "pintura-exterior",
+      "ultimaFecha": null,
       "id": "re-r__pintura-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "re-r",
+      "tareaCatalogoId": "recarga-aromatizadores",
+      "ultimaFecha": null,
       "id": "re-r__recarga-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-ctes",
+      "tareaCatalogoId": "aires-acondicionados",
+      "ultimaFecha": null,
       "id": "scuderia-ctes__aires-acondicionados"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-ctes",
+      "tareaCatalogoId": "cartelera-exterior",
+      "ultimaFecha": null,
       "id": "scuderia-ctes__cartelera-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-ctes",
+      "tareaCatalogoId": "control-plagas",
+      "ultimaFecha": null,
       "id": "scuderia-ctes__control-plagas"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-ctes",
+      "tareaCatalogoId": "corte-pasto",
+      "ultimaFecha": null,
       "id": "scuderia-ctes__corte-pasto"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-ctes",
+      "tareaCatalogoId": "limpieza-desagues",
+      "ultimaFecha": null,
       "id": "scuderia-ctes__limpieza-desagues"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-ctes",
+      "tareaCatalogoId": "limpieza-tanques",
+      "ultimaFecha": null,
       "id": "scuderia-ctes__limpieza-tanques"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-ctes",
+      "tareaCatalogoId": "mantenimiento-aromatizadores",
+      "ultimaFecha": null,
       "id": "scuderia-ctes__mantenimiento-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-ctes",
+      "tareaCatalogoId": "mantenimiento-jardineria",
+      "ultimaFecha": null,
       "id": "scuderia-ctes__mantenimiento-jardineria"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-ctes",
+      "tareaCatalogoId": "matafuegos",
+      "ultimaFecha": null,
       "id": "scuderia-ctes__matafuegos"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-ctes",
+      "tareaCatalogoId": "pintura-exterior",
+      "ultimaFecha": null,
       "id": "scuderia-ctes__pintura-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-ctes",
+      "tareaCatalogoId": "recarga-aromatizadores",
+      "ultimaFecha": null,
       "id": "scuderia-ctes__recarga-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-ctes",
+      "tareaCatalogoId": "servicio-generadores",
+      "ultimaFecha": null,
       "id": "scuderia-ctes__servicio-generadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-r",
+      "tareaCatalogoId": "aires-acondicionados",
+      "ultimaFecha": null,
       "id": "scuderia-r__aires-acondicionados"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-r",
+      "tareaCatalogoId": "cartelera-exterior",
+      "ultimaFecha": null,
       "id": "scuderia-r__cartelera-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-r",
+      "tareaCatalogoId": "control-plagas",
+      "ultimaFecha": null,
       "id": "scuderia-r__control-plagas"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-r",
+      "tareaCatalogoId": "corte-pasto",
+      "ultimaFecha": null,
       "id": "scuderia-r__corte-pasto"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-r",
+      "tareaCatalogoId": "limpieza-desagues",
+      "ultimaFecha": null,
       "id": "scuderia-r__limpieza-desagues"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-r",
+      "tareaCatalogoId": "limpieza-tanques",
+      "ultimaFecha": null,
       "id": "scuderia-r__limpieza-tanques"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-r",
+      "tareaCatalogoId": "mantenimiento-aromatizadores",
+      "ultimaFecha": null,
       "id": "scuderia-r__mantenimiento-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-r",
+      "tareaCatalogoId": "mantenimiento-jardineria",
+      "ultimaFecha": null,
       "id": "scuderia-r__mantenimiento-jardineria"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-r",
+      "tareaCatalogoId": "matafuegos",
+      "ultimaFecha": null,
       "id": "scuderia-r__matafuegos"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-r",
+      "tareaCatalogoId": "pintura-exterior",
+      "ultimaFecha": null,
       "id": "scuderia-r__pintura-exterior"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-r",
+      "tareaCatalogoId": "recarga-aromatizadores",
+      "ultimaFecha": null,
       "id": "scuderia-r__recarga-aromatizadores"
     },
     {
+      "evidencias": [],
+      "historial": [],
+      "proximoVencimiento": null,
+      "sucursalId": "scuderia-r",
+      "tareaCatalogoId": "servicio-generadores",
+      "ultimaFecha": null,
       "id": "scuderia-r__servicio-generadores"
     }
   ]
