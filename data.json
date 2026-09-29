@@ -2881,13 +2881,17 @@
   ],
   "tareasSucursal": [
     {
-      "evidencias": [],
-      "historial": [],
-      "proximoVencimiento": null,
       "sucursalId": "alliance-ctes",
       "tareaCatalogoId": "aires-acondicionados",
-      "ultimaFecha": null,
-      "id": "alliance-ctes__aires-acondicionados"
+      "ultimaFecha": "2026-09-29",
+      "proximoVencimiento": "2027-09-29",
+      "historial": [
+        {
+          "fecha": "2026-09-29",
+          "nota": "prueba",
+          "evidenciaUrl": "https://raw.githubusercontent.com/calidadmeucci/info-sucursales-/main/evidencias/alliance-ctes__aires-acondicionados__1790689200006.jpeg"
+        }
+      ]
     },
     {
       "evidencias": [],
