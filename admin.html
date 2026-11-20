@@ -96,11 +96,22 @@ table tr:last-child td{border-bottom:none;}
 .setup-wrap p{color:var(--muted); font-size:13.5px; line-height:1.6;}
 .help-link{color:var(--brand);}
 
+.faltante{color:var(--warn); font-weight:600; font-size:12px;}
+.muted{color:var(--muted); font-size:12.5px;}
+.navbtn{position:relative;}
+.navbadge{margin-left:auto; background:var(--warn); color:#fff; border-radius:100px; font-size:11px; font-weight:700; padding:1px 7px; min-width:20px; text-align:center;}
+#railfoot a{color:inherit;}
+.summary{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:12px;}
+.summary .chip{background:var(--warn-soft); color:var(--warn); border-radius:100px; padding:5px 12px; font-size:13px;}
+.gap-sub{font-size:12.5px; font-weight:700; color:var(--muted); margin:14px 0 6px;}
+.filters-row{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px;}
+.filters-row select{padding:7px 10px; border:1px solid var(--line); border-radius:7px; background:var(--surface); color:var(--ink); font-size:13.5px;}
 @media (max-width: 760px){
   #shell{flex-direction:column;}
-  #rail{position:fixed; bottom:0; left:0; right:0; top:auto; width:100%; height:auto; flex-direction:row; padding:6px 8px calc(6px + env(safe-area-inset-bottom,0px)); z-index:20; box-shadow:0 -2px 10px rgba(0,0,0,.12); gap:2px; justify-content:space-around;}
+  #rail{position:fixed; bottom:0; left:0; right:0; top:auto; width:100%; height:auto; flex-direction:row; padding:6px 8px calc(6px + env(safe-area-inset-bottom,0px)); z-index:20; box-shadow:0 -2px 10px rgba(0,0,0,.12); gap:2px; justify-content:flex-start; overflow-x:auto;}
   #rail .logo, #railfoot{display:none;}
-  .navbtn{flex-direction:column; font-size:11px; gap:3px; padding:6px 8px; flex:1;}
+  .navbadge{position:absolute; top:1px; right:10px; margin:0;}
+  .navbtn{flex-direction:column; font-size:11px; gap:3px; padding:6px 8px; flex:1 0 auto; min-width:74px; text-align:center;}
   .navbtn .ic{font-size:19px;}
   #main{padding-bottom:64px;}
   #content{padding:18px 16px 40px;}
@@ -130,12 +141,14 @@ table tr:last-child td{border-bottom:none;}
   <nav id="rail">
     <div class="logo">Panel de Sucursales<small>Administración</small></div>
     <button class="navbtn" data-tab="mantenimiento"><span class="ic">🛠️</span><span>Mantenimiento</span></button>
+    <button class="navbtn" data-tab="incompletos"><span class="ic">⚠️</span><span>Datos incompletos</span><span class="navbadge" id="inc-badge"></span></button>
     <button class="navbtn" data-tab="sucursales"><span class="ic">🏢</span><span>Sucursales</span></button>
     <button class="navbtn" data-tab="tiposServicio"><span class="ic">📋</span><span>Tipos de servicio</span></button>
     <button class="navbtn" data-tab="serviciosSucursal"><span class="ic">🔧</span><span>Servicios por sucursal</span></button>
     <button class="navbtn" data-tab="tareasCatalogo"><span class="ic">🗂️</span><span>Catálogo de tareas</span></button>
     <div id="railfoot">
       <span id="repo-label"></span><br>
+      <a href="./">Ver página pública</a><br>
       <button class="btn small" id="disconnect-btn" style="margin-top:8px;">Desconectar</button>
     </div>
   </nav>
@@ -221,7 +234,7 @@ function fileToBase64(file){
 /* ============================= STATE ============================= */
 const S = {
   sucursales:[], tiposServicio:[], serviciosSucursal:[], tareasCatalogo:[], tareasSucursal:[],
-  sha:null, tab:'mantenimiento', selectedSucursal:null, adminSub:'sucursales', mantFiltro:{sucursal:'', tipoServicio:''},
+  sha:null, tab:'mantenimiento', selectedSucursal:null, adminSub:'sucursales', mantFiltro:{sucursal:'', tipoServicio:''}, svcFiltro:{sucursal:'', tipo:''},
 };
 const PERIOD_DAYS = {Semanal:7, Mensual:30, Trimestral:90, Semestral:182, Anual:365};
 const PERIODOS = Object.keys(PERIOD_DAYS);
@@ -295,6 +308,7 @@ async function persist(message){
   };
   const result = await ghPutJson('data.json', payload, S.sha, message);
   S.sha = result.content.sha;
+  render();
 }
 
 /* ============================= RENDER ROOT ============================= */
@@ -302,6 +316,7 @@ function render(){
   document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active', b.dataset.tab===S.tab));
   const titles = {
     mantenimiento: ['Mantenimiento', 'Marcar tareas realizadas y ver alertas'],
+    incompletos: ['Datos incompletos', 'Información que falta completar'],
     sucursales: ['Sucursales', 'Alta y edición de locales'],
     tiposServicio: ['Tipos de servicio', 'Catálogo de servicios disponibles'],
     serviciosSucursal: ['Servicios por sucursal', 'Proveedores y contactos por local'],
@@ -310,7 +325,10 @@ function render(){
   document.getElementById('topbar-title').textContent = titles[S.tab][0];
   document.getElementById('topbar-sub').textContent = titles[S.tab][1];
   const content = document.getElementById('content'); content.innerHTML = '';
+  const nInc = countGaps(); const bd = document.getElementById('inc-badge');
+  if(bd){ bd.textContent = nInc || ''; bd.style.display = nInc ? '' : 'none'; }
   if(S.tab==='mantenimiento') renderMantenimiento(content);
+  if(S.tab==='incompletos') renderIncompletos(content);
   if(S.tab==='sucursales') renderAdminSucursales(content);
   if(S.tab==='tiposServicio') renderAdminTipos(content);
   if(S.tab==='serviciosSucursal') renderAdminServicios(content);
@@ -432,15 +450,21 @@ async function saveTareaRealizada(t){
 }
 
 /* ============================= ADMIN: SUCURSALES ============================= */
+async function commit(message, okMsg){
+  try{ await persist(message); closeModal(); toast(okMsg); }
+  catch(e){ console.error(e); toast('No se pudo guardar: ' + e.message); try{ await loadData(); }catch(_){} }
+}
 function renderAdminSucursales(content){
   const toolbar = el('div','admin-toolbar', `<div><strong>${S.sucursales.length}</strong> sucursales</div>`);
   const addBtn = el('button','btn primary','+ Agregar sucursal');
   addBtn.addEventListener('click', ()=>openSucursalModal(null));
   toolbar.appendChild(addBtn); content.appendChild(toolbar);
-  const table = el('table','','<thead><tr><th>Nombre</th><th>Dirección</th><th>Provincia</th><th></th></tr></thead>');
+  const table = el('table','','<thead><tr><th>Nombre</th><th>Dirección</th><th>Provincia</th><th>Servicios</th><th></th></tr></thead>');
   const tbody = el('tbody');
   S.sucursales.slice().sort((a,b)=>a.nombre.localeCompare(b.nombre)).forEach(s=>{
-    const tr = el('tr','', `<td>${esc(s.nombre)}</td><td>${esc(s.direccion)||'—'}</td><td>${esc(s.provincia)||'—'}</td><td></td>`);
+    const n = S.serviciosSucursal.filter(x=>x.sucursalId===s.id).length;
+    const falta = '<span class="faltante">falta</span>';
+    const tr = el('tr','', `<td>${esc(s.nombre)}</td><td>${s.direccion? esc(s.direccion) : falta}</td><td>${s.provincia? esc(s.provincia) : falta}</td><td>${n}</td><td></td>`);
     const editBtn = el('button','btn small','Editar'); editBtn.addEventListener('click', ()=>openSucursalModal(s));
     tr.lastElementChild.appendChild(editBtn); tbody.appendChild(tr);
   });
@@ -456,80 +480,143 @@ function openSucursalModal(s){
       <div class="field"><label>Dirección</label><input id="f-direccion" value="${esc(s?.direccion||'')}"></div>
       <div class="field"><label>Provincia</label><input id="f-provincia" value="${esc(s?.provincia||'')}"></div>
     </div>
-    <div class="modal-foot"><button class="btn" id="mcancel">Cancelar</button><button class="btn primary" id="msave">Guardar</button></div>`;
+    <div class="modal-foot">
+      ${!isNew?'<button class="btn danger" id="mdelete" style="margin-right:auto;">Eliminar</button>':''}
+      <button class="btn" id="mcancel">Cancelar</button><button class="btn primary" id="msave">Guardar</button>
+    </div>`;
   backdrop.classList.remove('hidden');
   document.getElementById('mclose').onclick = closeModal; document.getElementById('mcancel').onclick = closeModal;
+  if(!isNew){
+    document.getElementById('mdelete').onclick = async ()=>{
+      const svc = S.serviciosSucursal.filter(x=>x.sucursalId===s.id);
+      const tareas = S.tareasSucursal.filter(x=>x.sucursalId===s.id);
+      const hechas = tareas.filter(x=>x.ultimaFecha).length;
+      let msg = `Se va a eliminar la sucursal "${s.nombre}", sus ${svc.length} servicios y sus ${tareas.length} tareas de mantenimiento.`;
+      if(hechas) msg += `\n\nATENCIÓN: ${hechas} tarea(s) tienen realizaciones registradas, que se van a perder.`;
+      msg += '\n\n¿Continuar?';
+      if(!confirm(msg)) return;
+      S.sucursales = S.sucursales.filter(x=>x.id!==s.id);
+      S.serviciosSucursal = S.serviciosSucursal.filter(x=>x.sucursalId!==s.id);
+      S.tareasSucursal = S.tareasSucursal.filter(x=>x.sucursalId!==s.id);
+      await commit(`Eliminar sucursal ${s.nombre}`, 'Sucursal eliminada');
+    };
+  }
   document.getElementById('msave').onclick = async ()=>{
     const nombre = document.getElementById('f-nombre').value.trim();
     if(!nombre){ toast('Poné un nombre'); return; }
-    const id = s ? s.id : (slugify(nombre) + (S.sucursales.some(x=>x.id===slugify(nombre))?'-'+Date.now().toString(36).slice(-4):''));
-    const data = {id, nombre, direccion: document.getElementById('f-direccion').value.trim(), provincia: document.getElementById('f-provincia').value.trim()};
-    const idx = S.sucursales.findIndex(x=>x.id===id);
-    if(idx>=0) S.sucursales[idx] = data; else S.sucursales.push(data);
-    try{ await persist(`Sucursal: ${nombre}`); closeModal(); toast('Sucursal guardada'); }
-    catch(e){ toast('Error al guardar: '+e.message); }
+    const direccion = document.getElementById('f-direccion').value.trim();
+    const provincia = document.getElementById('f-provincia').value.trim();
+    if(isNew){
+      const base = slugify(nombre);
+      const id = base + (S.sucursales.some(x=>x.id===base) ? '-'+Date.now().toString(36).slice(-4) : '');
+      S.sucursales.push({id, nombre, direccion, provincia});
+    } else {
+      Object.assign(s, {nombre, direccion, provincia});
+    }
+    await commit(`Sucursal: ${nombre}`, 'Sucursal guardada');
   };
 }
 
 /* ============================= ADMIN: TIPOS DE SERVICIO ============================= */
 function renderAdminTipos(content){
   const toolbar = el('div','admin-toolbar', `<div><strong>${S.tiposServicio.length}</strong> tipos de servicio</div>`);
-  const addBtn = el('button','btn primary','+ Agregar tipo'); addBtn.addEventListener('click', ()=>openTipoModal());
+  const addBtn = el('button','btn primary','+ Agregar tipo'); addBtn.addEventListener('click', ()=>openTipoModal(null));
   toolbar.appendChild(addBtn); content.appendChild(toolbar);
-  const table = el('table','','<thead><tr><th></th><th>Nombre</th><th>Sucursales con este servicio</th></tr></thead>');
+  const table = el('table','','<thead><tr><th></th><th>Nombre</th><th>Sucursales con este servicio</th><th>Tareas asociadas</th><th></th></tr></thead>');
   const tbody = el('tbody');
   S.tiposServicio.forEach(t=>{
     const count = S.serviciosSucursal.filter(x=>x.tipoServicioId===t.id).length;
-    tbody.appendChild(el('tr','', `<td style="font-size:18px;">${t.icono||'•'}</td><td>${esc(t.nombre)}</td><td>${count}</td>`));
+    const tareas = S.tareasCatalogo.filter(x=>x.tipoServicioId===t.id).length;
+    const tr = el('tr','', `<td style="font-size:18px;">${esc(t.icono)||'•'}</td><td>${esc(t.nombre)}</td><td>${count}</td><td>${tareas}</td><td></td>`);
+    const editBtn = el('button','btn small','Editar'); editBtn.addEventListener('click', ()=>openTipoModal(t));
+    tr.lastElementChild.appendChild(editBtn); tbody.appendChild(tr);
   });
   table.appendChild(tbody);
   const c = el('div','card',''); c.appendChild(table); content.appendChild(c);
 }
-function openTipoModal(){
-  const backdrop = document.getElementById('modal-backdrop'); const modal = document.getElementById('modal');
+function openTipoModal(t){
+  const backdrop = document.getElementById('modal-backdrop'); const modal = document.getElementById('modal'); const isNew = !t;
   modal.innerHTML = `
-    <div class="modal-head"><h3>Nuevo tipo de servicio</h3><button class="modal-close" id="mclose">✕</button></div>
+    <div class="modal-head"><h3>${isNew?'Nuevo tipo de servicio':'Editar tipo de servicio'}</h3><button class="modal-close" id="mclose">✕</button></div>
     <div class="modal-body">
-      <div class="field"><label>Nombre</label><input id="f-nombre" placeholder="Ej: Fumigación"></div>
-      <div class="field"><label>Ícono (un emoji, opcional)</label><input id="f-icono" placeholder="🧹" maxlength="4"></div>
+      <div class="field"><label>Nombre</label><input id="f-nombre" value="${esc(t?.nombre||'')}" placeholder="Ej: Fumigación"></div>
+      <div class="field"><label>Ícono (un emoji, opcional)</label><input id="f-icono" value="${esc(t?.icono||'')}" placeholder="🧹" maxlength="4"></div>
     </div>
-    <div class="modal-foot"><button class="btn" id="mcancel">Cancelar</button><button class="btn primary" id="msave">Guardar</button></div>`;
+    <div class="modal-foot">
+      ${!isNew?'<button class="btn danger" id="mdelete" style="margin-right:auto;">Eliminar</button>':''}
+      <button class="btn" id="mcancel">Cancelar</button><button class="btn primary" id="msave">Guardar</button>
+    </div>`;
   backdrop.classList.remove('hidden');
   document.getElementById('mclose').onclick = closeModal; document.getElementById('mcancel').onclick = closeModal;
+  if(!isNew){
+    document.getElementById('mdelete').onclick = async ()=>{
+      const tareasLigadas = S.tareasCatalogo.filter(x=>x.tipoServicioId===t.id);
+      if(tareasLigadas.length){
+        alert(`No se puede eliminar "${t.nombre}": hay ${tareasLigadas.length} tarea(s) del catálogo asociadas a este servicio (${tareasLigadas.map(x=>x.nombre).join(', ')}).\n\nPrimero editá o eliminá esas tareas desde "Catálogo de tareas".`);
+        return;
+      }
+      const svc = S.serviciosSucursal.filter(x=>x.tipoServicioId===t.id);
+      if(!confirm(`Se va a eliminar el tipo de servicio "${t.nombre}" y se va a quitar de ${svc.length} sucursal(es), con sus proveedores y contactos.\n\n¿Continuar?`)) return;
+      S.tiposServicio = S.tiposServicio.filter(x=>x.id!==t.id);
+      S.serviciosSucursal = S.serviciosSucursal.filter(x=>x.tipoServicioId!==t.id);
+      await commit(`Eliminar tipo de servicio ${t.nombre}`, 'Tipo de servicio eliminado');
+    };
+  }
   document.getElementById('msave').onclick = async ()=>{
     const nombre = document.getElementById('f-nombre').value.trim();
     if(!nombre){ toast('Poné un nombre'); return; }
-    const id = slugify(nombre);
-    S.tiposServicio.push({id, nombre, icono: document.getElementById('f-icono').value.trim()||'•'});
-    try{ await persist(`Tipo de servicio: ${nombre}`); closeModal(); toast('Tipo de servicio agregado'); }
-    catch(e){ toast('Error al guardar: '+e.message); }
+    const icono = document.getElementById('f-icono').value.trim() || '•';
+    if(isNew){
+      const id = slugify(nombre);
+      if(!id){ toast('El nombre no es válido'); return; }
+      if(S.tiposServicio.some(x=>x.id===id)){ toast('Ya existe un tipo con ese nombre'); return; }
+      S.tiposServicio.push({id, nombre, icono});
+    } else {
+      Object.assign(t, {nombre, icono});
+    }
+    await commit(`Tipo de servicio: ${nombre}`, 'Tipo de servicio guardado');
   };
 }
 
 /* ============================= ADMIN: SERVICIOS POR SUCURSAL ============================= */
 function renderAdminServicios(content){
-  const toolbar = el('div','admin-toolbar', `<div><strong>${S.serviciosSucursal.length}</strong> servicios asignados</div>`);
+  const f = S.svcFiltro;
+  let list = S.serviciosSucursal.slice();
+  if(f.sucursal) list = list.filter(x=>x.sucursalId===f.sucursal);
+  if(f.tipo) list = list.filter(x=>x.tipoServicioId===f.tipo);
+  const toolbar = el('div','admin-toolbar', `<div><strong>${list.length}</strong> de ${S.serviciosSucursal.length} servicios</div>`);
   const addBtn = el('button','btn primary','+ Asignar servicio'); addBtn.addEventListener('click', ()=>openServicioModal(null));
   toolbar.appendChild(addBtn); content.appendChild(toolbar);
+
+  const filters = el('div','filters-row');
+  const selSuc = document.createElement('select');
+  selSuc.innerHTML = '<option value="">Todas las sucursales</option>' + S.sucursales.slice().sort((a,b)=>a.nombre.localeCompare(b.nombre)).map(x=>`<option value="${x.id}">${esc(x.nombre)}</option>`).join('');
+  selSuc.value = f.sucursal; selSuc.addEventListener('change', ()=>{ S.svcFiltro.sucursal = selSuc.value; render(); });
+  const selTipo = document.createElement('select');
+  selTipo.innerHTML = '<option value="">Todos los servicios</option>' + S.tiposServicio.map(x=>`<option value="${x.id}">${esc(x.nombre)}</option>`).join('');
+  selTipo.value = f.tipo; selTipo.addEventListener('change', ()=>{ S.svcFiltro.tipo = selTipo.value; render(); });
+  filters.appendChild(selSuc); filters.appendChild(selTipo); content.appendChild(filters);
+
   const table = el('table','','<thead><tr><th>Sucursal</th><th>Servicio</th><th>Proveedor</th><th>Contacto</th><th></th></tr></thead>');
   const tbody = el('tbody');
-  S.serviciosSucursal.slice().sort((a,b)=>{
+  list.sort((a,b)=>{
     const sa = byId(S.sucursales,a.sucursalId)?.nombre||''; const sb = byId(S.sucursales,b.sucursalId)?.nombre||'';
-    return sa.localeCompare(sb);
+    return sa.localeCompare(sb) || String(a.tipoServicioId).localeCompare(String(b.tipoServicioId));
   }).forEach(s=>{
     const suc = byId(S.sucursales, s.sucursalId); const tipo = byId(S.tiposServicio, s.tipoServicioId);
-    const contacto = [s.contacto?.responsable, s.contacto?.telefono, s.contacto?.email].filter(Boolean).join(' · ') || '—';
-    const tr = el('tr','', `<td>${esc(suc?.nombre||s.sucursalId)}</td><td>${tipo?.icono||''} ${esc(tipo?.nombre||s.tipoServicioId)}</td><td>${esc(s.proveedor)||'—'}</td><td>${esc(contacto)}</td><td></td>`);
+    const contacto = [s.contacto?.responsable, s.contacto?.telefono, s.contacto?.email].filter(Boolean).join(' · ');
+    const contactoHtml = contacto ? esc(contacto) : (tieneTelefonoEnTexto(s.notas) ? '<span class="muted">en las notas</span>' : '<span class="faltante">falta</span>');
+    const tr = el('tr','', `<td>${esc(suc?.nombre||s.sucursalId)}</td><td>${esc(tipo?.icono||'')} ${esc(tipo?.nombre||s.tipoServicioId)}</td><td>${esc(s.proveedor)||'—'}</td><td>${contactoHtml}</td><td></td>`);
     const editBtn = el('button','btn small','Editar'); editBtn.addEventListener('click', ()=>openServicioModal(s));
     tr.lastElementChild.appendChild(editBtn); tbody.appendChild(tr);
   });
   table.appendChild(tbody);
   const c = el('div','card',''); c.appendChild(table); content.appendChild(c);
 }
-function openServicioModal(s){
+function openServicioModal(s, preset){
   const backdrop = document.getElementById('modal-backdrop'); const modal = document.getElementById('modal'); const isNew = !s;
-  const sucOpts = S.sucursales.slice().sort((a,b)=>a.nombre.localeCompare(b.nombre)).map(x=>`<option value="${x.id}" ${s?.sucursalId===x.id?'selected':''}>${esc(x.nombre)}</option>`).join('');
-  const tipoOpts = S.tiposServicio.map(x=>`<option value="${x.id}" ${s?.tipoServicioId===x.id?'selected':''}>${esc(x.nombre)}</option>`).join('');
+  const sucOpts = S.sucursales.slice().sort((a,b)=>a.nombre.localeCompare(b.nombre)).map(x=>`<option value="${x.id}" ${(s?.sucursalId||preset?.sucursalId)===x.id?'selected':''}>${esc(x.nombre)}</option>`).join('');
+  const tipoOpts = S.tiposServicio.map(x=>`<option value="${x.id}" ${(s?.tipoServicioId||preset?.tipoServicioId)===x.id?'selected':''}>${esc(x.nombre)}</option>`).join('');
   modal.innerHTML = `
     <div class="modal-head"><h3>${isNew?'Asignar servicio':'Editar servicio'}</h3><button class="modal-close" id="mclose">✕</button></div>
     <div class="modal-body">
@@ -539,7 +626,7 @@ function openServicioModal(s){
       </div>
       <div class="field"><label>Proveedor</label><input id="f-proveedor" value="${esc(s?.proveedor||'')}"></div>
       <div class="row">
-        <div class="field"><label id="f-resp-label">${s?.tipoServicioId === 'alarma' ? 'Contactos declarados' : 'Responsable'}</label><input id="f-resp" value="${esc(s?.contacto?.responsable||'')}"></div>
+        <div class="field"><label id="f-resp-label">${(s?.tipoServicioId||preset?.tipoServicioId) === 'alarma' ? 'Contactos declarados' : 'Responsable'}</label><input id="f-resp" value="${esc(s?.contacto?.responsable||'')}"></div>
         <div class="field"><label>Teléfono</label><input id="f-tel" value="${esc(s?.contacto?.telefono||'')}"></div>
       </div>
       <div class="row">
@@ -563,6 +650,8 @@ function openServicioModal(s){
     document.getElementById('mdelete').onclick = async ()=>{
       if(!confirm('¿Eliminar este servicio de la sucursal?')) return;
       S.serviciosSucursal = S.serviciosSucursal.filter(x=>x.id!==s.id);
+      const ligadas = S.tareasCatalogo.filter(t=>t.tipoServicioId===s.tipoServicioId).map(t=>t.id);
+      S.tareasSucursal = S.tareasSucursal.filter(x=>!(x.sucursalId===s.sucursalId && ligadas.includes(x.tareaCatalogoId) && !x.ultimaFecha));
       try{ await persist(`Eliminar servicio ${s.id}`); closeModal(); toast('Servicio eliminado'); }
       catch(e){ toast('Error al guardar: '+e.message); }
     };
@@ -571,6 +660,7 @@ function openServicioModal(s){
     const sucursalId = isNew ? document.getElementById('f-suc').value : s.sucursalId;
     const tipoServicioId = isNew ? document.getElementById('f-tipo').value : s.tipoServicioId;
     const id = sucursalId+'__'+tipoServicioId;
+    if(isNew && S.serviciosSucursal.some(x=>x.id===id)){ toast('Esa sucursal ya tiene ese servicio: editalo desde la lista.'); return; }
     const data = { id, sucursalId, tipoServicioId,
       proveedor: document.getElementById('f-proveedor').value.trim(),
       contacto: { responsable: document.getElementById('f-resp').value.trim(), telefono: document.getElementById('f-tel').value.trim(), email: document.getElementById('f-email').value.trim() },
@@ -594,52 +684,156 @@ function ensureTareasParaServicio(sucursalId, tipoServicioId){
 /* ============================= ADMIN: TAREAS CATÁLOGO ============================= */
 function renderAdminTareas(content){
   const toolbar = el('div','admin-toolbar', `<div><strong>${S.tareasCatalogo.length}</strong> tareas en el catálogo</div>`);
-  const addBtn = el('button','btn primary','+ Agregar tarea'); addBtn.addEventListener('click', ()=>openTareaCatalogoModal());
+  const addBtn = el('button','btn primary','+ Agregar tarea'); addBtn.addEventListener('click', ()=>openTareaCatalogoModal(null));
   toolbar.appendChild(addBtn); content.appendChild(toolbar);
-  const table = el('table','','<thead><tr><th>Tarea</th><th>Periodicidad</th><th>Servicio asociado</th><th>Sucursales donde aplica</th></tr></thead>');
+  const table = el('table','','<thead><tr><th>Tarea</th><th>Periodicidad</th><th>Servicio asociado</th><th>Sucursales donde aplica</th><th></th></tr></thead>');
   const tbody = el('tbody');
   S.tareasCatalogo.forEach(t=>{
     const tipo = t.tipoServicioId ? byId(S.tiposServicio, t.tipoServicioId) : null;
     const count = S.tareasSucursal.filter(x=>x.tareaCatalogoId===t.id).length;
-    tbody.appendChild(el('tr','', `<td>${esc(t.nombre)}</td><td>${esc(t.periodicidad)}</td><td>${tipo? (tipo.icono+' '+esc(tipo.nombre)) : 'Todas (general)'}</td><td>${count}</td>`));
+    const tr = el('tr','', `<td>${esc(t.nombre)}</td><td>${esc(t.periodicidad)}</td><td>${tipo? (esc(tipo.icono)+' '+esc(tipo.nombre)) : 'Todas (general)'}</td><td>${count}</td><td></td>`);
+    const editBtn = el('button','btn small','Editar'); editBtn.addEventListener('click', ()=>openTareaCatalogoModal(t));
+    tr.lastElementChild.appendChild(editBtn); tbody.appendChild(tr);
   });
   table.appendChild(tbody);
   const c = el('div','card',''); c.appendChild(table); content.appendChild(c);
 }
-function openTareaCatalogoModal(){
-  const backdrop = document.getElementById('modal-backdrop'); const modal = document.getElementById('modal');
-  const tipoOpts = '<option value="">Ninguno — aplica a todas las sucursales</option>' + S.tiposServicio.map(t=>`<option value="${t.id}">${esc(t.nombre)}</option>`).join('');
-  const periodOpts = PERIODOS.map(p=>`<option value="${p}">${p}</option>`).join('');
+function openTareaCatalogoModal(t){
+  const backdrop = document.getElementById('modal-backdrop'); const modal = document.getElementById('modal'); const isNew = !t;
+  const tipoOpts = '<option value="">Ninguno — aplica a todas las sucursales</option>' + S.tiposServicio.map(x=>`<option value="${x.id}" ${t?.tipoServicioId===x.id?'selected':''}>${esc(x.nombre)}</option>`).join('');
+  const periodOpts = PERIODOS.map(p=>`<option value="${p}" ${t?.periodicidad===p?'selected':''}>${p}</option>`).join('');
   modal.innerHTML = `
-    <div class="modal-head"><h3>Nueva tarea de mantenimiento</h3><button class="modal-close" id="mclose">✕</button></div>
+    <div class="modal-head"><h3>${isNew?'Nueva tarea de mantenimiento':'Editar tarea de mantenimiento'}</h3><button class="modal-close" id="mclose">✕</button></div>
     <div class="modal-body">
-      <div class="field"><label>Nombre de la tarea</label><input id="f-nombre" placeholder="Ej: Revisión de matafuegos"></div>
+      <div class="field"><label>Nombre de la tarea</label><input id="f-nombre" value="${esc(t?.nombre||'')}" placeholder="Ej: Revisión de matafuegos"></div>
       <div class="row">
         <div class="field"><label>Periodicidad</label><select id="f-period">${periodOpts}</select></div>
-        <div class="field"><label>Servicio asociado (opcional)</label><select id="f-tipo">${tipoOpts}</select></div>
+        <div class="field"><label>Servicio asociado${isNew?' (opcional)':''}</label><select id="f-tipo" ${!isNew?'disabled':''}>${tipoOpts}</select></div>
       </div>
-      <div style="font-size:12.5px; color:var(--muted);">Si elegís un servicio, la tarea solo se genera para las sucursales que tengan ese servicio asignado.</div>
+      <div style="font-size:12.5px; color:var(--muted);">${isNew
+        ? 'Si elegís un servicio, la tarea solo se genera para las sucursales que tengan ese servicio asignado.'
+        : 'El servicio asociado no se puede cambiar. Si necesitás otro, eliminá la tarea y creala de nuevo. Si cambiás la periodicidad, se recalculan los vencimientos de las tareas ya realizadas.'}</div>
     </div>
-    <div class="modal-foot"><button class="btn" id="mcancel">Cancelar</button><button class="btn primary" id="msave">Guardar</button></div>`;
+    <div class="modal-foot">
+      ${!isNew?'<button class="btn danger" id="mdelete" style="margin-right:auto;">Eliminar</button>':''}
+      <button class="btn" id="mcancel">Cancelar</button><button class="btn primary" id="msave">Guardar</button>
+    </div>`;
   backdrop.classList.remove('hidden');
   document.getElementById('mclose').onclick = closeModal; document.getElementById('mcancel').onclick = closeModal;
+  if(!isNew){
+    document.getElementById('mdelete').onclick = async ()=>{
+      const inst = S.tareasSucursal.filter(x=>x.tareaCatalogoId===t.id);
+      const hechas = inst.filter(x=>x.ultimaFecha).length;
+      let msg = `Se va a eliminar la tarea "${t.nombre}" del catálogo y de ${inst.length} sucursal(es).`;
+      if(hechas) msg += `\n\nATENCIÓN: ${hechas} sucursal(es) tienen realizaciones registradas de esta tarea, que se van a perder.`;
+      msg += '\n\n¿Continuar?';
+      if(!confirm(msg)) return;
+      S.tareasCatalogo = S.tareasCatalogo.filter(x=>x.id!==t.id);
+      S.tareasSucursal = S.tareasSucursal.filter(x=>x.tareaCatalogoId!==t.id);
+      await commit(`Eliminar tarea de catálogo ${t.nombre}`, 'Tarea eliminada');
+    };
+  }
   document.getElementById('msave').onclick = async ()=>{
     const nombre = document.getElementById('f-nombre').value.trim();
     if(!nombre){ toast('Poné un nombre'); return; }
     const periodicidad = document.getElementById('f-period').value;
-    const tipoServicioId = document.getElementById('f-tipo').value || null;
-    const id = slugify(nombre);
-    S.tareasCatalogo.push({id, nombre, periodicidad, periodicidadDias: PERIOD_DAYS[periodicidad], tipoServicioId});
-    const applicable = tipoServicioId ? S.serviciosSucursal.filter(x=>x.tipoServicioId===tipoServicioId).map(x=>x.sucursalId) : S.sucursales.map(x=>x.id);
-    applicable.forEach(sucursalId=>{
-      if(!S.tareasSucursal.find(x=>x.sucursalId===sucursalId && x.tareaCatalogoId===id)){
-        S.tareasSucursal.push({sucursalId, tareaCatalogoId:id, ultimaFecha:null, proximoVencimiento:null, historial:[]});
-      }
-    });
-    try{ await persist(`Tarea de catálogo: ${nombre}`); closeModal(); toast('Tarea agregada al catálogo'); }
-    catch(e){ toast('Error al guardar: '+e.message); }
+    const dias = PERIOD_DAYS[periodicidad];
+    if(isNew){
+      const tipoServicioId = document.getElementById('f-tipo').value || null;
+      const id = slugify(nombre);
+      if(!id){ toast('El nombre no es válido'); return; }
+      if(S.tareasCatalogo.some(x=>x.id===id)){ toast('Ya existe una tarea con ese nombre'); return; }
+      S.tareasCatalogo.push({id, nombre, periodicidad, periodicidadDias: dias, tipoServicioId});
+      const applicable = tipoServicioId ? S.serviciosSucursal.filter(x=>x.tipoServicioId===tipoServicioId).map(x=>x.sucursalId) : S.sucursales.map(x=>x.id);
+      applicable.forEach(sucursalId=>{
+        if(!S.tareasSucursal.find(x=>x.sucursalId===sucursalId && x.tareaCatalogoId===id)){
+          S.tareasSucursal.push({sucursalId, tareaCatalogoId:id, ultimaFecha:null, proximoVencimiento:null, historial:[]});
+        }
+      });
+      await commit(`Tarea de catálogo: ${nombre}`, 'Tarea agregada al catálogo');
+    } else {
+      Object.assign(t, {nombre, periodicidad, periodicidadDias: dias});
+      S.tareasSucursal.filter(x=>x.tareaCatalogoId===t.id && x.ultimaFecha).forEach(x=>{ x.proximoVencimiento = addDays(x.ultimaFecha, dias); });
+      await commit(`Tarea de catálogo: ${nombre}`, 'Tarea guardada');
+    }
   };
 }
+
+/* ============================= DATOS INCOMPLETOS ============================= */
+const SERVICIOS_BASICOS = ['luz','agua','internet'];
+function tieneTelefonoEnTexto(txt){ return /\d[\d\s().\-]{7,}\d/.test(txt || ''); }
+function contactoCompleto(x){
+  const c = x.contacto || {};
+  return !!(c.responsable || c.telefono || c.email) || tieneTelefonoEnTexto(x.notas);
+}
+function computeGaps(){
+  const g = {sucursales:[], sinContacto:[], noCargados:[]};
+  S.sucursales.forEach(s=>{
+    const falta = [];
+    if(!s.direccion) falta.push('dirección');
+    if(!s.provincia) falta.push('provincia');
+    if(falta.length) g.sucursales.push({s, falta});
+  });
+  S.serviciosSucursal.forEach(x=>{ if(!contactoCompleto(x)) g.sinContacto.push(x); });
+  S.sucursales.forEach(s=>{
+    SERVICIOS_BASICOS.forEach(tid=>{
+      if(byId(S.tiposServicio, tid) && !S.serviciosSucursal.some(x=>x.sucursalId===s.id && x.tipoServicioId===tid)){
+        g.noCargados.push({s, tipoId: tid});
+      }
+    });
+  });
+  return g;
+}
+function countGaps(){ const g = computeGaps(); return g.sucursales.length + g.sinContacto.length + g.noCargados.length; }
+
+function gapRow(titleHtml, subHtml, btnLabel, onClick){
+  const row = el('div','task-row', `<div class="tinfo"><div class="tname">${titleHtml}</div><div class="tsub">${subHtml}</div></div>`);
+  const b = el('button','btn small primary', btnLabel); b.addEventListener('click', onClick);
+  row.appendChild(b); return row;
+}
+function renderIncompletos(content){
+  const g = computeGaps();
+  const total = g.sucursales.length + g.sinContacto.length + g.noCargados.length;
+  if(!total){
+    content.appendChild(el('div','emptystate','<div class="big">✅</div>No hay datos pendientes: todo está completo.'));
+    return;
+  }
+  const totalServ = S.serviciosSucursal.length;
+  content.appendChild(el('div','summary', `
+    <span class="chip"><strong>${g.sucursales.length}</strong> sucursales con datos incompletos</span>
+    <span class="chip"><strong>${g.sinContacto.length}</strong> servicios sin contacto</span>
+    <span class="chip"><strong>${g.noCargados.length}</strong> servicios básicos sin cargar</span>`));
+  content.appendChild(el('div','muted', `Contacto cargado en ${totalServ - g.sinContacto.length} de ${totalServ} servicios. Se considera cargado si hay responsable, teléfono, mail o un teléfono escrito en las notas.`));
+
+  if(g.sucursales.length){
+    content.appendChild(el('div','group-title', `Sucursales con datos incompletos <span class="cnt">${g.sucursales.length}</span>`));
+    g.sucursales.sort((a,b)=>a.s.nombre.localeCompare(b.s.nombre)).forEach(({s, falta})=>{
+      content.appendChild(gapRow(esc(s.nombre), 'Falta: ' + falta.join(' y '), 'Completar', ()=>openSucursalModal(s)));
+    });
+  }
+  if(g.noCargados.length){
+    content.appendChild(el('div','group-title', `Servicios básicos sin cargar <span class="cnt">${g.noCargados.length}</span>`));
+    g.noCargados.sort((a,b)=>a.s.nombre.localeCompare(b.s.nombre)).forEach(({s, tipoId})=>{
+      const tipo = byId(S.tiposServicio, tipoId);
+      content.appendChild(gapRow(esc(s.nombre), `Falta cargar ${esc(tipo.icono||'')} ${esc(tipo.nombre)}`, 'Asignar', ()=>openServicioModal(null, {sucursalId:s.id, tipoServicioId:tipoId})));
+    });
+  }
+  if(g.sinContacto.length){
+    content.appendChild(el('div','group-title', `Servicios sin contacto <span class="cnt">${g.sinContacto.length}</span>`));
+    const porTipo = {};
+    g.sinContacto.forEach(x=>{ (porTipo[x.tipoServicioId] = porTipo[x.tipoServicioId] || []).push(x); });
+    Object.keys(porTipo).sort((a,b)=>(byId(S.tiposServicio,a)?.nombre||a).localeCompare(byId(S.tiposServicio,b)?.nombre||b)).forEach(tid=>{
+      const tipo = byId(S.tiposServicio, tid);
+      content.appendChild(el('div','gap-sub', `${esc(tipo?.icono||'')} ${esc(tipo?.nombre||tid)} (${porTipo[tid].length})`));
+      porTipo[tid].sort((a,b)=>(byId(S.sucursales,a.sucursalId)?.nombre||'').localeCompare(byId(S.sucursales,b.sucursalId)?.nombre||'')).forEach(x=>{
+        const suc = byId(S.sucursales, x.sucursalId);
+        const sub = x.proveedor ? `Proveedor: ${esc(x.proveedor)} · falta teléfono o mail` : 'Falta proveedor y contacto';
+        content.appendChild(gapRow(esc(suc?.nombre||x.sucursalId), sub, 'Completar', ()=>openServicioModal(x)));
+      });
+    });
+  }
+}
+
 
 init();
 </script>

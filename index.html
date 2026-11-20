@@ -43,6 +43,8 @@ h1,h2,h3{font-family:'Space Grotesk',system-ui,sans-serif; letter-spacing:-0.01e
 #topbar{padding:16px 28px; padding-top:calc(16px + env(safe-area-inset-top,0px)); border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; gap:16px; background:var(--surface); position:sticky; top:0; z-index:5; flex-wrap:wrap;}
 #topbar h1{font-size:20px; margin:0; font-weight:600;}
 #topbar .sub{color:var(--muted); font-size:13px; margin-top:2px;}
+.adminlink{border:1px solid var(--line); background:var(--surface); color:var(--ink); padding:7px 12px; border-radius:8px; font-size:13px; font-weight:500; text-decoration:none; white-space:nowrap;}
+.adminlink:hover{border-color:var(--muted);}
 #content{padding:24px 28px 60px; max-width:1180px; width:100%;}
 .hidden{display:none !important;}
 
@@ -111,6 +113,7 @@ h1,h2,h3{font-family:'Space Grotesk',system-ui,sans-serif; letter-spacing:-0.01e
   <div id="main">
     <div id="topbar">
       <div><h1 id="topbar-title">Sucursales</h1><div class="sub" id="topbar-sub">Provincia → sucursal → servicios y contactos</div></div>
+      <a class="adminlink" href="admin.html">⚙️ Administrador</a>
     </div>
     <div id="content"></div>
   </div>
