@@ -1025,17 +1025,17 @@
       "id": "dallas-r__techista"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "68882",
-      "notas": "Domicilio de la cuenta: Av 25 de mayo 1934",
-      "proveedor": "SAMEEP",
+      "id": "kia__agua",
       "sucursalId": "kia",
       "tipoServicioId": "agua",
-      "id": "kia__agua"
+      "proveedor": "SAMEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-444-0310",
+        "email": ""
+      },
+      "contrato": "68882",
+      "notas": "Domicilio de la cuenta: Av 25 de mayo 1934"
     },
     {
       "contacto": {
