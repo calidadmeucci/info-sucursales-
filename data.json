@@ -232,17 +232,17 @@
       "id": "alliance-ctes__aromatizadores"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "Con heladera",
-      "proveedor": "NESPRESO",
+      "id": "alliance-ctes__cafeteria",
       "sucursalId": "alliance-ctes",
       "tipoServicioId": "cafeteria",
-      "id": "alliance-ctes__cafeteria"
+      "proveedor": "NESPRESO",
+      "contacto": {
+        "responsable": "se compra en supermercado",
+        "telefono": "",
+        "email": "se compra en supermercado"
+      },
+      "contrato": "",
+      "notas": "Con heladera"
     },
     {
       "contacto": {
