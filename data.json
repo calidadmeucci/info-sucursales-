@@ -1113,17 +1113,26 @@
       "id": "kia__herreria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "",
-      "proveedor": "CLARO",
+      "id": "kia__internet",
       "sucursalId": "kia",
       "tipoServicioId": "internet",
-      "id": "kia__internet"
+      "proveedores": [
+        {
+          "nombre": "CLARO",
+          "responsable": ".",
+          "telefono": ".",
+          "email": ".",
+          "contrato": ""
+        }
+      ],
+      "proveedor": "CLARO",
+      "contacto": {
+        "responsable": ".",
+        "telefono": ".",
+        "email": "."
+      },
+      "contrato": "",
+      "notas": ""
     },
     {
       "id": "kia__luz",
