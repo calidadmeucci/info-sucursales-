@@ -336,17 +336,17 @@
       "id": "alliance-ctes__puertas-vidrios"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "Grandes: 3, Chicos: 5, Central: 0",
-      "proveedor": "",
+      "id": "alliance-ctes__refrigeracion",
       "sucursalId": "alliance-ctes",
       "tipoServicioId": "refrigeracion",
-      "id": "alliance-ctes__refrigeracion"
+      "proveedor": "LUCAS ROSCO",
+      "contacto": {
+        "responsable": "",
+        "telefono": "+5493794677955",
+        "email": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 3, Chicos: 5, Central: 0"
     },
     {
       "contacto": {
