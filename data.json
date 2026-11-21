@@ -682,17 +682,26 @@
       "id": "benelli__puertas-vidrios"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "Grandes: 2, Chicos: 2, Central: 0",
-      "proveedor": "",
+      "id": "benelli__refrigeracion",
       "sucursalId": "benelli",
       "tipoServicioId": "refrigeracion",
-      "id": "benelli__refrigeracion"
+      "proveedores": [
+        {
+          "nombre": "LUCAS ROSCO",
+          "responsable": "",
+          "telefono": "+54 9 3794 67-7955",
+          "email": "",
+          "contrato": ""
+        }
+      ],
+      "proveedor": "LUCAS ROSCO",
+      "contacto": {
+        "responsable": "",
+        "telefono": "+54 9 3794 67-7955",
+        "email": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 2, Chicos: 2, Central: 0"
     },
     {
       "contacto": {
