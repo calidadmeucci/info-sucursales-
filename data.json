@@ -1747,17 +1747,26 @@
       "id": "mm-italia__herreria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "",
-      "proveedor": "CLARO",
+      "id": "mm-italia__internet",
       "sucursalId": "mm-italia",
       "tipoServicioId": "internet",
-      "id": "mm-italia__internet"
+      "proveedores": [
+        {
+          "nombre": "CLARO",
+          "responsable": ".",
+          "telefono": ".",
+          "email": ".",
+          "contrato": ""
+        }
+      ],
+      "proveedor": "CLARO",
+      "contacto": {
+        "responsable": ".",
+        "telefono": ".",
+        "email": "."
+      },
+      "contrato": "",
+      "notas": ""
     },
     {
       "id": "mm-italia__luz",
