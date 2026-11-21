@@ -276,12 +276,12 @@
       "tipoServicioId": "internet",
       "proveedor": "GIGARED",
       "contacto": {
-        "responsable": "",
-        "telefono": "",
-        "email": ""
+        "responsable": ".",
+        "telefono": ".",
+        "email": "."
       },
       "contrato": "0007-00964294",
-      "notas": ""
+      "notas": "Avisar a sistemas"
     },
     {
       "contacto": {
