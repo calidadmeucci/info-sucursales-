@@ -2611,17 +2611,17 @@
       "id": "scuderia-ctes__techista"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "89978",
-      "notas": "Domicilio de la cuenta: Av Sarmiento 1931",
-      "proveedor": "SAMEEP",
+      "id": "scuderia-r__agua",
       "sucursalId": "scuderia-r",
       "tipoServicioId": "agua",
-      "id": "scuderia-r__agua"
+      "proveedor": "SAMEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-444-0310",
+        "email": ""
+      },
+      "contrato": "89978",
+      "notas": "Domicilio de la cuenta: Av Sarmiento 1931"
     },
     {
       "contacto": {
