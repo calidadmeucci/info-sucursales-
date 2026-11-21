@@ -193,17 +193,17 @@
   ],
   "serviciosSucursal": [
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "10054495",
-      "notas": "Domicilio de la cuenta: Av. Independencia 5420",
-      "proveedor": "AGUAS DE CORRIENTES",
+      "id": "alliance-ctes__agua",
       "sucursalId": "alliance-ctes",
       "tipoServicioId": "agua",
-      "id": "alliance-ctes__agua"
+      "proveedor": "AGUAS DE CORRIENTES",
+      "contacto": {
+        "responsable": "",
+        "telefono": "379 507-7777",
+        "email": ""
+      },
+      "contrato": "10054495",
+      "notas": "Domicilio de la cuenta: Av. Independencia 5420"
     },
     {
       "contacto": {
