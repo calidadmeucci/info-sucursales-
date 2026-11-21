@@ -1961,17 +1961,17 @@
       "id": "mm-ruta-11__techista"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "159737 y 132774 (2 medidores)",
-      "notas": "Domicilio de la cuenta: Av 25 de Mayo 2338",
-      "proveedor": "SAMEEP",
+      "id": "north__agua",
       "sucursalId": "north",
       "tipoServicioId": "agua",
-      "id": "north__agua"
+      "proveedor": "SAMEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-444-0310",
+        "email": ""
+      },
+      "contrato": "159737 y 132774 (2 medidores)",
+      "notas": "Domicilio de la cuenta: Av 25 de Mayo 2338"
     },
     {
       "contacto": {
