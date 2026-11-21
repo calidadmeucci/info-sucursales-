@@ -1364,17 +1364,33 @@
       "id": "meucci__puertas-vidrios"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "Grandes: 2, Chicos: 8, Central: 0",
-      "proveedor": "",
+      "id": "meucci__refrigeracion",
       "sucursalId": "meucci",
       "tipoServicioId": "refrigeracion",
-      "id": "meucci__refrigeracion"
+      "proveedores": [
+        {
+          "nombre": "NESTOR SANCHEZ",
+          "responsable": "",
+          "telefono": "+54 9 362 462-4238",
+          "email": "",
+          "contrato": ""
+        },
+        {
+          "nombre": "LUCAS ROSCO",
+          "responsable": "",
+          "telefono": "+54 9 3794 67-7955",
+          "email": "",
+          "contrato": ""
+        }
+      ],
+      "proveedor": "NESTOR SANCHEZ",
+      "contacto": {
+        "responsable": "",
+        "telefono": "+54 9 362 462-4238",
+        "email": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 2, Chicos: 8, Central: 0"
     },
     {
       "contacto": {
