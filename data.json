@@ -2356,17 +2356,47 @@
       "id": "north__puertas-vidrios"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "Grandes: 0, Chicos: 5, Central: 1",
-      "proveedor": "",
+      "id": "north__refrigeracion",
       "sucursalId": "north",
       "tipoServicioId": "refrigeracion",
-      "id": "north__refrigeracion"
+      "proveedores": [
+        {
+          "nombre": "NESTOR SANCHEZ",
+          "responsable": "",
+          "telefono": "+54 9 362 462-4238",
+          "email": "",
+          "contrato": ""
+        },
+        {
+          "nombre": "LUCAS ROSCO",
+          "responsable": "",
+          "telefono": "+54 9 3794 67-7955",
+          "email": "",
+          "contrato": ""
+        },
+        {
+          "nombre": "SERVICOLD",
+          "responsable": "Braian",
+          "telefono": "+54 9 3482 63-1278",
+          "email": "",
+          "contrato": ""
+        },
+        {
+          "nombre": "SERVICLIMA",
+          "responsable": "Alberto",
+          "telefono": "+54 9 362 453-0448",
+          "email": "",
+          "contrato": ""
+        }
+      ],
+      "proveedor": "NESTOR SANCHEZ",
+      "contacto": {
+        "responsable": "",
+        "telefono": "+54 9 362 462-4238",
+        "email": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 0, Chicos: 5, Central: 1\ncentral servicold o serviclima"
     },
     {
       "contacto": {
