@@ -765,17 +765,17 @@
       "id": "dallas-ctes__internet"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "30169535",
-      "notas": "Domicilio de la cuenta: Av. Pedro Ferré 1899",
-      "proveedor": "DEPEC",
+      "id": "dallas-ctes__luz",
       "sucursalId": "dallas-ctes",
       "tipoServicioId": "luz",
-      "id": "dallas-ctes__luz"
+      "proveedor": "DEPEC",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-555-3732",
+        "email": ""
+      },
+      "contrato": "30169535",
+      "notas": "Domicilio de la cuenta: Av. Pedro Ferré 1899"
     },
     {
       "contacto": {
