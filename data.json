@@ -2817,6 +2817,19 @@
       },
       "contrato": "85329150001",
       "notas": ""
+    },
+    {
+      "id": "re-ctes__agua",
+      "sucursalId": "re-ctes",
+      "tipoServicioId": "agua",
+      "proveedor": "ES CON LAS EXPENSAS",
+      "contacto": {
+        "responsable": ".",
+        "telefono": ".",
+        "email": "."
+      },
+      "contrato": "",
+      "notas": ""
     }
   ],
   "tareasCatalogo": [
