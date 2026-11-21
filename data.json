@@ -1623,17 +1623,17 @@
       "id": "mm-barranqueras__techista"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "60756",
-      "notas": "Domicilio de la cuenta: Av. Italia N°135",
-      "proveedor": "SAMEEP",
+      "id": "mm-italia__agua",
       "sucursalId": "mm-italia",
       "tipoServicioId": "agua",
-      "id": "mm-italia__agua"
+      "proveedor": "SAMEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-444-0310",
+        "email": ""
+      },
+      "contrato": "60756",
+      "notas": "Domicilio de la cuenta: Av. Italia N°135"
     },
     {
       "contacto": {
