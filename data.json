@@ -453,17 +453,26 @@
       "id": "alliance-r__herreria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "",
-      "proveedor": "CLARO",
+      "id": "alliance-r__internet",
       "sucursalId": "alliance-r",
       "tipoServicioId": "internet",
-      "id": "alliance-r__internet"
+      "proveedores": [
+        {
+          "nombre": "CLARO",
+          "responsable": ".",
+          "telefono": ".",
+          "email": ".",
+          "contrato": "1340-00539789"
+        }
+      ],
+      "proveedor": "CLARO",
+      "contacto": {
+        "responsable": ".",
+        "telefono": ".",
+        "email": "."
+      },
+      "contrato": "1340-00539789",
+      "notas": "AVISAR A SISTEMAS"
     },
     {
       "contacto": {
