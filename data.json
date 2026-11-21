@@ -1298,17 +1298,17 @@
       "id": "mg__aromatizadores"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "Con heladera",
-      "proveedor": "",
+      "id": "mg__cafeteria",
       "sucursalId": "mg",
       "tipoServicioId": "cafeteria",
-      "id": "mg__cafeteria"
+      "proveedor": "NESPRESO PROFESIONAL",
+      "contacto": {
+        "responsable": "oficce direct",
+        "telefono": "",
+        "email": ""
+      },
+      "contrato": "",
+      "notas": "Con heladera"
     },
     {
       "contacto": {
