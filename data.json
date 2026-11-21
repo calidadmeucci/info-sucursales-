@@ -713,17 +713,17 @@
       "id": "dallas-ctes__aromatizadores"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "Con heladera",
-      "proveedor": "NESPRESO",
+      "id": "dallas-ctes__cafeteria",
       "sucursalId": "dallas-ctes",
       "tipoServicioId": "cafeteria",
-      "id": "dallas-ctes__cafeteria"
+      "proveedor": "NESPRESO",
+      "contacto": {
+        "responsable": ".",
+        "telefono": "",
+        "email": "."
+      },
+      "contrato": "",
+      "notas": "se compra en supermercado"
     },
     {
       "contacto": {
