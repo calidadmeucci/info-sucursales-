@@ -2151,17 +2151,26 @@
       "id": "north__herreria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "",
-      "proveedor": "GIGARED",
+      "id": "north__internet",
       "sucursalId": "north",
       "tipoServicioId": "internet",
-      "id": "north__internet"
+      "proveedores": [
+        {
+          "nombre": "GIGARED",
+          "responsable": ".",
+          "telefono": ".",
+          "email": ".",
+          "contrato": ""
+        }
+      ],
+      "proveedor": "GIGARED",
+      "contacto": {
+        "responsable": ".",
+        "telefono": ".",
+        "email": "."
+      },
+      "contrato": "",
+      "notas": ""
     },
     {
       "contacto": {
