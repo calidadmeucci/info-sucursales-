@@ -2195,17 +2195,17 @@
       "id": "re-ctes__internet"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "30330585",
-      "notas": "Domicilio de la cuenta: Av. Costanera 3400",
-      "proveedor": "DEPEC",
+      "id": "re-ctes__luz",
       "sucursalId": "re-ctes",
       "tipoServicioId": "luz",
-      "id": "re-ctes__luz"
+      "proveedor": "DEPEC",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-555-3732",
+        "email": ""
+      },
+      "contrato": "30330585",
+      "notas": "Domicilio de la cuenta: Av. Costanera 3400"
     },
     {
       "contacto": {
