@@ -1519,17 +1519,17 @@
       "id": "mm-3-de-abril__techista"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "Domicilio de la cuenta: Diagonal Eva Perón 501, Barranqueras",
-      "proveedor": "SAMEEP",
+      "id": "mm-barranqueras__agua",
       "sucursalId": "mm-barranqueras",
       "tipoServicioId": "agua",
-      "id": "mm-barranqueras__agua"
+      "proveedor": "SAMEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-444-0310",
+        "email": ""
+      },
+      "contrato": "",
+      "notas": "Domicilio de la cuenta: Diagonal Eva Perón 501, Barranqueras"
     },
     {
       "contacto": {
