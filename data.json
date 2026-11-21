@@ -1873,17 +1873,26 @@
       "id": "mm-juan-b-justo__herreria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "",
-      "proveedor": "CLARO",
+      "id": "mm-juan-b-justo__internet",
       "sucursalId": "mm-juan-b-justo",
       "tipoServicioId": "internet",
-      "id": "mm-juan-b-justo__internet"
+      "proveedores": [
+        {
+          "nombre": "CLARO",
+          "responsable": ".",
+          "telefono": ".",
+          "email": ".",
+          "contrato": ""
+        }
+      ],
+      "proveedor": "CLARO",
+      "contacto": {
+        "responsable": ".",
+        "telefono": ".",
+        "email": "."
+      },
+      "contrato": "",
+      "notas": ""
     },
     {
       "id": "mm-juan-b-justo__luz",
