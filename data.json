@@ -843,17 +843,17 @@
       "id": "dallas-ctes__techista"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "281301",
-      "notas": "Domicilio de la cuenta: CH 177 PC - Monteagudo 537",
-      "proveedor": "SAMEEP",
+      "id": "dallas-r__agua",
       "sucursalId": "dallas-r",
       "tipoServicioId": "agua",
-      "id": "dallas-r__agua"
+      "proveedor": "SAMEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-444-0310",
+        "email": ""
+      },
+      "contrato": "281301",
+      "notas": "Domicilio de la cuenta: CH 177 PC - Monteagudo 537"
     },
     {
       "contacto": {
