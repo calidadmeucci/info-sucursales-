@@ -2728,17 +2728,17 @@
       "id": "scuderia-r__jardineria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "234781",
-      "notas": "Domicilio de la cuenta: Av Sarmiento 1935",
-      "proveedor": "SECHEEP",
+      "id": "scuderia-r__luz",
       "sucursalId": "scuderia-r",
       "tipoServicioId": "luz",
-      "id": "scuderia-r__luz"
+      "proveedor": "SECHEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-7777-589",
+        "email": ""
+      },
+      "contrato": "234781",
+      "notas": "Domicilio de la cuenta: Av Sarmiento 1935"
     },
     {
       "contacto": {
