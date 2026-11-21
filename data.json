@@ -2866,6 +2866,28 @@
       },
       "contrato": "",
       "notas": ""
+    },
+    {
+      "id": "mg__agua",
+      "sucursalId": "mg",
+      "tipoServicioId": "agua",
+      "proveedores": [
+        {
+          "nombre": "VA CON EXPENSAS",
+          "responsable": "",
+          "telefono": "",
+          "email": "",
+          "contrato": ""
+        }
+      ],
+      "proveedor": "VA CON EXPENSAS",
+      "contacto": {
+        "responsable": "",
+        "telefono": "",
+        "email": ""
+      },
+      "contrato": "",
+      "notas": ""
     }
   ],
   "tareasCatalogo": [
