@@ -2888,6 +2888,28 @@
       },
       "contrato": "",
       "notas": ""
+    },
+    {
+      "id": "mm-barranqueras__internet",
+      "sucursalId": "mm-barranqueras",
+      "tipoServicioId": "internet",
+      "proveedores": [
+        {
+          "nombre": "GIGARED",
+          "responsable": ".",
+          "telefono": ".",
+          "email": ".",
+          "contrato": "00400055305"
+        }
+      ],
+      "proveedor": "GIGARED",
+      "contacto": {
+        "responsable": ".",
+        "telefono": ".",
+        "email": "."
+      },
+      "contrato": "00400055305",
+      "notas": ""
     }
   ],
   "tareasCatalogo": [
