@@ -2828,17 +2828,26 @@
       "id": "scuderia-r__herreria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "",
-      "proveedor": "CLARO / GIGARED",
+      "id": "scuderia-r__internet",
       "sucursalId": "scuderia-r",
       "tipoServicioId": "internet",
-      "id": "scuderia-r__internet"
+      "proveedores": [
+        {
+          "nombre": "CLARO / GIGARED",
+          "responsable": ".",
+          "telefono": ".",
+          "email": ".",
+          "contrato": ""
+        }
+      ],
+      "proveedor": "CLARO / GIGARED",
+      "contacto": {
+        "responsable": ".",
+        "telefono": ".",
+        "email": "."
+      },
+      "contrato": "",
+      "notas": ""
     },
     {
       "contacto": {
