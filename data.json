@@ -1504,17 +1504,26 @@
       "id": "mm-3-de-abril__herreria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "",
-      "proveedor": "GIGARED",
+      "id": "mm-3-de-abril__internet",
       "sucursalId": "mm-3-de-abril",
       "tipoServicioId": "internet",
-      "id": "mm-3-de-abril__internet"
+      "proveedores": [
+        {
+          "nombre": "GIGARED",
+          "responsable": ".",
+          "telefono": ".",
+          "email": ".",
+          "contrato": ""
+        }
+      ],
+      "proveedor": "GIGARED",
+      "contacto": {
+        "responsable": ".",
+        "telefono": ".",
+        "email": "."
+      },
+      "contrato": "",
+      "notas": ""
     },
     {
       "id": "mm-3-de-abril__luz",
