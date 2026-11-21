@@ -609,17 +609,17 @@
       "id": "benelli__internet"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "30309519",
-      "notas": "Domicilio de la cuenta: Av. Independencia 3581",
-      "proveedor": "DEPEC",
+      "id": "benelli__luz",
       "sucursalId": "benelli",
       "tipoServicioId": "luz",
-      "id": "benelli__luz"
+      "proveedor": "DEPEC",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-555-3732",
+        "email": ""
+      },
+      "contrato": "30309519",
+      "notas": "Domicilio de la cuenta: Av. Independencia 3581"
     },
     {
       "contacto": {
