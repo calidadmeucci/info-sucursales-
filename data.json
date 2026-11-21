@@ -2390,17 +2390,17 @@
       "id": "re-r__puertas-vidrios"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "Grandes: 0, Chicos: 1, Central: 1",
-      "proveedor": "",
+      "id": "re-r__refrigeracion",
       "sucursalId": "re-r",
       "tipoServicioId": "refrigeracion",
-      "id": "re-r__refrigeracion"
+      "proveedor": "SERVICOLD",
+      "contacto": {
+        "responsable": "BRaian",
+        "telefono": "+54 9 3482 63-1278",
+        "email": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 0, Chicos: 1, Central: 1"
     },
     {
       "contacto": {
