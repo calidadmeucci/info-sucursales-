@@ -2572,17 +2572,17 @@
       "id": "scuderia-ctes__puertas-vidrios"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "Grandes: 4, Chicos: 8, Central: 0",
-      "proveedor": "",
+      "id": "scuderia-ctes__refrigeracion",
       "sucursalId": "scuderia-ctes",
       "tipoServicioId": "refrigeracion",
-      "id": "scuderia-ctes__refrigeracion"
+      "proveedor": "LUCAS ROSCO",
+      "contacto": {
+        "responsable": "",
+        "telefono": "+5493794677955",
+        "email": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 4, Chicos: 8, Central: 0"
     },
     {
       "contacto": {
