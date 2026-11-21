@@ -1571,17 +1571,17 @@
       "id": "mm-barranqueras__herreria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "322944",
-      "notas": "Domicilio de la cuenta: Diagonal Eva Perón 501, Barranqueras",
-      "proveedor": "SECHEEP",
+      "id": "mm-barranqueras__luz",
       "sucursalId": "mm-barranqueras",
       "tipoServicioId": "luz",
-      "id": "mm-barranqueras__luz"
+      "proveedor": "SECHEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-7777-589",
+        "email": ""
+      },
+      "contrato": "322944",
+      "notas": "Domicilio de la cuenta: Diagonal Eva Perón 501, Barranqueras"
     },
     {
       "contacto": {
