@@ -2078,17 +2078,17 @@
       "id": "north__jardineria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "344009",
-      "notas": "Domicilio de la cuenta: Av 25 de Mayo 2338",
-      "proveedor": "SECHEEP",
+      "id": "north__luz",
       "sucursalId": "north",
       "tipoServicioId": "luz",
-      "id": "north__luz"
+      "proveedor": "SECHEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-7777-589",
+        "email": ""
+      },
+      "contrato": "344009",
+      "notas": "Domicilio de la cuenta: Av 25 de Mayo 2338"
     },
     {
       "contacto": {
