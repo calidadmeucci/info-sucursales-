@@ -1047,17 +1047,40 @@
       "id": "dallas-r__puertas-vidrios"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "Grandes: 0, Chicos: 6, Central: 1",
-      "proveedor": "",
+      "id": "dallas-r__refrigeracion",
       "sucursalId": "dallas-r",
       "tipoServicioId": "refrigeracion",
-      "id": "dallas-r__refrigeracion"
+      "proveedores": [
+        {
+          "nombre": "LUCAS ROSCO",
+          "responsable": "LUCAS",
+          "telefono": "+54 9 3794 67-7955",
+          "email": "",
+          "contrato": ""
+        },
+        {
+          "nombre": "SERVICOLD",
+          "responsable": "BRAIAN",
+          "telefono": "+54 9 3482 63-1278",
+          "email": "",
+          "contrato": ""
+        },
+        {
+          "nombre": "SERVICLIMA",
+          "responsable": "Albertono Berntoni",
+          "telefono": "+54 9 362 453-0448",
+          "email": "",
+          "contrato": ""
+        }
+      ],
+      "proveedor": "LUCAS ROSCO",
+      "contacto": {
+        "responsable": "LUCAS",
+        "telefono": "+54 9 3794 67-7955",
+        "email": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 0, Chicos: 6, Central: 1\nAires comunes: Lucas \ncentral: servicold o serviclima"
     },
     {
       "contacto": {
