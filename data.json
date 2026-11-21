@@ -2455,17 +2455,26 @@
       "id": "re-r__herreria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "",
-      "proveedor": "CLARO",
+      "id": "re-r__internet",
       "sucursalId": "re-r",
       "tipoServicioId": "internet",
-      "id": "re-r__internet"
+      "proveedores": [
+        {
+          "nombre": "CLARO",
+          "responsable": ".",
+          "telefono": ".",
+          "email": ".",
+          "contrato": ""
+        }
+      ],
+      "proveedor": "CLARO",
+      "contacto": {
+        "responsable": ".",
+        "telefono": ".",
+        "email": "."
+      },
+      "contrato": "",
+      "notas": ""
     },
     {
       "contacto": {
