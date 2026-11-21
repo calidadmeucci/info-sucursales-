@@ -960,17 +960,17 @@
       "id": "dallas-r__jardineria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "532917",
-      "notas": "Domicilio de la cuenta: Ruta 16 km 9",
-      "proveedor": "SECHEEP",
+      "id": "dallas-r__luz",
       "sucursalId": "dallas-r",
       "tipoServicioId": "luz",
-      "id": "dallas-r__luz"
+      "proveedor": "SECHEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-7777-589",
+        "email": ""
+      },
+      "contrato": "532917",
+      "notas": "Domicilio de la cuenta: Ruta 16 km 9"
     },
     {
       "contacto": {
