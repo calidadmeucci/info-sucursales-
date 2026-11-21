@@ -2162,17 +2162,33 @@
       "id": "mm-ruta-11__puertas-vidrios"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "Grandes: 1, Chicos: 1, Central: 0",
-      "proveedor": "",
+      "id": "mm-ruta-11__refrigeracion",
       "sucursalId": "mm-ruta-11",
       "tipoServicioId": "refrigeracion",
-      "id": "mm-ruta-11__refrigeracion"
+      "proveedores": [
+        {
+          "nombre": "LUCAS ROSCO",
+          "responsable": "",
+          "telefono": "+54 9 3794 67-7955",
+          "email": "",
+          "contrato": ""
+        },
+        {
+          "nombre": "NESTOR SANCHEZ",
+          "responsable": "",
+          "telefono": "+54 9 362 462-4238",
+          "email": "",
+          "contrato": ""
+        }
+      ],
+      "proveedor": "LUCAS ROSCO",
+      "contacto": {
+        "responsable": "",
+        "telefono": "+54 9 3794 67-7955",
+        "email": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 1, Chicos: 1, Central: 0"
     },
     {
       "contacto": {
