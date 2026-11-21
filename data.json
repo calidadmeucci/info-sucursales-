@@ -1493,17 +1493,17 @@
       "id": "mm-3-de-abril__puertas-vidrios"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "Grandes: 1, Chicos: 1, Central: 0",
-      "proveedor": "",
+      "id": "mm-3-de-abril__refrigeracion",
       "sucursalId": "mm-3-de-abril",
       "tipoServicioId": "refrigeracion",
-      "id": "mm-3-de-abril__refrigeracion"
+      "proveedor": "LUCAS ROSCO",
+      "contacto": {
+        "responsable": "",
+        "telefono": "+5493794677955",
+        "email": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 1, Chicos: 1, Central: 0"
     },
     {
       "contacto": {
