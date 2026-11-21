@@ -674,17 +674,17 @@
       "id": "benelli__techista"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "10008072 y 10073608 (2 medidores)",
-      "notas": "Domicilio de la cuenta: Paraguay 1590 / Av. Pedro Ferré 1899",
-      "proveedor": "AGUAS DE CORRIENTES",
+      "id": "dallas-ctes__agua",
       "sucursalId": "dallas-ctes",
       "tipoServicioId": "agua",
-      "id": "dallas-ctes__agua"
+      "proveedor": "AGUAS DE CORRIENTES",
+      "contacto": {
+        "responsable": "",
+        "telefono": "379 507-7777",
+        "email": ""
+      },
+      "contrato": "10008072 y 10073608 (2 medidores)",
+      "notas": "Domicilio de la cuenta: Paraguay 1590 / Av. Pedro Ferré 1899"
     },
     {
       "contacto": {
