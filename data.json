@@ -2143,17 +2143,17 @@
       "id": "re-ctes__aromatizadores"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "Con heladera",
-      "proveedor": "",
+      "id": "re-ctes__cafeteria",
       "sucursalId": "re-ctes",
       "tipoServicioId": "cafeteria",
-      "id": "re-ctes__cafeteria"
+      "proveedor": "NESPRESO PROFESIONAL",
+      "contacto": {
+        "responsable": "Office dfirect",
+        "telefono": "",
+        "email": "cmedina@ofidirect.com"
+      },
+      "contrato": "",
+      "notas": "se compra en supermercado"
     },
     {
       "contacto": {
