@@ -1999,17 +1999,26 @@
       "id": "mm-ruta-11__herreria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "",
-      "proveedor": "GIGARED",
+      "id": "mm-ruta-11__internet",
       "sucursalId": "mm-ruta-11",
       "tipoServicioId": "internet",
-      "id": "mm-ruta-11__internet"
+      "proveedores": [
+        {
+          "nombre": "GIGARED",
+          "responsable": ".",
+          "telefono": ".",
+          "email": ".",
+          "contrato": ""
+        }
+      ],
+      "proveedor": "GIGARED",
+      "contacto": {
+        "responsable": ".",
+        "telefono": ".",
+        "email": "."
+      },
+      "contrato": "",
+      "notas": ""
     },
     {
       "contacto": {
