@@ -2234,17 +2234,17 @@
       "id": "re-ctes__puertas-vidrios"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "Grandes: 0, Chicos: 0, Central: 1",
-      "proveedor": "",
+      "id": "re-ctes__refrigeracion",
       "sucursalId": "re-ctes",
       "tipoServicioId": "refrigeracion",
-      "id": "re-ctes__refrigeracion"
+      "proveedor": "SERVICOLD",
+      "contacto": {
+        "responsable": "Braian",
+        "telefono": "+54 9 3482 63-1278",
+        "email": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 0, Chicos: 0, Central: 1"
     },
     {
       "contacto": {
