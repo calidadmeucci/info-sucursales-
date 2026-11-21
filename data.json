@@ -1891,17 +1891,33 @@
       "id": "mm-italia__puertas-vidrios"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "Grandes: 2, Chicos: 1, Central: 0",
-      "proveedor": "",
+      "id": "mm-italia__refrigeracion",
       "sucursalId": "mm-italia",
       "tipoServicioId": "refrigeracion",
-      "id": "mm-italia__refrigeracion"
+      "proveedores": [
+        {
+          "nombre": "LUCAS ROSCO",
+          "responsable": "",
+          "telefono": "+54 9 3794 67-7955",
+          "email": "",
+          "contrato": ""
+        },
+        {
+          "nombre": "NESTOR SANCHEZ",
+          "responsable": "",
+          "telefono": "+54 9 362 462-4238",
+          "email": "",
+          "contrato": ""
+        }
+      ],
+      "proveedor": "LUCAS ROSCO",
+      "contacto": {
+        "responsable": "",
+        "telefono": "+54 9 3794 67-7955",
+        "email": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 2, Chicos: 1, Central: 0"
     },
     {
       "contacto": {
