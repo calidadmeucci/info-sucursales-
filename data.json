@@ -804,17 +804,17 @@
       "id": "dallas-ctes__puertas-vidrios"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "Grandes: 2, Chicos: 0, Central: 0",
-      "proveedor": "",
+      "id": "dallas-ctes__refrigeracion",
       "sucursalId": "dallas-ctes",
       "tipoServicioId": "refrigeracion",
-      "id": "dallas-ctes__refrigeracion"
+      "proveedor": "LUCAS ROSCO",
+      "contacto": {
+        "responsable": "",
+        "telefono": "+5493794677955",
+        "email": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 2, Chicos: 0, Central: 0"
     },
     {
       "contacto": {
