@@ -2804,6 +2804,19 @@
       },
       "contrato": "097271 / 000001",
       "notas": ""
+    },
+    {
+      "id": "mm-ruta-11__luz",
+      "sucursalId": "mm-ruta-11",
+      "tipoServicioId": "luz",
+      "proveedor": "SECHEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-7777-589",
+        "email": ""
+      },
+      "contrato": "85329150001",
+      "notas": ""
     }
   ],
   "tareasCatalogo": [
