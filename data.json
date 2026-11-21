@@ -770,17 +770,26 @@
       "id": "dallas-ctes__herreria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "",
-      "proveedor": "GIGARED",
+      "id": "dallas-ctes__internet",
       "sucursalId": "dallas-ctes",
       "tipoServicioId": "internet",
-      "id": "dallas-ctes__internet"
+      "proveedores": [
+        {
+          "nombre": "GIGARED",
+          "responsable": ".",
+          "telefono": ".",
+          "email": ".",
+          "contrato": "0007-00964294"
+        }
+      ],
+      "proveedor": "GIGARED",
+      "contacto": {
+        "responsable": ".",
+        "telefono": ".",
+        "email": "."
+      },
+      "contrato": "0007-00964294",
+      "notas": ""
     },
     {
       "id": "dallas-ctes__luz",
