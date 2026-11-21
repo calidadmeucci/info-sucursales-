@@ -104,6 +104,9 @@ table tr:last-child td{border-bottom:none;}
 .summary{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:12px;}
 .summary .chip{background:var(--warn-soft); color:var(--warn); border-radius:100px; padding:5px 12px; font-size:13px;}
 .gap-sub{font-size:12.5px; font-weight:700; color:var(--muted); margin:14px 0 6px;}
+.prov-card{border:1px solid var(--line); border-radius:9px; padding:12px 12px 2px; margin-bottom:12px; background:var(--surface-2);}
+.prov-head{display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; font-size:13px;}
+.prov-line{margin-bottom:3px;}
 .filters-row{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px;}
 .filters-row select{padding:7px 10px; border:1px solid var(--line); border-radius:7px; background:var(--surface); color:var(--ink); font-size:13.5px;}
 @media (max-width: 760px){
@@ -418,7 +421,7 @@ function openTareaModal(t){
   document.getElementById('mcancel').onclick = closeModal;
   document.getElementById('msave').onclick = ()=>saveTareaRealizada(t);
 }
-function closeModal(){ document.getElementById('modal-backdrop').classList.add('hidden'); }
+function closeModal(){ document.getElementById('modal-backdrop').classList.add('hidden'); document.getElementById('modal').style.maxWidth=''; }
 
 async function saveTareaRealizada(t){
   const fecha = document.getElementById('f-fecha').value || todayISO();
@@ -579,6 +582,20 @@ function openTipoModal(t){
 }
 
 /* ============================= ADMIN: SERVICIOS POR SUCURSAL ============================= */
+/* ----- proveedores de un servicio (compatible con datos cargados antes de esta versión) ----- */
+function proveedoresDe(x){
+  if(Array.isArray(x.proveedores) && x.proveedores.length){
+    return x.proveedores.map(p=>({nombre:p.nombre||'', responsable:p.responsable||'', telefono:p.telefono||'', email:p.email||'', contrato:p.contrato||''}));
+  }
+  const c = x.contacto || {};
+  const p = {nombre:x.proveedor||'', responsable:c.responsable||'', telefono:c.telefono||'', email:c.email||'', contrato:x.contrato||''};
+  return (p.nombre||p.responsable||p.telefono||p.email||p.contrato) ? [p] : [];
+}
+function provTieneContacto(p){ return !!(p.responsable || p.telefono || p.email); }
+function contactoTexto(p){ return [p.responsable, p.telefono, p.email].filter(Boolean).join(' · '); }
+function labelResp(tipoId){ return tipoId === 'alarma' ? 'Contactos declarados' : 'Responsable'; }
+function emptyProv(){ return {nombre:'', responsable:'', telefono:'', email:'', contrato:''}; }
+
 function renderAdminServicios(content){
   const f = S.svcFiltro;
   let list = S.serviciosSucursal.slice();
@@ -597,26 +614,52 @@ function renderAdminServicios(content){
   selTipo.value = f.tipo; selTipo.addEventListener('change', ()=>{ S.svcFiltro.tipo = selTipo.value; render(); });
   filters.appendChild(selSuc); filters.appendChild(selTipo); content.appendChild(filters);
 
-  const table = el('table','','<thead><tr><th>Sucursal</th><th>Servicio</th><th>Proveedor</th><th>Contacto</th><th></th></tr></thead>');
+  const table = el('table','','<thead><tr><th>Sucursal</th><th>Servicio</th><th>Proveedores y contactos</th><th></th></tr></thead>');
   const tbody = el('tbody');
   list.sort((a,b)=>{
     const sa = byId(S.sucursales,a.sucursalId)?.nombre||''; const sb = byId(S.sucursales,b.sucursalId)?.nombre||'';
     return sa.localeCompare(sb) || String(a.tipoServicioId).localeCompare(String(b.tipoServicioId));
   }).forEach(s=>{
     const suc = byId(S.sucursales, s.sucursalId); const tipo = byId(S.tiposServicio, s.tipoServicioId);
-    const contacto = [s.contacto?.responsable, s.contacto?.telefono, s.contacto?.email].filter(Boolean).join(' · ');
-    const contactoHtml = contacto ? esc(contacto) : (tieneTelefonoEnTexto(s.notas) ? '<span class="muted">en las notas</span>' : '<span class="faltante">falta</span>');
-    const tr = el('tr','', `<td>${esc(suc?.nombre||s.sucursalId)}</td><td>${esc(tipo?.icono||'')} ${esc(tipo?.nombre||s.tipoServicioId)}</td><td>${esc(s.proveedor)||'—'}</td><td>${contactoHtml}</td><td></td>`);
+    const provs = proveedoresDe(s);
+    let provHtml;
+    if(!provs.length){
+      provHtml = tieneTelefonoEnTexto(s.notas) ? '<span class="muted">contacto en las notas</span>' : '<span class="faltante">sin proveedor ni contacto</span>';
+    } else {
+      provHtml = provs.map(p=>{
+        const c = contactoTexto(p);
+        const contacto = c ? esc(c) : ((provs.length===1 && tieneTelefonoEnTexto(s.notas)) ? '<span class="muted">contacto en las notas</span>' : '<span class="faltante">falta contacto</span>');
+        return `<div class="prov-line">${p.nombre ? '<strong>'+esc(p.nombre)+'</strong> · ' : ''}${contacto}${p.contrato ? ' <span class="muted">· Nº '+esc(p.contrato)+'</span>' : ''}</div>`;
+      }).join('');
+    }
+    const tr = el('tr','', `<td>${esc(suc?.nombre||s.sucursalId)}</td><td>${esc(tipo?.icono||'')} ${esc(tipo?.nombre||s.tipoServicioId)}</td><td>${provHtml}</td><td></td>`);
     const editBtn = el('button','btn small','Editar'); editBtn.addEventListener('click', ()=>openServicioModal(s));
     tr.lastElementChild.appendChild(editBtn); tbody.appendChild(tr);
   });
   table.appendChild(tbody);
   const c = el('div','card',''); c.appendChild(table); content.appendChild(c);
 }
+function provCardHtml(p, i, tipoId, canRemove){
+  return `<div class="prov-card" data-i="${i}">
+    <div class="prov-head"><strong>Proveedor ${i+1}</strong>${canRemove ? `<button type="button" class="btn small danger" data-remove="${i}">Quitar</button>` : ''}</div>
+    <div class="field"><label>Proveedor</label><input data-f="nombre" value="${esc(p.nombre)}"></div>
+    <div class="row">
+      <div class="field"><label>${labelResp(tipoId)}</label><input data-f="responsable" value="${esc(p.responsable)}"></div>
+      <div class="field"><label>Teléfono</label><input data-f="telefono" value="${esc(p.telefono)}"></div>
+    </div>
+    <div class="row">
+      <div class="field"><label>Email</label><input data-f="email" value="${esc(p.email)}"></div>
+      <div class="field"><label>Nº de contrato o cuenta</label><input data-f="contrato" value="${esc(p.contrato)}"></div>
+    </div>
+  </div>`;
+}
 function openServicioModal(s, preset){
   const backdrop = document.getElementById('modal-backdrop'); const modal = document.getElementById('modal'); const isNew = !s;
   const sucOpts = S.sucursales.slice().sort((a,b)=>a.nombre.localeCompare(b.nombre)).map(x=>`<option value="${x.id}" ${(s?.sucursalId||preset?.sucursalId)===x.id?'selected':''}>${esc(x.nombre)}</option>`).join('');
   const tipoOpts = S.tiposServicio.map(x=>`<option value="${x.id}" ${(s?.tipoServicioId||preset?.tipoServicioId)===x.id?'selected':''}>${esc(x.nombre)}</option>`).join('');
+  let provs = s ? proveedoresDe(s) : [];
+  if(!provs.length) provs = [emptyProv()];
+  modal.style.maxWidth = '580px';
   modal.innerHTML = `
     <div class="modal-head"><h3>${isNew?'Asignar servicio':'Editar servicio'}</h3><button class="modal-close" id="mclose">✕</button></div>
     <div class="modal-body">
@@ -624,15 +667,8 @@ function openServicioModal(s, preset){
         <div class="field"><label>Sucursal</label><select id="f-suc" ${!isNew?'disabled':''}>${sucOpts}</select></div>
         <div class="field"><label>Tipo de servicio</label><select id="f-tipo" ${!isNew?'disabled':''}>${tipoOpts}</select></div>
       </div>
-      <div class="field"><label>Proveedor</label><input id="f-proveedor" value="${esc(s?.proveedor||'')}"></div>
-      <div class="row">
-        <div class="field"><label id="f-resp-label">${(s?.tipoServicioId||preset?.tipoServicioId) === 'alarma' ? 'Contactos declarados' : 'Responsable'}</label><input id="f-resp" value="${esc(s?.contacto?.responsable||'')}"></div>
-        <div class="field"><label>Teléfono</label><input id="f-tel" value="${esc(s?.contacto?.telefono||'')}"></div>
-      </div>
-      <div class="row">
-        <div class="field"><label>Email</label><input id="f-email" value="${esc(s?.contacto?.email||'')}"></div>
-        <div class="field"><label>Nº de contrato</label><input id="f-contrato" value="${esc(s?.contrato||'')}"></div>
-      </div>
+      <div id="prov-list"></div>
+      <div style="margin-bottom:14px;"><button type="button" class="btn small" id="prov-add">+ Agregar proveedor</button></div>
       <div class="field"><label>Notas</label><textarea id="f-notas">${esc(s?.notas||'')}</textarea></div>
     </div>
     <div class="modal-foot">
@@ -641,37 +677,55 @@ function openServicioModal(s, preset){
     </div>`;
   backdrop.classList.remove('hidden');
   document.getElementById('mclose').onclick = closeModal; document.getElementById('mcancel').onclick = closeModal;
-  if(isNew){
-    document.getElementById('f-tipo').addEventListener('change', (e)=>{
-      document.getElementById('f-resp-label').textContent = e.target.value === 'alarma' ? 'Contactos declarados' : 'Responsable';
+
+  const tipoActual = ()=> isNew ? document.getElementById('f-tipo').value : s.tipoServicioId;
+  const capture = ()=>{
+    document.querySelectorAll('#prov-list .prov-card').forEach(card=>{
+      const i = +card.dataset.i;
+      card.querySelectorAll('[data-f]').forEach(inp=>{ provs[i][inp.dataset.f] = inp.value; });
     });
-  }
+  };
+  const paint = ()=>{
+    const box = document.getElementById('prov-list');
+    box.innerHTML = provs.map((p,i)=>provCardHtml(p, i, tipoActual(), provs.length > 1)).join('');
+    box.querySelectorAll('[data-remove]').forEach(b=>{ b.onclick = ()=>{ capture(); provs.splice(+b.dataset.remove, 1); paint(); }; });
+  };
+  paint();
+  document.getElementById('prov-add').onclick = ()=>{ capture(); provs.push(emptyProv()); paint(); };
+  if(isNew) document.getElementById('f-tipo').addEventListener('change', ()=>{ capture(); paint(); });
+
   if(!isNew){
     document.getElementById('mdelete').onclick = async ()=>{
       if(!confirm('¿Eliminar este servicio de la sucursal?')) return;
       S.serviciosSucursal = S.serviciosSucursal.filter(x=>x.id!==s.id);
       const ligadas = S.tareasCatalogo.filter(t=>t.tipoServicioId===s.tipoServicioId).map(t=>t.id);
       S.tareasSucursal = S.tareasSucursal.filter(x=>!(x.sucursalId===s.sucursalId && ligadas.includes(x.tareaCatalogoId) && !x.ultimaFecha));
-      try{ await persist(`Eliminar servicio ${s.id}`); closeModal(); toast('Servicio eliminado'); }
-      catch(e){ toast('Error al guardar: '+e.message); }
+      await commit(`Eliminar servicio ${s.id}`, 'Servicio eliminado');
     };
   }
   document.getElementById('msave').onclick = async ()=>{
+    capture();
     const sucursalId = isNew ? document.getElementById('f-suc').value : s.sucursalId;
     const tipoServicioId = isNew ? document.getElementById('f-tipo').value : s.tipoServicioId;
     const id = sucursalId+'__'+tipoServicioId;
     if(isNew && S.serviciosSucursal.some(x=>x.id===id)){ toast('Esa sucursal ya tiene ese servicio: editalo desde la lista.'); return; }
-    const data = { id, sucursalId, tipoServicioId,
-      proveedor: document.getElementById('f-proveedor').value.trim(),
-      contacto: { responsable: document.getElementById('f-resp').value.trim(), telefono: document.getElementById('f-tel').value.trim(), email: document.getElementById('f-email').value.trim() },
-      contrato: document.getElementById('f-contrato').value.trim(), notas: document.getElementById('f-notas').value.trim() };
+    const lista = provs
+      .map(p=>({nombre:p.nombre.trim(), responsable:p.responsable.trim(), telefono:p.telefono.trim(), email:p.email.trim(), contrato:p.contrato.trim()}))
+      .filter(p=>p.nombre||p.responsable||p.telefono||p.email||p.contrato);
+    const primero = lista[0] || emptyProv();
+    const data = { id, sucursalId, tipoServicioId, proveedores: lista,
+      // copia del primer proveedor en los campos de siempre, por compatibilidad
+      proveedor: primero.nombre,
+      contacto: { responsable: primero.responsable, telefono: primero.telefono, email: primero.email },
+      contrato: primero.contrato,
+      notas: document.getElementById('f-notas').value.trim() };
     const idx = S.serviciosSucursal.findIndex(x=>x.id===id);
     if(idx>=0) S.serviciosSucursal[idx] = data; else S.serviciosSucursal.push(data);
     ensureTareasParaServicio(sucursalId, tipoServicioId);
-    try{ await persist(`Servicio ${tipoServicioId} en ${sucursalId}`); closeModal(); toast('Servicio guardado'); }
-    catch(e){ toast('Error al guardar: '+e.message); }
+    await commit(`Servicio ${tipoServicioId} en ${sucursalId}`, 'Servicio guardado');
   };
 }
+
 function ensureTareasParaServicio(sucursalId, tipoServicioId){
   S.tareasCatalogo.filter(t=>t.tipoServicioId===tipoServicioId).forEach(t=>{
     const id = sucursalId+'__'+t.id;
@@ -762,19 +816,27 @@ function openTareaCatalogoModal(t){
 /* ============================= DATOS INCOMPLETOS ============================= */
 const SERVICIOS_BASICOS = ['luz','agua','internet'];
 function tieneTelefonoEnTexto(txt){ return /\d[\d\s().\-]{7,}\d/.test(txt || ''); }
-function contactoCompleto(x){
-  const c = x.contacto || {};
-  return !!(c.responsable || c.telefono || c.email) || tieneTelefonoEnTexto(x.notas);
+// huecos de contacto de un servicio: uno por cada proveedor sin contacto
+function huecosDeContacto(x){
+  const provs = proveedoresDe(x);
+  const notasCubre = tieneTelefonoEnTexto(x.notas);
+  if(!provs.length) return notasCubre ? [] : [{x, nombre:''}];
+  return provs
+    .filter(p=>!(provTieneContacto(p) || (provs.length === 1 && notasCubre)))
+    .map(p=>({x, nombre:p.nombre}));
 }
 function computeGaps(){
-  const g = {sucursales:[], sinContacto:[], noCargados:[]};
+  const g = {sucursales:[], sinContacto:[], noCargados:[], totalContactos:0};
   S.sucursales.forEach(s=>{
     const falta = [];
     if(!s.direccion) falta.push('dirección');
     if(!s.provincia) falta.push('provincia');
     if(falta.length) g.sucursales.push({s, falta});
   });
-  S.serviciosSucursal.forEach(x=>{ if(!contactoCompleto(x)) g.sinContacto.push(x); });
+  S.serviciosSucursal.forEach(x=>{
+    g.totalContactos += Math.max(1, proveedoresDe(x).length);
+    huecosDeContacto(x).forEach(h=>g.sinContacto.push(h));
+  });
   S.sucursales.forEach(s=>{
     SERVICIOS_BASICOS.forEach(tid=>{
       if(byId(S.tiposServicio, tid) && !S.serviciosSucursal.some(x=>x.sucursalId===s.id && x.tipoServicioId===tid)){
@@ -798,12 +860,11 @@ function renderIncompletos(content){
     content.appendChild(el('div','emptystate','<div class="big">✅</div>No hay datos pendientes: todo está completo.'));
     return;
   }
-  const totalServ = S.serviciosSucursal.length;
   content.appendChild(el('div','summary', `
     <span class="chip"><strong>${g.sucursales.length}</strong> sucursales con datos incompletos</span>
-    <span class="chip"><strong>${g.sinContacto.length}</strong> servicios sin contacto</span>
+    <span class="chip"><strong>${g.sinContacto.length}</strong> proveedores sin contacto</span>
     <span class="chip"><strong>${g.noCargados.length}</strong> servicios básicos sin cargar</span>`));
-  content.appendChild(el('div','muted', `Contacto cargado en ${totalServ - g.sinContacto.length} de ${totalServ} servicios. Se considera cargado si hay responsable, teléfono, mail o un teléfono escrito en las notas.`));
+  content.appendChild(el('div','muted', `Contacto cargado en ${g.totalContactos - g.sinContacto.length} de ${g.totalContactos} proveedores. Se considera cargado si hay responsable, teléfono, mail o (cuando hay un solo proveedor) un teléfono escrito en las notas del servicio.`));
 
   if(g.sucursales.length){
     content.appendChild(el('div','group-title', `Sucursales con datos incompletos <span class="cnt">${g.sucursales.length}</span>`));
@@ -819,16 +880,16 @@ function renderIncompletos(content){
     });
   }
   if(g.sinContacto.length){
-    content.appendChild(el('div','group-title', `Servicios sin contacto <span class="cnt">${g.sinContacto.length}</span>`));
+    content.appendChild(el('div','group-title', `Proveedores sin contacto <span class="cnt">${g.sinContacto.length}</span>`));
     const porTipo = {};
-    g.sinContacto.forEach(x=>{ (porTipo[x.tipoServicioId] = porTipo[x.tipoServicioId] || []).push(x); });
+    g.sinContacto.forEach(h=>{ (porTipo[h.x.tipoServicioId] = porTipo[h.x.tipoServicioId] || []).push(h); });
     Object.keys(porTipo).sort((a,b)=>(byId(S.tiposServicio,a)?.nombre||a).localeCompare(byId(S.tiposServicio,b)?.nombre||b)).forEach(tid=>{
       const tipo = byId(S.tiposServicio, tid);
       content.appendChild(el('div','gap-sub', `${esc(tipo?.icono||'')} ${esc(tipo?.nombre||tid)} (${porTipo[tid].length})`));
-      porTipo[tid].sort((a,b)=>(byId(S.sucursales,a.sucursalId)?.nombre||'').localeCompare(byId(S.sucursales,b.sucursalId)?.nombre||'')).forEach(x=>{
-        const suc = byId(S.sucursales, x.sucursalId);
-        const sub = x.proveedor ? `Proveedor: ${esc(x.proveedor)} · falta teléfono o mail` : 'Falta proveedor y contacto';
-        content.appendChild(gapRow(esc(suc?.nombre||x.sucursalId), sub, 'Completar', ()=>openServicioModal(x)));
+      porTipo[tid].sort((a,b)=>(byId(S.sucursales,a.x.sucursalId)?.nombre||'').localeCompare(byId(S.sucursales,b.x.sucursalId)?.nombre||'')).forEach(h=>{
+        const suc = byId(S.sucursales, h.x.sucursalId);
+        const sub = h.nombre ? `Proveedor: ${esc(h.nombre)} · falta teléfono o mail` : 'Falta proveedor y contacto';
+        content.appendChild(gapRow(esc(suc?.nombre||h.x.sucursalId), sub, 'Completar', ()=>openServicioModal(h.x)));
       });
     });
   }
