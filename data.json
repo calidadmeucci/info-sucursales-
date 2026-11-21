@@ -1142,17 +1142,17 @@
       "id": "kia__techista"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "244696 y 97271 (2 medidores)",
-      "notas": "Domicilio de la cuenta: Paso de la Patria 2456 / Av. Las Malvinas 2401",
-      "proveedor": "SAMEEP",
+      "id": "meucci__agua",
       "sucursalId": "meucci",
       "tipoServicioId": "agua",
-      "id": "meucci__agua"
+      "proveedor": "SAMEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-444-0310",
+        "email": ""
+      },
+      "contrato": "244696 y 97271 (2 medidores)",
+      "notas": "Domicilio de la cuenta: Paso de la Patria 2456 / Av. Las Malvinas 2401"
     },
     {
       "contacto": {
