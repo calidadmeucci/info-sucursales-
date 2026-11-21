@@ -2416,17 +2416,17 @@
       "id": "re-r__techista"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "10136915",
-      "notas": "Domicilio de la cuenta: Av. Armando Carmelo Romero 5755",
-      "proveedor": "AGUAS DE CORRIENTES",
+      "id": "scuderia-ctes__agua",
       "sucursalId": "scuderia-ctes",
       "tipoServicioId": "agua",
-      "id": "scuderia-ctes__agua"
+      "proveedor": "AGUAS DE CORRIENTES",
+      "contacto": {
+        "responsable": "",
+        "telefono": "379 507-7777",
+        "email": ""
+      },
+      "contrato": "10136915",
+      "notas": "Domicilio de la cuenta: Av. Armando Carmelo Romero 5755"
     },
     {
       "contacto": {
