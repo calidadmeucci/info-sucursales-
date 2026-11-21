@@ -2533,17 +2533,17 @@
       "id": "scuderia-ctes__jardineria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "30206728",
-      "notas": "Domicilio de la cuenta: Ruta N°5",
-      "proveedor": "DEPEC",
+      "id": "scuderia-ctes__luz",
       "sucursalId": "scuderia-ctes",
       "tipoServicioId": "luz",
-      "id": "scuderia-ctes__luz"
+      "proveedor": "DEPEC",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-555-3732",
+        "email": ""
+      },
+      "contrato": "30206728",
+      "notas": "Domicilio de la cuenta: Ruta N°5"
     },
     {
       "contacto": {
