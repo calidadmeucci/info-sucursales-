@@ -271,17 +271,17 @@
       "id": "alliance-ctes__herreria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "",
-      "proveedor": "GIGARED",
+      "id": "alliance-ctes__internet",
       "sucursalId": "alliance-ctes",
       "tipoServicioId": "internet",
-      "id": "alliance-ctes__internet"
+      "proveedor": "GIGARED",
+      "contacto": {
+        "responsable": "",
+        "telefono": "",
+        "email": ""
+      },
+      "contrato": "0007-00964294",
+      "notas": ""
     },
     {
       "contacto": {
