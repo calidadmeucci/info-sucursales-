@@ -2507,17 +2507,17 @@
       "id": "scuderia-ctes__herreria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "",
-      "proveedor": "GIGARED",
+      "id": "scuderia-ctes__internet",
       "sucursalId": "scuderia-ctes",
       "tipoServicioId": "internet",
-      "id": "scuderia-ctes__internet"
+      "proveedor": "GIGARED",
+      "contacto": {
+        "responsable": ".",
+        "telefono": ".",
+        "email": "."
+      },
+      "contrato": "0007-00964294",
+      "notas": "AVISAR A SISTEMAS"
     },
     {
       "contacto": {
