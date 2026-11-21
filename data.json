@@ -1239,17 +1239,26 @@
       "id": "meucci__herreria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "",
-      "proveedor": "GIGARED",
+      "id": "meucci__internet",
       "sucursalId": "meucci",
       "tipoServicioId": "internet",
-      "id": "meucci__internet"
+      "proveedores": [
+        {
+          "nombre": "GIGARED",
+          "responsable": ".",
+          "telefono": ".",
+          "email": ".",
+          "contrato": ""
+        }
+      ],
+      "proveedor": "GIGARED",
+      "contacto": {
+        "responsable": ".",
+        "telefono": ".",
+        "email": "."
+      },
+      "contrato": "",
+      "notas": ""
     },
     {
       "contacto": {
