@@ -1805,17 +1805,17 @@
       "id": "mm-juan-b-justo__internet"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "307251",
-      "notas": "Domicilio de la cuenta: Juan B Justo N°282",
-      "proveedor": "SECHEEP",
+      "id": "mm-juan-b-justo__luz",
       "sucursalId": "mm-juan-b-justo",
       "tipoServicioId": "luz",
-      "id": "mm-juan-b-justo__luz"
+      "proveedor": "SECHEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-7777-589",
+        "email": ""
+      },
+      "contrato": "307251",
+      "notas": "Domicilio de la cuenta: Juan B Justo N°282"
     },
     {
       "contacto": {
