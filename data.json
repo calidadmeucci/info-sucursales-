@@ -1740,17 +1740,17 @@
       "id": "mm-italia__techista"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "67761",
-      "notas": "Domicilio de la cuenta: Juan B Justo N°280",
-      "proveedor": "SAMEEP",
+      "id": "mm-juan-b-justo__agua",
       "sucursalId": "mm-juan-b-justo",
       "tipoServicioId": "agua",
-      "id": "mm-juan-b-justo__agua"
+      "proveedor": "SAMEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-444-0310",
+        "email": ""
+      },
+      "contrato": "67761",
+      "notas": "Domicilio de la cuenta: Juan B Justo N°280"
     },
     {
       "contacto": {
