@@ -961,17 +961,26 @@
       "id": "dallas-r__herreria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "",
-      "proveedor": "GIGARED",
+      "id": "dallas-r__internet",
       "sucursalId": "dallas-r",
       "tipoServicioId": "internet",
-      "id": "dallas-r__internet"
+      "proveedores": [
+        {
+          "nombre": "GIGARED",
+          "responsable": ".",
+          "telefono": ".",
+          "email": ".",
+          "contrato": "0007-00964610"
+        }
+      ],
+      "proveedor": "GIGARED",
+      "contacto": {
+        "responsable": ".",
+        "telefono": ".",
+        "email": "."
+      },
+      "contrato": "0007-00964610",
+      "notas": ""
     },
     {
       "contacto": {
