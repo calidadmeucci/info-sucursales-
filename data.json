@@ -1749,17 +1749,33 @@
       "id": "mm-barranqueras__puertas-vidrios"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "Grandes: 2, Chicos: 0, Central: 0",
-      "proveedor": "",
+      "id": "mm-barranqueras__refrigeracion",
       "sucursalId": "mm-barranqueras",
       "tipoServicioId": "refrigeracion",
-      "id": "mm-barranqueras__refrigeracion"
+      "proveedores": [
+        {
+          "nombre": "NESTOR SANCHEZ",
+          "responsable": "",
+          "telefono": "+54 9 362 462-4238",
+          "email": "",
+          "contrato": ""
+        },
+        {
+          "nombre": "LUCAS ROSCO",
+          "responsable": "",
+          "telefono": "+54 9 3794 67-7955",
+          "email": "",
+          "contrato": ""
+        }
+      ],
+      "proveedor": "NESTOR SANCHEZ",
+      "contacto": {
+        "responsable": "",
+        "telefono": "+54 9 362 462-4238",
+        "email": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 2, Chicos: 0, Central: 0"
     },
     {
       "contacto": {
