@@ -297,17 +297,17 @@
       "id": "alliance-ctes__jardineria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "30202281",
-      "notas": "Domicilio de la cuenta: Av. Independencia 5420",
-      "proveedor": "DEPEC",
+      "id": "alliance-ctes__luz",
       "sucursalId": "alliance-ctes",
       "tipoServicioId": "luz",
-      "id": "alliance-ctes__luz"
+      "proveedor": "DEPEC",
+      "contacto": {
+        "responsable": ".",
+        "telefono": "0800-555-3732",
+        "email": "."
+      },
+      "contrato": "30202281",
+      "notas": "Domicilio de la cuenta: Av. Independencia 5420"
     },
     {
       "contacto": {
