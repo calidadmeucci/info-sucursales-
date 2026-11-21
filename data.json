@@ -1688,17 +1688,17 @@
       "id": "mm-italia__internet"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "515114",
-      "notas": "Domicilio de la cuenta: Av. Italia N°135",
-      "proveedor": "SECHEEP",
+      "id": "mm-italia__luz",
       "sucursalId": "mm-italia",
       "tipoServicioId": "luz",
-      "id": "mm-italia__luz"
+      "proveedor": "SECHEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-7777-589",
+        "email": ""
+      },
+      "contrato": "515114",
+      "notas": "Domicilio de la cuenta: Av. Italia N°135"
     },
     {
       "contacto": {
