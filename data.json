@@ -1090,17 +1090,17 @@
       "id": "kia__internet"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "245854",
-      "notas": "Domicilio de la cuenta: Av 25 de Mayo 1934",
-      "proveedor": "SECHEEP",
+      "id": "kia__luz",
       "sucursalId": "kia",
       "tipoServicioId": "luz",
-      "id": "kia__luz"
+      "proveedor": "SECHEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-7777-589",
+        "email": ""
+      },
+      "contrato": "245854",
+      "notas": "Domicilio de la cuenta: Av 25 de Mayo 1934"
     },
     {
       "contacto": {
