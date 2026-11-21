@@ -605,17 +605,26 @@
       "id": "benelli__herreria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "",
-      "proveedor": "GIGARED",
+      "id": "benelli__internet",
       "sucursalId": "benelli",
       "tipoServicioId": "internet",
-      "id": "benelli__internet"
+      "proveedores": [
+        {
+          "nombre": "GIGARED",
+          "responsable": ".",
+          "telefono": ".",
+          "email": ".",
+          "contrato": "0007-00965005"
+        }
+      ],
+      "proveedor": "GIGARED",
+      "contacto": {
+        "responsable": ".",
+        "telefono": ".",
+        "email": "."
+      },
+      "contrato": "0007-00965005",
+      "notas": "AVISAR A SISTEMAS"
     },
     {
       "id": "benelli__luz",
