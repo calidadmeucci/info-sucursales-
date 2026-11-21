@@ -531,17 +531,17 @@
       "id": "alliance-r__techista"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "10018772",
-      "notas": "Domicilio de la cuenta: Av. Independencia 3581",
-      "proveedor": "AGUAS DE CORRIENTES",
+      "id": "benelli__agua",
       "sucursalId": "benelli",
       "tipoServicioId": "agua",
-      "id": "benelli__agua"
+      "proveedor": "AGUAS DE CORRIENTES",
+      "contacto": {
+        "responsable": "",
+        "telefono": "379 507-7777",
+        "email": ""
+      },
+      "contrato": "10018772",
+      "notas": "Domicilio de la cuenta: Av. Independencia 3581"
     },
     {
       "contacto": {
