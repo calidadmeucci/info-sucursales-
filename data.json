@@ -2873,18 +2873,18 @@
       "tipoServicioId": "agua",
       "proveedores": [
         {
-          "nombre": "VA CON EXPENSAS",
-          "responsable": "",
-          "telefono": "",
-          "email": "",
+          "nombre": "VA CON EXPENSAS EDIFICIO",
+          "responsable": ".",
+          "telefono": ".",
+          "email": ".",
           "contrato": ""
         }
       ],
-      "proveedor": "VA CON EXPENSAS",
+      "proveedor": "VA CON EXPENSAS EDIFICIO",
       "contacto": {
-        "responsable": "",
-        "telefono": "",
-        "email": ""
+        "responsable": ".",
+        "telefono": ".",
+        "email": "."
       },
       "contrato": "",
       "notas": ""
