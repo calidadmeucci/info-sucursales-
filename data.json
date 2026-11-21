@@ -375,17 +375,17 @@
       "id": "alliance-ctes__techista"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "150218",
-      "notas": "Domicilio de la cuenta: Av. 25 de Mayo 1101",
-      "proveedor": "SAMEEP",
+      "id": "alliance-r__agua",
       "sucursalId": "alliance-r",
       "tipoServicioId": "agua",
-      "id": "alliance-r__agua"
+      "proveedor": "SAMEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-444-0310",
+        "email": ""
+      },
+      "contrato": "150218",
+      "notas": "Domicilio de la cuenta: Av. 25 de Mayo 1101"
     },
     {
       "contacto": {
