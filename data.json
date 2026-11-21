@@ -1389,17 +1389,17 @@
       "id": "mg__techista"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "10085193",
-      "notas": "Domicilio de la cuenta: Av. Sarmiento 1610 - 3 de Abril 1698",
-      "proveedor": "AGUAS DE CORRIENTES",
+      "id": "mm-3-de-abril__agua",
       "sucursalId": "mm-3-de-abril",
       "tipoServicioId": "agua",
-      "id": "mm-3-de-abril__agua"
+      "proveedor": "AGUAS DE CORRIENTES",
+      "contacto": {
+        "responsable": "",
+        "telefono": "379 507-7777",
+        "email": ""
+      },
+      "contrato": "10085193",
+      "notas": "Domicilio de la cuenta: Av. Sarmiento 1610 - 3 de Abril 1698"
     },
     {
       "contacto": {
