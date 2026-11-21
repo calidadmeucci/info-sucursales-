@@ -2364,17 +2364,17 @@
       "id": "re-r__jardineria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "197804",
-      "notas": "Domicilio de la cuenta: Av Sarmiento 1901",
-      "proveedor": "SECHEEP",
+      "id": "re-r__luz",
       "sucursalId": "re-r",
       "tipoServicioId": "luz",
-      "id": "re-r__luz"
+      "proveedor": "SECHEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-7777-589",
+        "email": ""
+      },
+      "contrato": "197804",
+      "notas": "Domicilio de la cuenta: Av Sarmiento 1901"
     },
     {
       "contacto": {
