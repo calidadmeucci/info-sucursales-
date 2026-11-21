@@ -1454,17 +1454,17 @@
       "id": "mm-3-de-abril__internet"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "30065635",
-      "notas": "Domicilio de la cuenta: Av. 3 de Abril 1698",
-      "proveedor": "DEPEC",
+      "id": "mm-3-de-abril__luz",
       "sucursalId": "mm-3-de-abril",
       "tipoServicioId": "luz",
-      "id": "mm-3-de-abril__luz"
+      "proveedor": "DEPEC",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-555-3732",
+        "email": ""
+      },
+      "contrato": "30065635",
+      "notas": "Domicilio de la cuenta: Av. 3 de Abril 1698"
     },
     {
       "contacto": {
