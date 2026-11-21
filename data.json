@@ -1350,17 +1350,17 @@
       "id": "mg__internet"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "557819",
-      "notas": "Domicilio de la cuenta: Av. Rivadavia N°709 Local 2 (MF)",
-      "proveedor": "SECHEEP",
+      "id": "mg__luz",
       "sucursalId": "mg",
       "tipoServicioId": "luz",
-      "id": "mg__luz"
+      "proveedor": "SECHEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-7777-589",
+        "email": ""
+      },
+      "contrato": "557819",
+      "notas": "Domicilio de la cuenta: Av. Rivadavia N°709 Local 2 (MF)"
     },
     {
       "contacto": {
