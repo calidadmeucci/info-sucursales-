@@ -514,17 +514,33 @@
       "id": "alliance-r__puertas-vidrios"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "Grandes: 3, Chicos: 8, Central: 0",
-      "proveedor": "",
+      "id": "alliance-r__refrigeracion",
       "sucursalId": "alliance-r",
       "tipoServicioId": "refrigeracion",
-      "id": "alliance-r__refrigeracion"
+      "proveedores": [
+        {
+          "nombre": "LUCAS ROSCO",
+          "responsable": "",
+          "telefono": "+54 9 3794 67-7955",
+          "email": "",
+          "contrato": ""
+        },
+        {
+          "nombre": "NESTOR SANCHEZ",
+          "responsable": "",
+          "telefono": "+54 9 362 462-4238",
+          "email": "",
+          "contrato": ""
+        }
+      ],
+      "proveedor": "LUCAS ROSCO",
+      "contacto": {
+        "responsable": "",
+        "telefono": "+54 9 3794 67-7955",
+        "email": ""
+      },
+      "contrato": "",
+      "notas": "Grandes: 3, Chicos: 8, Central: 0"
     },
     {
       "contacto": {
