@@ -479,17 +479,17 @@
       "id": "alliance-r__jardineria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "225384",
-      "notas": "Domicilio de la cuenta: Padre Cerqueira 20",
-      "proveedor": "SECHEEP",
+      "id": "alliance-r__luz",
       "sucursalId": "alliance-r",
       "tipoServicioId": "luz",
-      "id": "alliance-r__luz"
+      "proveedor": "SECHEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-7777-589",
+        "email": ""
+      },
+      "contrato": "225384",
+      "notas": "Domicilio de la cuenta: Padre Cerqueira 20"
     },
     {
       "contacto": {
