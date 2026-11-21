@@ -2791,6 +2791,19 @@
       "sucursalId": "scuderia-r",
       "tipoServicioId": "techista",
       "id": "scuderia-r__techista"
+    },
+    {
+      "id": "mm-ruta-11__agua",
+      "sucursalId": "mm-ruta-11",
+      "tipoServicioId": "agua",
+      "proveedor": "SAMEEP",
+      "contacto": {
+        "responsable": "",
+        "telefono": "0800-444-0310",
+        "email": ""
+      },
+      "contrato": "097271 / 000001",
+      "notas": ""
     }
   ],
   "tareasCatalogo": [
