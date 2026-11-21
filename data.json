@@ -2290,17 +2290,26 @@
       "id": "re-ctes__herreria"
     },
     {
-      "contacto": {
-        "email": "",
-        "responsable": "",
-        "telefono": ""
-      },
-      "contrato": "",
-      "notas": "",
-      "proveedor": "GIGARED",
+      "id": "re-ctes__internet",
       "sucursalId": "re-ctes",
       "tipoServicioId": "internet",
-      "id": "re-ctes__internet"
+      "proveedores": [
+        {
+          "nombre": "GIGARED",
+          "responsable": ".",
+          "telefono": ".",
+          "email": ".",
+          "contrato": ""
+        }
+      ],
+      "proveedor": "GIGARED",
+      "contacto": {
+        "responsable": ".",
+        "telefono": ".",
+        "email": "."
+      },
+      "contrato": "",
+      "notas": ""
     },
     {
       "id": "re-ctes__luz",
